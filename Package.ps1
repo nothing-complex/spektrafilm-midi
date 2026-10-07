@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$Version='0.1.0-prototype', [switch]$Zip, [switch]$Source = $true)
+param([string]$Version='0.1.1-prototype', [switch]$Zip, [switch]$Source = $true)
 $ErrorActionPreference='Stop'
 $projectRoot=$PSScriptRoot
 if ($Version -notmatch '^[0-9A-Za-z._-]+$') { throw 'Invalid version string.' }

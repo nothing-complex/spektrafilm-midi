@@ -4,7 +4,7 @@ A free, open-source Windows prototype for controlling a community build of Spekt
 
 **Early prototype, looking for testers.** The software builds and automated tests pass. Physical Element operation and actual Resolve integration have not yet completed acceptance testing. Continuous automatic control depends on Resolve exposing the effect's **Apply MIDI** button and target marker through Windows accessibility. Manual Apply is the fallback. Please start with a disposable project.
 
-[Download the Windows prototype and matching source](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.0-prototype) · [Setup](docs/SETUP.md) · [Controls](docs/CONTROLS.md) · [Verified status](docs/BUILD_STATUS.md)
+[Download the Windows prototype and matching source](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.1-prototype) · [Setup](docs/SETUP.md) · [Controls](docs/CONTROLS.md) · [Verified status](docs/BUILD_STATUS.md)
 
 ## What it does
 
@@ -34,16 +34,18 @@ The installer targets only the MIDI bundle. Existing regular Spektrafilm nodes k
 
 Requirements: **Windows x64**, the **.NET 9 Windows Desktop runtime**, a Vulkan-capable GPU/driver supported by the public renderer, and Tangent Hub for the native Element route. No virtual MIDI driver is installed by this project.
 
-1. Download and extract `Spektrafilm-MIDI-0.1.0-prototype.zip` from the [prerelease](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.0-prototype).
+1. Download and extract `Spektrafilm-MIDI-0.1.1-prototype.zip` from the [prerelease](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.1-prototype).
 2. Close Resolve. From the extracted package, preview `./Install.ps1` in PowerShell. Then use `./Install.ps1 -Apply` in an administrator PowerShell to install the separate MIDI bundle.
 3. Restart Resolve and add **Spektrafilm MIDI (Community Beta)** to a disposable test grade.
-4. Run **Launch Companion.cmd**, choose one input route and click **Connect**. For Element, choose **Tangent Hub** and select the separate **Spektrafilm MIDI** application in Hub/Mapper. Keep your normal Resolve maps.
-5. Click **Arm MIDI** in the intended effect and wait for a complete armed target in the companion.
-6. Move a control, then click **Apply MIDI** in the effect within two seconds. Confirm the inspector value, image and feedback agree.
+4. Run **Launch Companion.cmd**, choose one input route and click **Connect** each session. For Element, choose **Tangent Hub**.
+5. For native Element control, open Mapper's **Select Application** menu and turn **Auto-select Application** off. Select **Spektrafilm MIDI** so it has the checkmark; the arrow beside it opens its maps. Auto-select otherwise switches the panels back to the default Resolve setup when Resolve gains focus.
+6. Confirm the Kb screens show Spektrafilm labels such as **Film Exp** and **Print Exp** on the Essentials bank, possibly marked off before arming. If they still show Resolve's controls, complete the [Tangent switching steps](docs/SETUP.md#switching-element-from-resolve-to-spektrafilm) first.
+7. Click **Arm MIDI** in the intended effect and wait for a complete armed target in the companion.
+8. Move a control, then click **Apply MIDI** in the effect within two seconds. Confirm the inspector value, image and feedback agree.
 
 For optional automatic Apply, find and explicitly bind the correct accessible inspector button in the companion, then enable Automatic Apply. It requires foreground Resolve and the exact instance marker. There is no automatic selected-node following or coordinate-click fallback. See [setup](docs/SETUP.md) and [companion details](companion/README.md).
 
-Disarm before export or switching the full panel set back to Resolve's native application. Use the [acceptance checklist](docs/ACCEPTANCE.md) to check undo, persistence, cache invalidation and renders before using a real job.
+Disarm before export or switching the full panel set back to Resolve's native application. Select DaVinci Resolve in Mapper, and restore Auto-select if you want normal focus switching again. Keep your normal Resolve maps; the A+B shortcut between Resolve's native/mappable modes does not select this separate application. Use the [acceptance checklist](docs/ACCEPTANCE.md) to check undo, persistence, cache invalidation and renders before using a real job.
 
 ## Public-source limits
 

@@ -271,11 +271,18 @@ public static class TangentCodec
 }
 public sealed record TangentMessage(uint Command, uint Id, double Value, IReadOnlyList<(uint Type, uint Id)>? Panels = null, double Shuttle = 0);
 
+// TIPC has no acknowledgement that this application owns the panels. RegistrationReady
+// means the Hub handshake completed and our application definition was sent. Real control
+// input is reported separately so a TCP connection cannot be mistaken for panel ownership.
+public sealed record TangentDiagnostics(bool SocketConnected, bool RegistrationReady, uint ProtocolRevision,
+    int ConfiguredPanels, int ConnectedPanels, long InputCount, DateTime? LastInputUtc);
+
 public sealed class TangentConnection : IDisposable
 {
     private readonly TcpClient socket = new(AddressFamily.InterNetwork);
     private readonly CancellationTokenSource cancellation = new();
     private readonly SemaphoreSlim writeGate = new(1);
+    private readonly SemaphoreSlim feedbackGate = new(1);
     private readonly MappingProfile profile;
     private readonly string systemPath;
     private readonly string userPath;
@@ -283,17 +290,35 @@ public sealed class TangentConnection : IDisposable
     private readonly HashSet<uint> fineButtons = new();
     private readonly Dictionary<uint, bool> panelStates = new();
     private bool pollingPanels;
+    private readonly object diagnosticsGate = new();
+    private TangentDiagnostics diagnostics = new(false, false, 0, 0, 0, 0, null);
+    private int disposed;
     public event Action<ControlInput>? Input;
     public event Action? FeedbackRequested;
     public event Action? Disconnected;
     public event Action<string>? Status;
+    public event Action<TangentDiagnostics>? DiagnosticsChanged;
     public bool Connected => socket.Connected && !cancellation.IsCancellationRequested;
+    public bool Registered => Connected && Diagnostics.RegistrationReady;
+    public TangentDiagnostics Diagnostics => Volatile.Read(ref diagnostics);
     public TangentConnection(MappingProfile profile, string systemPath, string userPath) { this.profile = profile; this.systemPath = systemPath; this.userPath = userPath; }
     public async Task ConnectAsync()
     {
         await socket.ConnectAsync(IPAddress.Loopback, profile.TangentPort, cancellation.Token);
-        Status?.Invoke("Tangent connected. Select Spektrafilm MIDI in Tangent Hub/Mapper.");
+        UpdateDiagnostics(d => d with { SocketConnected = true });
+        Status?.Invoke("Tangent socket connected; waiting for Hub handshake. In Mapper, turn off Select Application > Auto-select Application, then select Spektrafilm MIDI.");
         _ = ReadAsync();
+    }
+    private void UpdateDiagnostics(Func<TangentDiagnostics, TangentDiagnostics> update)
+    {
+        TangentDiagnostics snapshot;
+        lock (diagnosticsGate) { snapshot = update(diagnostics); Volatile.Write(ref diagnostics, snapshot); }
+        DiagnosticsChanged?.Invoke(snapshot);
+    }
+    private void EmitInput(ControlInput input)
+    {
+        UpdateDiagnostics(d => d with { InputCount = d.InputCount + 1, LastInputUtc = DateTime.UtcNow });
+        Input?.Invoke(input);
     }
     private async Task ReadAsync()
     {
@@ -311,15 +336,28 @@ public sealed class TangentConnection : IDisposable
                     if (message.Command == 1)
                     {
                         if (message.Id < 3) throw new FormatException("Tangent protocol revision too old");
-                        await Send(TangentCodec.Command(0x81, profile.AppName, systemPath, userPath));
+                        UpdateDiagnostics(d => d with { RegistrationReady = false });
+                        // Re-initiation must not race a display batch setting lastMode after
+                        // it was reset. Finish/drop that batch before starting the handshake.
+                        await feedbackGate.WaitAsync(cancellation.Token);
+                        try
+                        {
+                            panelStates.Clear();
+                            Volatile.Write(ref lastMode, 0);
+                            UpdateDiagnostics(d => d with { ProtocolRevision = message.Id, ConfiguredPanels = message.Panels?.Count ?? 0, ConnectedPanels = 0 });
+                            if (!await Send(TangentCodec.Command(0x81, profile.AppName, systemPath, userPath))) continue;
+                            UpdateDiagnostics(d => d with { RegistrationReady = true });
+                        }
+                        finally { feedbackGate.Release(); }
                         if (message.Id >= 4 && !pollingPanels) { pollingPanels = true; _ = PollPanelStatesAsync(); }
-                        Status?.Invoke("Tangent Hub protocol " + message.Id + "; configured panels " + (message.Panels?.Count ?? 0));
+                        Status?.Invoke("Tangent application definition sent (protocol " + message.Id + "). In Mapper, disable Auto-select Application and select Spektrafilm MIDI; returning to Resolve with Auto-select on restores Resolve's usual controls.");
                         FeedbackRequested?.Invoke();
                     }
+                    else if (!Registered) continue;
                     else if (message.Command is 2 or 3 or 5 or 6)
                     {
                         var axis = profile.Axes.FirstOrDefault(x => MappingProfile.Id(x.Id) == message.Id);
-                        if (axis != null) Input?.Invoke(new(message.Command is 3 or 6 ? InputKind.Reset : InputKind.Relative, axis.Index, message.Value));
+                        if (axis != null) EmitInput(new(message.Command is 3 or 6 ? InputKind.Reset : InputKind.Relative, axis.Index, message.Value));
                     }
                     else if (message.Command is 4 or 7) FeedbackRequested?.Invoke();
                     else if (message.Command is 8 or 11)
@@ -329,7 +367,7 @@ public sealed class TangentConnection : IDisposable
                         {
                             var pressed = message.Command == 8;
                             if (button.Action == "fine") { if (pressed) fineButtons.Add(message.Id); else fineButtons.Remove(message.Id); pressed = fineButtons.Count > 0; }
-                            Input?.Invoke(new(InputKind.Button, 0, Action: button.Action, Pressed: pressed));
+                            EmitInput(new(InputKind.Button, 0, Action: button.Action, Pressed: pressed));
                         }
                     }
                     else if (message.Command == 9) Input?.Invoke(new(InputKind.Mode, 0, message.Id));
@@ -339,6 +377,7 @@ public sealed class TangentConnection : IDisposable
                         var connected = message.Value != 0;
                         var known = panelStates.TryGetValue(message.Id, out var previous);
                         panelStates[message.Id] = connected;
+                        UpdateDiagnostics(d => d with { ConnectedPanels = panelStates.Values.Count(value => value) });
                         if (known && previous && !connected) { fineButtons.Clear(); Input?.Invoke(new(InputKind.Button, 0, Action: "fine", Pressed: false)); Disconnected?.Invoke(); }
                         if (!known || previous != connected) { Status?.Invoke("Panel " + message.Id + (connected ? " connected" : known && previous ? " disconnected; live control disarmed" : " not connected")); FeedbackRequested?.Invoke(); }
                     }
@@ -347,7 +386,7 @@ public sealed class TangentConnection : IDisposable
         }
         catch (Exception e) when (e is IOException or SocketException or FormatException or OperationCanceledException or ObjectDisposedException)
         { if (!cancellation.IsCancellationRequested) Status?.Invoke("Tangent disconnected: " + e.Message); }
-        finally { fineButtons.Clear(); Input?.Invoke(new(InputKind.Button, 0, Action: "fine", Pressed: false)); socket.Close(); Disconnected?.Invoke(); }
+        finally { fineButtons.Clear(); Input?.Invoke(new(InputKind.Button, 0, Action: "fine", Pressed: false)); socket.Close(); UpdateDiagnostics(d => d with { SocketConnected = false, RegistrationReady = false, ConnectedPanels = 0 }); Disconnected?.Invoke(); }
     }
     private async Task PollPanelStatesAsync()
     {
@@ -355,38 +394,58 @@ public sealed class TangentConnection : IDisposable
         {
             while (Connected)
             {
-                await Send(TangentCodec.Command(0xA5));
+                await Send(TangentCodec.Command(0xA5), requireRegistration: true);
                 await Task.Delay(1000, cancellation.Token);
             }
         }
         catch (Exception e) when (e is OperationCanceledException or IOException or SocketException or ObjectDisposedException)
         { if (!cancellation.IsCancellationRequested) socket.Close(); }
     }
-    private async Task Send(byte[] packet)
+    private async Task<bool> Send(byte[] packet, bool requireRegistration = false)
     {
-        if (!Connected) return;
+        if (!Connected || requireRegistration && !Registered) return false;
         await writeGate.WaitAsync(cancellation.Token);
-        try { await socket.GetStream().WriteAsync(packet, cancellation.Token); }
+        try
+        {
+            if (!Connected || requireRegistration && !Registered) return false;
+            await socket.GetStream().WriteAsync(packet, cancellation.Token);
+            return true;
+        }
         finally { writeGate.Release(); }
     }
     public async Task UpdateDisplaysAsync(IReadOnlyList<AxisDisplay> axes, uint mode, string bank, string state)
     {
-        if (!Connected) return;
+        if (!Registered) return;
         try
         {
-            if (lastMode != mode) { await Send(TangentCodec.Command(0x85, mode)); lastMode = mode; }
-            foreach (var axis in axes)
+            await feedbackGate.WaitAsync(cancellation.Token);
+            try
             {
-                var label = axis.Available ? axis.Label : "[off] " + axis.Label;
-                // Names include textual choices; values remain real numeric host values.
-                if (axis.Available && !double.TryParse(axis.Text, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out _) && axis.Text != "Paired") label += " " + axis.Text;
-                await Send(TangentCodec.Command(0xA2, axis.Id, label[..Math.Min(label.Length, 32)]));
-                await Send(TangentCodec.Command(0x82, axis.Id, (float)Math.Clamp(axis.Value, -float.MaxValue, float.MaxValue), axis.AtDefault));
+                if (!Registered) return;
+                if (Volatile.Read(ref lastMode) != mode)
+                {
+                    if (!await Send(TangentCodec.Command(0x85, mode), requireRegistration: true)) return;
+                    Volatile.Write(ref lastMode, mode);
+                }
+                foreach (var axis in axes)
+                {
+                    var label = axis.Available ? axis.Label : "[off] " + axis.Label;
+                    // Names include textual choices; values remain real numeric host values.
+                    if (axis.Available && !double.TryParse(axis.Text, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out _) && axis.Text != "Paired") label += " " + axis.Text;
+                    if (!await Send(TangentCodec.Command(0xA2, axis.Id, label[..Math.Min(label.Length, 32)]), requireRegistration: true)) return;
+                    if (!await Send(TangentCodec.Command(0x82, axis.Id, (float)Math.Clamp(axis.Value, -float.MaxValue, float.MaxValue), axis.AtDefault), requireRegistration: true)) return;
+                }
+                await Send(TangentCodec.Command(0x86, (uint)2, bank[..Math.Min(bank.Length, 32)], false, state[..Math.Min(state.Length, 32)], false), requireRegistration: true);
             }
-            await Send(TangentCodec.Command(0x86, (uint)2, bank[..Math.Min(bank.Length, 32)], false, state[..Math.Min(state.Length, 32)], false));
+            finally { feedbackGate.Release(); }
         }
         catch (Exception e) when (e is IOException or SocketException or OperationCanceledException or ObjectDisposedException)
         { if (!cancellation.IsCancellationRequested) Status?.Invoke("Tangent feedback: " + e.Message); }
     }
-    public void Dispose() { cancellation.Cancel(); socket.Dispose(); }
+    public void Dispose()
+    {
+        if (Interlocked.Exchange(ref disposed, 1) != 0) return;
+        cancellation.Cancel(); socket.Dispose();
+        UpdateDiagnostics(d => d with { SocketConnected = false, RegistrationReady = false, ConnectedPanels = 0 });
+    }
 }

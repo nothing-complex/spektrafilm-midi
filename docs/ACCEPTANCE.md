@@ -29,8 +29,8 @@ Status: **physical acceptance pending**. Automated source/protocol tests do not 
 - Tk: exercise X/Y/ring for all three balls, both directions, and all six associated resets. In this build, verify M/Y/C fallback on the first ball/ring.
 - Mf: exercise ball X/Y, focused ring, twelve programmable buttons, A/B and all five transport buttons. Transport/undo/redo must report unavailable rather than emit global input.
 - Bt: verify all twelve feature-bank buttons and A/B. Lens/Motion must be visibly unavailable; stage toggle must act only where implemented.
-- Hold/release modifiers, including overlapping holds, disconnection while held and Tangent's reserved A+B application switch. No fine modifier may remain stuck.
-- Switch the entire panel set between native Resolve and the sibling custom application. Do not claim split ownership unless separately proven.
+- Hold/release modifiers, including overlapping holds and disconnection while held. No fine modifier may remain stuck. Confirm Tangent/Resolve's reserved A+B native/mappable gesture is not treated as a companion grading reset.
+- With Mapper's Auto-select Application off, select Spektrafilm MIDI so it has the checkmark. Confirm its screen labels remain after Resolve gains focus. Switch the entire panel set back to DaVinci Resolve using Mapper, then test restoring Auto-select. A+B is not a shortcut to the sibling application. Do not claim split ownership unless separately proven.
 
 ## Screens and input formats
 

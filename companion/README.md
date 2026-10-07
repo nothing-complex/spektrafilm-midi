@@ -6,10 +6,11 @@ Run `companion/Launch.ps1` after the project build, or run the packaged `Spektra
 
 ## First connection
 
-1. Launch the companion and select **one** input adapter: Tangent Hub, MIDI, or OSC. Connect it before arming the effect. Connecting or disconnecting adapters disarms live control and clears the optional Apply binding.
-2. Add **Spektrafilm MIDI — Community** to the intended Resolve node. In its MIDI controls, click **Arm MIDI**. Existing regular Spektrafilm nodes remain independent.
-3. Wait for the companion to show one armed instance and its authoritative parameter state. Select a feature bank, or **All available parameters** for automatic coverage of the current schema.
-4. Move a controller. The plugin queues the edits for up to two seconds. **Click Apply MIDI in the plugin** to commit them through a normal host action. A stopped playhead does not itself dispatch queued edits.
+1. Launch the companion and select **one** input adapter: Tangent Hub, MIDI, or OSC. Click **Connect** each session before arming the effect; selecting the adapter alone does not connect it. Connecting or disconnecting adapters disarms live control and clears the optional Apply binding.
+2. For native Element control, open Tangent Mapper's **Select Application** menu, turn **Auto-select Application** off, and select **Spektrafilm MIDI** so it has the checkmark. The arrow beside the application only opens its maps. Auto-select otherwise restores the default Resolve setup when Resolve gains focus. On the Essentials bank, check for Kb labels such as Film Exp and Print Exp, possibly marked off while unarmed. See the [switching guide](../docs/SETUP.md#switching-element-from-resolve-to-spektrafilm).
+3. Add **Spektrafilm MIDI (Community Beta)** to the intended Resolve node. In its MIDI controls, click **Arm MIDI**. Existing regular Spektrafilm nodes remain independent.
+4. Wait for the companion to show one armed instance and its authoritative parameter state. Select a feature bank, or **All available parameters** for automatic coverage of the current schema.
+5. Move a controller. The plugin queues the edits for up to two seconds. **Click Apply MIDI in the plugin** to commit them through a normal host action. A stopped playhead does not itself dispatch queued edits.
 
 This is a feasibility build. Actual Resolve redraw, undo, project persistence, device behavior, and realtime performance still require host/hardware validation. The program never sets OFX parameters from MIDI, network or render callbacks.
 
@@ -28,7 +29,7 @@ If Resolve does not expose an accessible button or marker, the companion remains
 
 ## Input routes
 
-- **Tangent Hub:** TCP loopback port64246. The supplied `profiles/tangent` app defines all24 continuous axes,37 action buttons and associated encoder/ball/ring resets. Select the Spektrafilm MIDI app in Hub/Mapper. Current labels, numeric values, choice names within refreshed labels, bank/mode and arm status are sent back. Actual panel display formatting remains subject to Hub/hardware verification. Four A modifiers can be held simultaneously without prematurely cancelling Fine when only one is released.
+- **Tangent Hub:** TCP loopback port64246. The supplied `profiles/tangent` app defines all24 continuous axes,37 action buttons and associated encoder/ball/ring resets. Select the Spektrafilm MIDI app in Mapper with Auto-select Application off. Resolve's A+B native/mappable shortcut does not select this separate app. Current labels, numeric values, choice names within refreshed labels, bank/mode and arm status are sent back. Actual panel display formatting remains subject to Hub/hardware verification. Four A modifiers can be held simultaneously without prematurely cancelling Fine when only one is released.
 - **MIDI:** Windows WinMM device input. CC0–23 map to axes0–23; notes0–23 reset; notes32–68 follow the profile's explicit action mapping. Select the actual device encoding: binary offset64, two's complement, sign/magnitude, absolute7-bit, or absolute14-bit. For14-bit, MSB CC0–23 pairs with LSB CC32–55. Channel0 accepts all channels;1–16 selects one. Absolute inputs require pickup and are re-latched after an external authoritative change. Relative steps use the parameter's real units and preserve fractions.
 - **OSC:** UDP loopback9000 by default. `/spektrafilm/axis/0` through `/spektrafilm/axis/23` accept a float/int relative delta; zero is the supplied Mapper profile's associated-reset message. `/spektrafilm/reset/<axis>` with nonzero value explicitly resets. `/spektrafilm/button/<MIDI note>` routes the mapped button; zero releases. `/spektrafilm/bank/<name>` switches feature banks, and `/spektrafilm/action/<action>` supports named actions. Legacy `/1/knob1` through24 accepts relative deltas. Only immediate OSC bundles are accepted.
 

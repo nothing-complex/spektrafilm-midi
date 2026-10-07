@@ -33,6 +33,23 @@ byte[] Osc(string address, float value)
     foreach (var s in new[] { address, ",f" }) { var bytes = Encoding.UTF8.GetBytes(s); stream.Write(bytes); stream.WriteByte(0); while (stream.Length % 4 != 0) stream.WriteByte(0); }
     Span<byte> n = stackalloc byte[4]; BinaryPrimitives.WriteInt32BigEndian(n, BitConverter.SingleToInt32Bits(value)); stream.Write(n); return stream.ToArray();
 }
+async Task<byte[]> TangentFrame(NetworkStream stream)
+{
+    using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(3));
+    var header = new byte[4]; await stream.ReadExactlyAsync(header, timeout.Token);
+    var frame = new byte[BinaryPrimitives.ReadInt32BigEndian(header)];
+    Check(frame.Length is >= 4 and <= 1048576); await stream.ReadExactlyAsync(frame, timeout.Token); return frame;
+}
+async Task<byte[]> TangentCommandUntil(NetworkStream stream, uint command)
+{
+    for (var i = 0; i < 100; i++) { var frame = await TangentFrame(stream); if (BinaryPrimitives.ReadUInt32BigEndian(frame) == command) return frame; }
+    throw new InvalidOperationException("Expected Tangent command " + command.ToString("X"));
+}
+async Task Until(Func<bool> condition)
+{
+    using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(3));
+    while (!condition()) await Task.Delay(10, timeout.Token);
+}
 
 Test("Wire UTF8 percent strings, finite numbers and malformed escapes", () =>
 {
@@ -212,6 +229,63 @@ Test("Discovery survives plugin endpoint teardown and receives a new broker", ()
     var replyFrom = new IPEndPoint(IPAddress.Any, 0); var reply = Encoding.UTF8.GetString(replacement.Receive(ref replyFrom));
     Check(replyFrom.Port == 55054 && reply == "SNAPSHOT\t1\tnewSession\tnewInstance\t1");
     Check(connection.Registry.Instances.Any(t => t.Session == "newSession"));
+});
+Test("Tangent handshake gates feedback and diagnostics distinguish socket, definition and real input", () =>
+{
+    async Task Run()
+    {
+        using var server = new TcpListener(IPAddress.Loopback, 0); server.Start();
+        var profile = Profile(); profile.TangentPort = ((IPEndPoint)server.LocalEndpoint).Port;
+        profile.Buttons.Add(new() { Id = "0x3001", Action = "fine", Label = "Fine" });
+        using var connection = new TangentConnection(profile, Path.GetTempPath(), Path.GetTempPath());
+        var statuses = new System.Collections.Concurrent.ConcurrentQueue<string>(); connection.Status += statuses.Enqueue;
+        var received = new System.Collections.Concurrent.ConcurrentQueue<ControlInput>(); connection.Input += received.Enqueue;
+        await connection.ConnectAsync(); using var peer = await server.AcceptTcpClientAsync(); var stream = peer.GetStream();
+        Check(connection.Diagnostics.SocketConnected && !connection.Diagnostics.RegistrationReady && !connection.Registered);
+        await connection.UpdateDisplaysAsync(Array.Empty<AxisDisplay>(), 0x2001, "Essentials", "DISARMED");
+        await Task.Delay(60); Check(!stream.DataAvailable, "Feedback was sent before InitiateComms/ApplicationDefinition");
+        await stream.WriteAsync(TangentCodec.Command(1, 4u, 2u, 0u, 10u, 1u, 11u));
+        var definition = await TangentFrame(stream);
+        Check(definition.SequenceEqual(TangentCodec.Command(0x81, profile.AppName, Path.GetTempPath(), Path.GetTempPath()).AsSpan(4).ToArray()), "First response was not the application definition");
+        await Until(() => connection.Registered);
+        Check(connection.Diagnostics.ProtocolRevision == 4 && connection.Diagnostics.ConfiguredPanels == 2 && connection.Diagnostics.ConnectedPanels == 0 && connection.Diagnostics.InputCount == 0);
+        await stream.WriteAsync(TangentCodec.Command(0x35, 10u, true));
+        await stream.WriteAsync(TangentCodec.Command(0x35, 11u, false));
+        await Until(() => connection.Diagnostics.ConnectedPanels == 1);
+        Check(connection.Diagnostics.InputCount == 0 && connection.Diagnostics.LastInputUtc == null, "Connection reports were counted as hardware input");
+        await stream.WriteAsync(TangentCodec.Command(2, 0x1001u, 0.25f));
+        await stream.WriteAsync(TangentCodec.Command(8, 0x3001u));
+        await Until(() => connection.Diagnostics.InputCount == 2);
+        Check(connection.Diagnostics.LastInputUtc is DateTime last && DateTime.UtcNow - last < TimeSpan.FromSeconds(3));
+        Check(received.Any(input => input.Kind == InputKind.Relative && input.Value == 0.25));
+        Check(statuses.Any(status => status.Contains("disable Auto-select Application")), "Missing panel ownership guidance");
+        peer.Close(); await Until(() => !connection.Diagnostics.SocketConnected);
+        Check(!connection.Registered && !connection.Diagnostics.RegistrationReady && connection.Diagnostics.ConnectedPanels == 0);
+        Check(connection.Diagnostics.InputCount == 2, "Disconnect cleanup was counted as hardware input");
+    }
+    Run().GetAwaiter().GetResult();
+});
+Test("Tangent re-initiation sends definition before feedback and resends the unchanged current mode", () =>
+{
+    async Task Run()
+    {
+        using var server = new TcpListener(IPAddress.Loopback, 0); server.Start();
+        var profile = Profile(); profile.TangentPort = ((IPEndPoint)server.LocalEndpoint).Port;
+        using var connection = new TangentConnection(profile, Path.GetTempPath(), Path.GetTempPath());
+        var refreshes = 0; connection.FeedbackRequested += () => Interlocked.Increment(ref refreshes);
+        await connection.ConnectAsync(); using var peer = await server.AcceptTcpClientAsync(); var stream = peer.GetStream();
+        await stream.WriteAsync(TangentCodec.Command(1, 3u, 0u));
+        await TangentCommandUntil(stream, 0x81); await Until(() => Volatile.Read(ref refreshes) == 1);
+        await connection.UpdateDisplaysAsync(Array.Empty<AxisDisplay>(), 0x2003, "Print", "DISARMED");
+        var firstMode = await TangentCommandUntil(stream, 0x85); Check(BinaryPrimitives.ReadUInt32BigEndian(firstMode.AsSpan(4)) == 0x2003);
+        await TangentCommandUntil(stream, 0x86);
+        await stream.WriteAsync(TangentCodec.Command(1, 3u, 0u));
+        var secondDefinition = await TangentFrame(stream); Check(BinaryPrimitives.ReadUInt32BigEndian(secondDefinition) == 0x81);
+        await Until(() => Volatile.Read(ref refreshes) == 2);
+        await connection.UpdateDisplaysAsync(Array.Empty<AxisDisplay>(), 0x2003, "Print", "DISARMED");
+        var repeatedMode = await TangentCommandUntil(stream, 0x85); Check(BinaryPrimitives.ReadUInt32BigEndian(repeatedMode.AsSpan(4)) == 0x2003);
+    }
+    Run().GetAwaiter().GetResult();
 });
 var profilePath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../../profiles/mappings.json"));
 if (File.Exists(profilePath)) Test("Real full Element mapping parses and uses all24 unique axes", () =>

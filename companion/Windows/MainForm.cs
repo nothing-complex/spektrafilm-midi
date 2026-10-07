@@ -23,6 +23,8 @@ public sealed class MainForm : Forms.Form
     private readonly Forms.ComboBox banks = new() { DropDownStyle = Forms.ComboBoxStyle.DropDownList, Width = 245 };
     private readonly Forms.ComboBox focus = new() { DropDownStyle = Forms.ComboBoxStyle.DropDownList, Width = 280 };
     private readonly Forms.Label target = new() { AutoSize = true, Text = "No armed target. Add the MIDI effect and press Arm MIDI in its controls." };
+    private readonly Forms.Label inputStatus = new() { Dock = Forms.DockStyle.Top, Height = 28, Text = "Controller disconnected. Choose an input and click Connect; keep this companion open." };
+    private readonly Forms.Label routingHint = new() { Dock = Forms.DockStyle.Fill, Text = "For Element: connect Tangent Hub, turn off Auto-select Application in Tangent Mapper, then select Spektrafilm MIDI." };
     private readonly Forms.Label page = new() { AutoSize = true };
     private readonly Forms.Label status = new() { AutoSize = false, Height = 45, Dock = Forms.DockStyle.Fill, Text = "Manual Apply MIDI required. Controller input queues edits; the plugin Apply MIDI button commits them." };
     private readonly Forms.DataGridView grid = new() { Dock = Forms.DockStyle.Fill, AllowUserToAddRows = false, AllowUserToDeleteRows = false, ReadOnly = true, RowHeadersVisible = false, AutoSizeColumnsMode = Forms.DataGridViewAutoSizeColumnsMode.Fill, SelectionMode = Forms.DataGridViewSelectionMode.FullRowSelect };
@@ -45,6 +47,8 @@ public sealed class MainForm : Forms.Form
     private string? catalogIdentity;
     private string? boundIdentity;
     private string? lastStatus;
+    private long inputCount;
+    private DateTime? lastInputUtc;
     private readonly HashSet<int> heldFineNotes = new();
     private readonly string settingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TangentMidi", "Spektrafilm", "companion-v1.json");
     private sealed record Settings(string Adapter, string MidiDevice, MidiEncoding Encoding, int Channel, int OscPort, string Bank);
@@ -53,7 +57,7 @@ public sealed class MainForm : Forms.Form
     {
         this.profilesPath = profilesPath;
         Text = "Spektrafilm MIDI — Element Companion (community feasibility build)";
-        Width = 1140; Height = 850; MinimumSize = new Size(900, 620); StartPosition = Forms.FormStartPosition.CenterScreen;
+        Width = 1140; Height = 930; MinimumSize = new Size(900, 760); StartPosition = Forms.FormStartPosition.CenterScreen;
         Font = new Font("Segoe UI", 10);
         plugin = new PluginConnection(); engine = new ControlEngine(plugin.Registry, profile);
         engine.CommandReady += plugin.Send;
@@ -72,12 +76,17 @@ public sealed class MainForm : Forms.Form
     }
     private void BuildLayout()
     {
-        var layout = new Forms.TableLayoutPanel { Dock = Forms.DockStyle.Fill, ColumnCount = 1, RowCount = 7, Padding = new Forms.Padding(10) };
-        layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize));
+        var layout = new Forms.TableLayoutPanel { Dock = Forms.DockStyle.Fill, ColumnCount = 1, RowCount = 8, Padding = new Forms.Padding(10) };
+        layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.Absolute, 120)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize));
         layout.RowStyles.Add(new(Forms.SizeType.Absolute, 90)); layout.RowStyles.Add(new(Forms.SizeType.Percent, 72)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.Percent, 28));
         var inputs = new Forms.FlowLayoutPanel { AutoSize = true, Dock = Forms.DockStyle.Fill, WrapContents = true };
         inputs.Controls.AddRange(new Forms.Control[] { Label("Input"), adapter, Button("Connect", async () => await ConnectAsync()), Button("Disconnect", Disconnect), Label("MIDI port"), midiDevices, Button("Refresh ports", RefreshDevices), encoding, Label("Ch (0=all)"), channel, Label("OSC port"), oscPort });
         layout.Controls.Add(inputs);
+        var routing = new Forms.GroupBox { Text = "Controller routing — verify this before testing the effect", Dock = Forms.DockStyle.Fill, Padding = new Forms.Padding(8) };
+        var routingRows = new Forms.TableLayoutPanel { Dock = Forms.DockStyle.Fill, RowCount = 2, ColumnCount = 1 };
+        routingRows.RowStyles.Add(new(Forms.SizeType.Absolute, 28)); routingRows.RowStyles.Add(new(Forms.SizeType.Percent, 100));
+        inputStatus.Dock = Forms.DockStyle.Fill;
+        routingRows.Controls.Add(inputStatus); routingRows.Controls.Add(routingHint); routing.Controls.Add(routingRows); layout.Controls.Add(routing);
         var tools = new Forms.FlowLayoutPanel { AutoSize = true, Dock = Forms.DockStyle.Fill };
         tools.Controls.AddRange(new Forms.Control[] { Label("Bank"), banks, Button("‹ Page", () => engine.SelectPage(engine.Page - 1)), Button("Page ›", () => engine.SelectPage(engine.Page + 1)), page, Button("Refresh state", () => engine.Action("refresh")), Button("Disarm", () => engine.Action("disarm")), Button("Request Apply", () => engine.Action("apply")), Label("Mf ring focus"), focus });
         layout.Controls.Add(tools); layout.Controls.Add(target);
@@ -153,6 +162,8 @@ public sealed class MainForm : Forms.Form
     private void Disconnect()
     {
         midi?.Dispose(); midi = null; osc?.Dispose(); osc = null; tangent?.Dispose(); tangent = null;
+        inputCount = 0; lastInputUtc = null;
+        RefreshInputStatus();
         heldFineNotes.Clear(); engine.Action("fine", false);
         // An adapter disconnect invalidates queued movement in the plugin.
         foreach (var t in plugin.Registry.Instances.Where(t => t.Armed)) plugin.Send(t, Wire.Command(t, "DISARM"));
@@ -160,6 +171,7 @@ public sealed class MainForm : Forms.Form
     }
     private void ReceiveInput(ControlInput input) => UI(() =>
     {
+        inputCount++; lastInputUtc = DateTime.UtcNow;
         if (input.Action?.StartsWith("midi-note:", StringComparison.Ordinal) == true)
         {
             if (int.TryParse(input.Action[10..], out var note))
@@ -210,6 +222,7 @@ public sealed class MainForm : Forms.Form
     }
     private async Task TickAsync()
     {
+        RefreshInputStatus();
         RefreshView();
         var applyNow = DateTime.UtcNow;
         if (applyScheduler.IsDue(applyNow))
@@ -224,7 +237,7 @@ public sealed class MainForm : Forms.Form
             }
             else applyScheduler.Clear();
         }
-        if (feedbackDirty && !feedbackSending && tangent?.Connected == true && DateTime.UtcNow - lastFeedback > TimeSpan.FromMilliseconds(120))
+        if (feedbackDirty && !feedbackSending && tangent?.Registered == true && DateTime.UtcNow - lastFeedback > TimeSpan.FromMilliseconds(120))
         {
             feedbackDirty = false; feedbackSending = true; lastFeedback = DateTime.UtcNow;
             try
@@ -235,6 +248,30 @@ public sealed class MainForm : Forms.Form
             finally { feedbackSending = false; }
         }
     }
+    private void RefreshInputStatus()
+    {
+        if (tangent != null)
+        {
+            var d = tangent.Diagnostics;
+            inputStatus.Text = "Tangent: " + (d.SocketConnected ? "TCP connected" : "disconnected")
+                + " • " + (d.RegistrationReady ? "definition sent (protocol " + d.ProtocolRevision + ")" : "waiting for Hub handshake")
+                + " • panels " + d.ConnectedPanels + " connected"
+                + " • input " + d.InputCount + InputAge(d.LastInputUtc);
+            routingHint.Text = "Mapper > Select Application: Auto-select Application OFF, then Spektrafilm MIDI (checkmark). "
+                + "Kb should show Film Exp / Print Exp. Turn a knob: the input count must increase to confirm routing.";
+        }
+        else
+        {
+            var connected = midi != null || osc != null;
+            inputStatus.Text = connected ? (midi != null ? "MIDI connected" : "OSC listening") + " • input " + inputCount + InputAge(lastInputUtc)
+                : "Controller disconnected. Choose an input and click Connect; keep this companion open.";
+            routingHint.Text = connected ? "Confirm the input count increases, then Arm MIDI in Spektrafilm MIDI (Community Beta). "
+                + "Queued edits need the effect's Apply MIDI button, or an explicitly bound Automatic Apply button."
+                : "Element: choose Tangent Hub and click Connect. Mapper: Auto-select Application OFF, then Spektrafilm MIDI. "
+                + "Arm the MIDI effect in Resolve.";
+        }
+    }
+    private static string InputAge(DateTime? last) => last.HasValue ? " (last " + Math.Max(0, (int)(DateTime.UtcNow - last.Value).TotalSeconds) + "s ago)" : " (none received)";
     private void FindApply()
     {
         try

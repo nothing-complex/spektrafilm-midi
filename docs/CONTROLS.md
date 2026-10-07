@@ -39,7 +39,7 @@ The source catalogue has 144 metadata entries. **140 numeric/choice/boolean para
 | Bt | Hold for fine adjustment | Toggle current stage where implemented |
 | Mf | Hold for fine adjustment | Next focused parameter |
 
-Fine adjustment uses one tenth the normal step. Stage toggle follows the current Grain, Halation, Scanner or Diffusion page; the first Diffusion page toggles camera diffusion and the second toggles print diffusion. Other pages report no stage toggle. The hardware A+B application-switching gesture is reserved for Tangent. Do not replace it with a grading reset.
+Fine adjustment uses one tenth the normal step. Stage toggle follows the current Grain, Halation, Scanner or Diffusion page; the first Diffusion page toggles camera diffusion and the second toggles print diffusion. Other pages report no stage toggle. A+B remains reserved for Tangent/Resolve's native/mappable switching; it does not select Spektrafilm MIDI. Use Mapper's Select Application menu with Auto-select Application off to activate this separate app. Do not replace A+B with a grading reset.
 
 All twelve Kb presses reset their assigned component. The six Tk reset buttons reset the associated ball XY pair or ring. Tangent Hub supplies these as managed `ParameterReset` events; the XML does not override them with fabricated raw button IDs. Printer-ball reset removes chromatic offsets while retaining mean level. Printer-ring reset removes mean level while retaining chromatic offsets, constrained to legal limits. These compound behaviors require physical validation.
 
