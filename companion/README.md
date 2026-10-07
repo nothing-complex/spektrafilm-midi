@@ -33,7 +33,7 @@ Automatic application uses UI Automation `InvokePattern`, with all of these cond
 
 If Resolve does not expose an accessible button or marker, the companion remains in manual Apply mode. It does not fall back to mouse coordinates, global keystrokes or private host calls. Bindings are never saved or restored, and selection/target changes invalidate them.
 
-The button and target marker have been found and bound in an installed Resolve inspector, and an empty host Apply callback returned `APPLY: APPLIED 0`. This confirms callback dispatch with no queued edits; continuous invocation and changed values from physical panels remain under acceptance testing.
+The button and target marker have been found and bound in an installed Resolve inspector. A short live Element test recorded 178 hardware inputs, repeated nonempty `APPLY: APPLIED` acknowledgments, and changes to Film Exposure, Print Exposure and Film Push/Pull. Sensitivity was excessive in that test. Version 0.1.3 corrects the native movement configuration and adds relative speed adjustment; the physical feel of those changes and the full acceptance checklist remain unverified.
 
 ## Input routes
 
@@ -46,6 +46,10 @@ The UI connects only one physical input route at a time to prevent native/OSC/MI
 ## Controls and state
 
 All24 axes are shown with current labels, values and availability. Double-clicking a displayed row resets its mapped parameter. Kb exposes twelve feature controls per page. Tk uses paired controls and vector components where appropriate; missing Academy printer controls fall back to the actual filtered-enlarger controls. Mf uses paired shaping and an explicitly focused parameter on the ring. Buttons change feature banks, pages, focus and fine movement, refresh/disarm/apply, and capture/recall temporary A/B snapshots for the current armed instance. Unsupported Resolve transport/undo routes produce an explicit status and do not synthesize input.
+
+**Relative speed ×** scales relative movement for continuous parameters across the native Tangent, MIDI and OSC routes. The default is `1`; allowed values are `0.01–4`. For example, `0.25` gives one quarter of the normal movement. A held **Fine** modifier reduces it by another factor of ten. The speed setting is saved between sessions. It does not change choice/integer/boolean steps, absolute MIDI positions or resets. Fractional values are preserved through the continuous parameter path.
+
+The native Tangent profile uses a bounded generic movement range of `−100` to `100` with step `0.01`, replacing the overly broad range and step `1` used in earlier packages. This also allows fractional numeric feedback on the panel; the old display rounding did not mean the OFX parameter itself only accepted integers. Reconnect Tangent Hub using the new package's profiles when updating. Input diagnostics include the last axis and raw increment to help identify unexpected movement before parameter scaling.
 
 Only complete snapshots become authoritative. Schema/session/instance/generation checks reject stale targets. The companion sends a heartbeat at700ms; loss of the companion causes the plugin to disarm. Inputs are disabled with zero or multiple armed targets, incomplete state or stale discovery. Actual values replace predictions only after host application. Every available catalog parameter can be reached through generated pages; unavailable parameters are labelled and receive no writes.
 

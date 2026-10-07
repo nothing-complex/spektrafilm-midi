@@ -2,14 +2,14 @@
 
 A free, open-source Windows prototype for controlling a community build of Spektrafilm OFX from a full Tangent Element set or a MIDI controller. Includes a desktop companion, native Tangent screen feedback and an optional OSC route.
 
-**Early prototype, looking for testers.** The software builds and automated tests pass. Physical Element operation and actual Resolve integration have not yet completed acceptance testing. Continuous automatic control depends on Resolve exposing the effect's **Apply MIDI** button and target marker through Windows accessibility. Manual Apply is the fallback. Please start with a disposable project.
+**Early prototype, looking for testers.** The software builds and automated tests pass. A short live Element test now confirms physical input, automatic host Apply and changed values in Resolve. Sensitivity calibration and the full acceptance checklist remain open. Continuous automatic control depends on Resolve exposing the effect's **Apply MIDI** button and target marker through Windows accessibility. Manual Apply is the fallback. Please start with a disposable project.
 
-[Download the Windows prototype and matching source](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.2-prototype) · [Setup](docs/SETUP.md) · [Controls](docs/CONTROLS.md) · [Verified status](docs/BUILD_STATUS.md)
+[Download the Windows prototype and matching source](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.3-prototype) · [Setup](docs/SETUP.md) · [Controls](docs/CONTROLS.md) · [Verified status](docs/BUILD_STATUS.md)
 
 ## What it does
 
 - Maps all **24 continuous axes** on an Element Kb/Tk/Bt/Mf set: twelve knobs, three Tk ball/ring sets, and the Mf ball/ring.
-- Provides feature banks, parameter pages, resets, fine adjustment, a focused Mf ring and temporary A/B snapshots.
+- Provides feature banks, parameter pages, resets, adjustable relative speed, fine adjustment, a focused Mf ring and temporary A/B snapshots.
 - Sends control labels, actual values, choice names and bank information to panel screens through native Tangent Hub support. Physical formatting still needs checking.
 - Accepts WinMM MIDI, native Tangent Hub TCP or loopback OSC input, with one physical input route active at a time.
 - Supports relative MIDI formats, absolute 7-bit and 14-bit input, and soft takeover.
@@ -34,7 +34,7 @@ The installer targets only the MIDI bundle. Existing regular Spektrafilm nodes k
 
 Requirements: **Windows x64**, the **.NET 9 Windows Desktop runtime**, a Vulkan-capable GPU/driver supported by the public renderer, and Tangent Hub for the native Element route. No virtual MIDI driver is installed by this project.
 
-1. Download and extract `Spektrafilm-MIDI-0.1.2-prototype.zip` from the [prerelease](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.2-prototype).
+1. Download and extract `Spektrafilm-MIDI-0.1.3-prototype.zip` from the [prerelease](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.3-prototype).
 2. Close Resolve. From the extracted package, preview `./Install.ps1` in PowerShell. Then use `./Install.ps1 -Apply` in an administrator PowerShell to install the separate MIDI bundle.
 3. Restart Resolve and add **Spektrafilm MIDI (Community Beta)** to a disposable test grade.
 4. Run **Launch Companion.cmd**, choose one input route and click **Connect** each session. For Element, choose **Tangent Hub**.
@@ -43,7 +43,9 @@ Requirements: **Windows x64**, the **.NET 9 Windows Desktop runtime**, a Vulkan-
 7. Click **Arm MIDI** in the intended effect and wait for a complete armed target in the companion.
 8. With the effect's MIDI controls visible, click **Find visible Apply buttons** in the companion, select the intended button, then **Bind + enable Auto Apply**. Return to Resolve and confirm the companion reports **Host Apply: AUTO enabled (Resolve active)**. Move a control and check for an **APPLIED** acknowledgment and a matching inspector/image change.
 
-**DELTA: QUEUED only confirms receipt; it does not mean the effect changed.** Automatic Apply is off until you bind the button each session. The persistent **Host Apply** line shows OFF, waiting for foreground Resolve, or enabled, together with the last Apply result. After binding, **Apply now** in the companion invokes the verified effect button immediately, including while Resolve is in the background. If binding is unavailable, move a control and click **Apply MIDI** in the effect within two seconds for manual testing. Automatic hardware input requires foreground Resolve and the exact instance marker; continuous operation still needs acceptance testing. See [setup](docs/SETUP.md) and [companion details](companion/README.md).
+**DELTA: QUEUED only confirms receipt; it does not mean the effect changed.** Automatic Apply is off until you bind the button each session. The persistent **Host Apply** line shows OFF, waiting for foreground Resolve, or enabled, together with the last Apply result. After binding, **Apply now** in the companion invokes the verified effect button immediately, including while Resolve is in the background. If binding is unavailable, move a control and click **Apply MIDI** in the effect within two seconds for manual testing. Automatic hardware input requires foreground Resolve and the exact instance marker. See [setup](docs/SETUP.md) and [companion details](companion/README.md).
+
+If the knobs move too quickly, reduce **Relative speed ×** in the companion: `0.25` gives one quarter of normal movement. The default is `1`, with a `0.01–4` range, and the setting is saved. Hold a mapped **Fine** button for another tenfold reduction. Continuous parameters retain fractional values; choices and integer controls keep their discrete steps. Version 0.1.3 also corrects the native Tangent movement range/step and fractional numeric feedback. Existing users can keep the installed OFX binary and run the updated companion with its bundled profiles; reconnect Tangent Hub to register them.
 
 Disarm before export or switching the full panel set back to Resolve's native application. Select DaVinci Resolve in Mapper, and restore Auto-select if you want normal focus switching again. Keep your normal Resolve maps; the A+B shortcut between Resolve's native/mappable modes does not select this separate application. Use the [acceptance checklist](docs/ACCEPTANCE.md) to check undo, persistence, cache invalidation and renders before using a real job.
 

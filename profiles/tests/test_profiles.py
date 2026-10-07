@@ -94,6 +94,23 @@ class ProfilesTest(unittest.TestCase):
                 for control in mode.findall(".//Control"):
                     self.assertEqual({m.attrib["mode"] for m in control.findall("Mapping")}, {"Std", "Alt"})
 
+    def test_native_movement_ranges_preserve_sensitivity_and_decimal_feedback(self):
+        controls = ET.parse(ROOT / "profiles/tangent/controls.xml").getroot()
+        parameters = controls.findall("./Controls/Parameter")
+        self.assertEqual({p.attrib["id"] for p in parameters}, {a["id"] for a in self.mapping["axes"]})
+        for parameter in parameters:
+            minimum = float(parameter.findtext("MinValue"))
+            maximum = float(parameter.findtext("MaxValue"))
+            step = float(parameter.findtext("StepSize"))
+            # Hub sensitivity depends on the declared movement range. The old
+            # +/-1,000,000 range amplified physical motion and StepSize=1 hid
+            # fractional host values on the panels' Number displays.
+            self.assertLess(minimum, 0, parameter.attrib["id"])
+            self.assertGreater(maximum, 0, parameter.attrib["id"])
+            self.assertLessEqual(maximum - minimum, 200, parameter.attrib["id"])
+            self.assertGreater(step, 0, parameter.attrib["id"])
+            self.assertLessEqual(step, 0.01, parameter.attrib["id"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -14,7 +14,7 @@ The automatic Apply path locates the actual Apply MIDI inspector button through 
 
 The persistent **Host Apply** line shows whether automatic Apply is **OFF**, **AUTO waiting for Resolve foreground**, or **AUTO enabled (Resolve active)**, plus the last Apply acknowledgment. Earlier settings can leave automatic Apply off despite a working controller connection. When Resolve is in the background, automatic application waits for it to regain focus, for up to two seconds after the latest input. Return to Resolve within that interval, or move a control again after returning. Expired input is discarded.
 
-For explicit manual dispatch from the companion, click **Apply now** after binding. It immediately invokes the same verified host button even while Resolve is in the background; automatic Apply need not be enabled. The fresh armed target, unique button and exact instance-marker checks still apply. Queued input must still be less than two seconds old. Binding and an empty host Apply callback have been verified in installed Resolve (`APPLY: APPLIED 0`); continuous physical-panel operation remains under acceptance testing.
+For explicit manual dispatch from the companion, click **Apply now** after binding. It immediately invokes the same verified host button even while Resolve is in the background; automatic Apply need not be enabled. The fresh armed target, unique button and exact instance-marker checks still apply. Queued input must still be less than two seconds old. A short live Element test has confirmed nonempty host Apply acknowledgments and changing Film Exposure, Print Exposure and Film Push/Pull in Resolve. Sensitivity calibration and the full hardware/host acceptance checklist remain open.
 
 A transport request alone cannot manufacture an OFX UI-thread callback. If the button or ownership marker is not accessible, keep manual Apply. This capability is a prototype aid; physical Resolve acceptance is still required.
 
@@ -30,7 +30,17 @@ The panels must be assigned to the companion's separate application. Resolve's d
 
 The companion advertises its bundled `profiles/tangent` directory as the system map location, with a separate user-map location. There is no need to copy these files over Resolve's installed maps. If **Spektrafilm MIDI** is missing from Mapper, check the companion's connection status and that the package's `profiles/tangent` folder is present.
 
+Version 0.1.3 includes a corrected native Tangent movement range and step. Existing users can keep their installed MIDI OFX binary, run the updated companion with its bundled profiles, then reconnect Tangent Hub so it registers the new controls. Confirm the intended application remains selected after reconnecting.
+
 Resolve's A+B shortcut switches its native/mappable modes; it does not select the companion's application. Use Mapper to switch the full panel set. When finished, disarm the effect, select DaVinci Resolve again, and re-enable Auto-select if that is how you normally work.
+
+## Adjusting sensitivity
+
+Use **Relative speed ×** in the companion to adjust continuous relative movement. The default is `1`, with a `0.01–4` range. Start with `0.25` if the knobs still feel too fast; it produces one quarter of normal movement. The setting persists between sessions and affects native Tangent, relative MIDI and OSC input. Hold a mapped **Fine** modifier for another tenfold reduction.
+
+Continuous OFX values already support fractions. Earlier native profiles used a generic step of `1` and an excessively broad movement range; that also rounded numeric feedback on the panel. The updated profile uses range `−100` to `100` and step `0.01`. The companion applies the parameter's own mapping step and the relative speed multiplier after receiving the movement. Choice, integer and boolean controls remain discrete and ignore the speed multiplier; absolute MIDI positions and resets are unaffected.
+
+Check the input status line for the last axis and raw increment if movement is unexpectedly large. Judge the result against the inspector and companion value as well as the panel display. Physical calibration of the new default remains part of acceptance testing.
 
 ## Conventional MIDI
 
@@ -71,6 +81,7 @@ The bridge's WinMM device-open/output path and the imported OSC map still requir
 - **No target:** click Arm MIDI on the intended sibling instance; disarm other instances and wait for a fresh snapshot.
 - **DELTA: QUEUED but image does not change:** receipt succeeded, but the host Apply action has not run. Check the persistent Host Apply line. If it says OFF, find the intended Apply button and use **Bind + enable Auto Apply**. If it is waiting for Resolve foreground, return to Resolve and move a control again. Confirm an APPLIED acknowledgment. Manual fallback: move a control, then click Apply MIDI in the effect within two seconds.
 - **Panels work only while Mapper/Hub is active:** turn Mapper's **Auto-select Application** off and checkmark **Spektrafilm MIDI**, then check the panel labels again with Resolve foreground. An executable association does not keep the companion application selected when Resolve gains focus.
+- **Knobs are too sensitive or values appear to jump by integers:** use the 0.1.3 companion with its bundled Tangent profiles and reconnect the Hub. Lower **Relative speed ×** (for example to `0.25`) or hold **Fine**. Continuous parameters retain fractions; choices and integer parameters intentionally move in discrete steps. Check the inspector and last raw increment to distinguish display rounding from actual parameter changes.
 - **A control is off:** it may be hidden by processing mode or stage state. Select the appropriate mode/enable switch through a mapped parameter or the inspector.
 - **Printer balance is inactive:** this public build falls back to C/M/Y. If a later schema offers RGB printer points, disable Gang/Group before opponent movements.
 - **Labels do not change after a bank switch:** use native Tangent rather than the static OSC/MIDI profile; verify the active application is Spektrafilm MIDI.

@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$Version='0.1.2-prototype', [switch]$Zip, [switch]$Source = $true)
+param([string]$Version='0.1.3-prototype', [switch]$Zip, [switch]$Source = $true)
 $ErrorActionPreference='Stop'
 $projectRoot=$PSScriptRoot
 if ($Version -notmatch '^[0-9A-Za-z._-]+$') { throw 'Invalid version string.' }
@@ -48,7 +48,7 @@ $manifest=[ordered]@{
   pluginId='local.tangentmidi.spektrafilm'; upstreamCommit='86476afc5b077de77e2278e3658d1ba9309892a1';
   openfxCommit='e40728885390ec16276d11e00025de9b4282060c';
   automaticDispatch='Explicit UIAutomation binding to a unique visible Apply MIDI button with exact armed target marker. Automatic input requires foreground Resolve; explicit Apply now may invoke the bound button in the background. Pending work expires two seconds after latest input.';
-  limitations=@('Public source baseline predates installed current Spektrafilm.','Academy printer-density data absent; filtered-enlarger fallback.','Binding and an empty host Apply callback verified in installed Resolve; continuous physical-panel operation still requires acceptance testing.','Transport command adapter and whole-gesture undo are not implemented.');
+  limitations=@('Public source baseline predates installed current Spektrafilm.','Academy printer-density data absent; filtered-enlarger fallback.','A short physical Element test confirmed continuous Apply in installed Resolve; corrected sensitivity and full acceptance remain pending.','Transport command adapter and whole-gesture undo are not implemented.');
   files=@(Get-ChildItem -LiteralPath $packageRoot -Recurse -File | ForEach-Object { [ordered]@{path=[IO.Path]::GetRelativePath($packageRoot,$_.FullName);sha256=(Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash} })
 }
 $manifest | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $packageRoot 'build-manifest.json') -Encoding utf8

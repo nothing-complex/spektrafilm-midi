@@ -127,6 +127,40 @@ Test("Mapping actual units, simultaneous axes and reset commands", () =>
     Check(commands.Count == 3 && commands[0].EndsWith("\t0.025") && commands[1].EndsWith("\t-0.2") && commands[2].StartsWith("RESET\t1"));
     Advertise(registry, generation: 2); engine.Handle(new(InputKind.Relative, 0, 1)); Check(commands.Count == 3);
 });
+Test("Relative sensitivity rejects nonfinite and out-of-range values without changing the setting", () =>
+{
+    var engine = new ControlEngine(new InstanceRegistry(), Profile()); Check(engine.RelativeSensitivity == 1);
+    foreach (var value in new[] { 0.0, 0.0099, 4.0001, double.NaN, double.PositiveInfinity, double.NegativeInfinity })
+    {
+        var rejected = false;
+        try { engine.RelativeSensitivity = value; } catch (ArgumentOutOfRangeException) { rejected = true; }
+        Check(rejected && engine.RelativeSensitivity == 1, "Invalid sensitivity was accepted or changed the previous setting");
+    }
+    engine.RelativeSensitivity = 0.01; Check(engine.RelativeSensitivity == 0.01);
+    engine.RelativeSensitivity = 4; Check(engine.RelativeSensitivity == 4);
+});
+Test("Relative sensitivity preserves discrete steps, Fine remainders, absolute values and reset", () =>
+{
+    foreach (var type in new[] { "int", "bool", "choice" })
+    {
+        var registry = new InstanceRegistry(); Advertise(registry);
+        Check(Receive(registry, "STATE_BEGIN\t1\tsession\tinstance\t1\t1\t1"));
+        Check(Receive(registry, $"PARAM\t1\tsession\tinstance\t1\t1\tfilmExposureEv\t{type}\t0\t0\t10\t1\t0\t0\t1\tDiscrete\t"));
+        Check(Receive(registry, "STATE_END\t1\tsession\tinstance\t1\t1"));
+        var engine = new ControlEngine(registry, Profile()) { RelativeSensitivity = 0.01 };
+        var commands = new List<string>(); engine.CommandReady += (_, text) => commands.Add(text);
+        engine.Handle(new(InputKind.Relative, 0, 1)); Check(commands.Count == 1 && commands[0].EndsWith("\t1"), type + " step was scaled");
+        engine.Action("fine");
+        engine.Handle(new(InputKind.Relative, 0, 2)); Check(commands.Count == 1);
+        engine.Handle(new(InputKind.Relative, 0, 8)); Check(commands.Count == 2 && commands[1].EndsWith("\t1"), type + " Fine remainder changed");
+    }
+    var continuousRegistry = new InstanceRegistry(); Advertise(continuousRegistry); State(continuousRegistry);
+    var continuous = new ControlEngine(continuousRegistry, Profile()) { RelativeSensitivity = 0.01 };
+    var continuousCommands = new List<string>(); continuous.CommandReady += (_, text) => continuousCommands.Add(text);
+    continuous.Handle(new(InputKind.Absolute, 0, 0.5)); continuous.Handle(new(InputKind.Absolute, 0, 0.6));
+    Check(continuousCommands.Count == 2 && continuousCommands[1].StartsWith("SET\t1") && continuousCommands[1].EndsWith("\t2"), "Absolute position was scaled");
+    continuous.Handle(new(InputKind.Reset, 0)); Check(continuousCommands[^1] == "RESET\t1\tsession\tinstance\t1\tfilmExposureEv\t0", "Reset changed");
+});
 Test("Absolute soft takeover relatches after external host changes", () =>
 {
     var registry = new InstanceRegistry(); Advertise(registry); State(registry);
@@ -180,6 +214,26 @@ Test("Compound printer feedback and reset preserve neutral/chroma semantics", ()
     Check(engine.Displays()[0].Value == 1 && engine.Displays()[1].Value == 2);
     engine.Handle(new(InputKind.Reset, 0)); Check(values.SequenceEqual(new[] { 2.0, 2, 2 })); values.Clear();
     engine.Handle(new(InputKind.Reset, 1)); Check(values.SequenceEqual(new[] { 1.0, 0, -1 }));
+});
+Test("Relative sensitivity scales compound double axes, preserves their direction and leaves reset intact", () =>
+{
+    var registry = new InstanceRegistry(); Advertise(registry);
+    Check(Receive(registry, "STATE_BEGIN\t1\tsession\tinstance\t1\t1\t3"));
+    foreach (var (id, value) in new[] { ("printerLightR", 23.99), ("printerLightG", 2.0), ("printerLightB", 1.0) })
+        Check(Receive(registry, $"PARAM\t1\tsession\tinstance\t1\t1\t{id}\tdouble\t0\t-24\t24\t0.1\t0\t{Wire.Number(value)}\t1\t{id}\t"));
+    Check(Receive(registry, "STATE_END\t1\tsession\tinstance\t1\t1"));
+    var profile = Profile();
+    profile.Banks[0].Pages[0].Slots[0] = new() { Operation = "printer-x", Terms = new() { new() { Parameter = "printerLightR", Scale = 1 }, new() { Parameter = "printerLightG", Scale = 0 }, new() { Parameter = "printerLightB", Scale = -1 } } };
+    var engine = new ControlEngine(registry, profile) { RelativeSensitivity = 0.1 }; var commands = new List<string>(); var values = new List<double>();
+    engine.CommandReady += (_, text) => { commands.Add(text); if (text.StartsWith("DELTA\t")) { Check(Wire.Number(text.Split('\t')[^1], out var value)); values.Add(value); } };
+    engine.Handle(new(InputKind.Relative, 0, -1));
+    Check(values.Count == 3 && Math.Abs(values[0] + 0.01) < 1e-12 && values[1] == 0 && Math.Abs(values[2] - 0.01) < 1e-12);
+    values.Clear(); engine.Handle(new(InputKind.Relative, 0, 10));
+    Check(values.Count == 3 && Math.Abs(values[0] - 0.01) < 1e-12 && values[1] == 0 && Math.Abs(values[2] + 0.01) < 1e-12, "Boundary clamp changed compound direction");
+    values.Clear(); engine.Action("fine"); engine.Handle(new(InputKind.Relative, 0, -1));
+    Check(values.Count == 3 && Math.Abs(values[0] + 0.001) < 1e-12 && Math.Abs(values[2] - 0.001) < 1e-12, "Fine did not stack with sensitivity on compound axes");
+    commands.Clear(); engine.Handle(new(InputKind.Reset, 0));
+    Check(commands.Count == 3 && commands.All(command => command.StartsWith("RESET\t1")), "Compound reset was scaled or converted to a delta");
 });
 Test("Real loopback UDP discovery requests snapshot from its exclusive bound socket", () =>
 {
@@ -343,6 +397,16 @@ Test("Tangent re-initiation sends definition before feedback and resends the unc
     Run().GetAwaiter().GetResult();
 });
 var profilePath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../../profiles/mappings.json"));
+if (File.Exists(profilePath)) Test("Native Film Exposure mapping sends fractional bidirectional deltas, with sensitivity and Fine stacking", () =>
+{
+    var registry = new InstanceRegistry(); Advertise(registry); State(registry);
+    var engine = new ControlEngine(registry, MappingProfile.Load(profilePath)); var values = new List<double>();
+    engine.CommandReady += (_, text) => { Check(text.StartsWith("DELTA\t1\tsession\tinstance\t1\tfilmExposureEv\t0\t")); Check(Wire.Number(text.Split('\t')[^1], out var value)); values.Add(value); };
+    engine.Handle(new(InputKind.Relative, 0, 1)); engine.Handle(new(InputKind.Relative, 0, -1));
+    engine.RelativeSensitivity = 0.1; engine.Handle(new(InputKind.Relative, 0, 1));
+    engine.Action("fine"); engine.Handle(new(InputKind.Relative, 0, 1));
+    Check(values.Count == 4 && Math.Abs(values[0] - 0.025) < 1e-12 && Math.Abs(values[1] + 0.025) < 1e-12 && Math.Abs(values[2] - 0.0025) < 1e-12 && Math.Abs(values[3] - 0.00025) < 1e-12, "Film Exposure delta lost fractional precision or sensitivity did not stack");
+});
 if (File.Exists(profilePath)) Test("Real full Element mapping parses and uses all24 unique axes", () =>
 {
     var profile = MappingProfile.Load(profilePath);

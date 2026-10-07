@@ -272,9 +272,14 @@ def tangent_xml(mapping):
     for a in mapping["axes"]:
         p = ET.SubElement(controls, "Parameter", id=a["id"])
         ET.SubElement(p, "Name").text = a["label"]
-        ET.SubElement(p, "MinValue").text = "-1000000"
-        ET.SubElement(p, "MaxValue").text = "1000000"
-        ET.SubElement(p, "StepSize").text = "1"
+        # These are abstract Hub movement units, converted by the companion's
+        # parameter-specific step; the OFX schema supplies the real edit bounds.
+        # Hub uses the range for sensitivity, so an effectively unbounded range
+        # makes small physical movements excessively large. A fractional step
+        # also lets its Number displays show decimals instead of whole numbers.
+        ET.SubElement(p, "MinValue").text = "-100"
+        ET.SubElement(p, "MaxValue").text = "100"
+        ET.SubElement(p, "StepSize").text = "0.01"
     for b in mapping["buttons"]:
         ET.SubElement(ET.SubElement(controls, "Action", id=b["id"]), "Name").text = b["label"]
     outputs = {"tangent/controls.xml": xml_bytes(root)}

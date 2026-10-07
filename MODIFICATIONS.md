@@ -17,6 +17,8 @@ New native integration files:
 
 The surrounding companion, panel profiles, root build/package scripts, tests and community documentation are new project additions. The unchanged baseline source under `profiles/reference/` is retained for repeatable catalogue extraction.
 
-Companion 0.1.2 adds bounded foreground retries, preserves input received during a host invocation, enables automatic Apply after verified binding, and adds explicit Apply now and persistent dispatch status. Its native OFX binary is unchanged from 0.1.0/0.1.1. The installed Resolve inspector has passed binding and an empty host Apply callback; continuous physical-panel operation remains pending.
+Companion 0.1.2 adds bounded foreground retries, preserves input received during a host invocation, enables automatic Apply after verified binding, and adds explicit Apply now and persistent dispatch status. A short live Element test has since confirmed physical input, nonempty host Apply acknowledgments and changed values in Resolve.
+
+Companion 0.1.3 adds a persistent relative speed multiplier for continuous controls and reports the last input axis/raw increment. Native Tangent profiles use a bounded generic movement range of `−100` to `100` and step `0.01`, replacing the excessive range and step `1`; this also improves fractional numeric feedback. Discrete parameters, absolute MIDI and resets retain their existing behavior. The native OFX binary is unchanged from 0.1.0–0.1.2. Physical sensitivity calibration and full host/hardware acceptance remain open.
 
 The prototype is a separate community effect, not a replacement for or current-feature-equivalent version of the official plugin. See [README](README.md) and [build status](docs/BUILD_STATUS.md) for supported behavior and open acceptance conditions.

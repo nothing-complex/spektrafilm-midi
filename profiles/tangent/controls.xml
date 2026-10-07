@@ -56,147 +56,147 @@
     <Controls>
         <Parameter id="0x1001">
             <Name>Film Exp</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1002">
             <Name>Print Exp</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1003">
             <Name>Film Push</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1004">
             <Name>Print Push</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1005">
             <Name>C Filter</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1006">
             <Name>M Filter</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1007">
             <Name>Y Filter</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1008">
             <Name>Print Shadow</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1009">
             <Name>Print Hi</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x100A">
             <Name>Grain</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x100B">
             <Name>Halation</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x100C">
             <Name>Cam Diffuse</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1101">
             <Name>M Filter</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1102">
             <Name>Y Filter</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1103">
             <Name>C Filter</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1104">
             <Name>Enlarge X</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1105">
             <Name>Enlarge Y</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1106">
             <Name>Enlarge Size</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1107">
             <Name>Preflash M</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1108">
             <Name>Preflash Y</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1109">
             <Name>Preflash Exp</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1201">
             <Name>Print Shadow</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1202">
             <Name>Print Hi</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Parameter id="0x1203">
             <Name>Focus Trim</Name>
-            <MinValue>-1000000</MinValue>
-            <MaxValue>1000000</MaxValue>
-            <StepSize>1</StepSize>
+            <MinValue>-100</MinValue>
+            <MaxValue>100</MaxValue>
+            <StepSize>0.01</StepSize>
         </Parameter>
         <Action id="0x3001">
             <Name>Essentials</Name>

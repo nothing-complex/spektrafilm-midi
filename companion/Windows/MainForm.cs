@@ -20,11 +20,13 @@ public sealed class MainForm : Forms.Form
     private readonly Forms.ComboBox encoding = new() { DropDownStyle = Forms.ComboBoxStyle.DropDownList, Width = 185 };
     private readonly Forms.NumericUpDown channel = new() { Minimum = 0, Maximum = 16, Width = 45 };
     private readonly Forms.NumericUpDown oscPort = new() { Minimum = 1024, Maximum = 65535, Value = 9000, Width = 75 };
+    private readonly Forms.NumericUpDown relativeSpeed = new() { Minimum = 0.01m, Maximum = 4, Value = 1, Increment = 0.05m, DecimalPlaces = 2, Width = 80 };
     private readonly Forms.ComboBox banks = new() { DropDownStyle = Forms.ComboBoxStyle.DropDownList, Width = 245 };
     private readonly Forms.ComboBox focus = new() { DropDownStyle = Forms.ComboBoxStyle.DropDownList, Width = 280 };
     private readonly Forms.Label target = new() { AutoSize = true, Text = "No armed target. Add the MIDI effect and press Arm MIDI in its controls." };
     private readonly Forms.Label inputStatus = new() { Dock = Forms.DockStyle.Top, Height = 28, Text = "Controller disconnected. Choose an input and click Connect; keep this companion open." };
     private readonly Forms.Label hostApplyStatus = new() { Dock = Forms.DockStyle.Fill };
+    private readonly Forms.Label movementStatus = new() { Dock = Forms.DockStyle.Fill, Text = "Last movement: none. Relative speed affects continuous values; hold Fine for another 10× slower." };
     private readonly Forms.Label routingHint = new() { Dock = Forms.DockStyle.Fill, Text = "For Element: connect Tangent Hub, turn off Auto-select Application in Tangent Mapper, then select Spektrafilm MIDI." };
     private readonly Forms.Label page = new() { AutoSize = true };
     private readonly Forms.Label status = new() { AutoSize = false, Height = 45, Dock = Forms.DockStyle.Fill, Text = "Manual Apply MIDI required. Controller input queues edits; the plugin Apply MIDI button commits them." };
@@ -51,10 +53,11 @@ public sealed class MainForm : Forms.Form
     private string? lastStatus;
     private long inputCount;
     private DateTime? lastInputUtc;
+    private string? lastMovement;
     private string lastApplyResult = "No host Apply confirmed.";
     private readonly HashSet<int> heldFineNotes = new();
     private readonly string settingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TangentMidi", "Spektrafilm", "companion-v1.json");
-    private sealed record Settings(string Adapter, string MidiDevice, MidiEncoding Encoding, int Channel, int OscPort, string Bank);
+    private sealed record Settings(string Adapter, string MidiDevice, MidiEncoding Encoding, int Channel, int OscPort, string Bank, double RelativeSensitivity = 1);
     private sealed record FocusItem(string Key, string Label) { public override string ToString() => Label; }
     public MainForm(string profilesPath, MappingProfile profile)
     {
@@ -71,6 +74,8 @@ public sealed class MainForm : Forms.Form
         adapter.Items.AddRange(new object[] { "Off", "MIDI", "OSC", "Tangent Hub" }); adapter.SelectedIndex = 0;
         encoding.Items.AddRange(Enum.GetValues<MidiEncoding>().Cast<object>().ToArray()); encoding.SelectedItem = MidiEncoding.RelativeBinaryOffset;
         RefreshDevices(); RefreshBanks(); LoadSettings();
+        engine.RelativeSensitivity = (double)relativeSpeed.Value;
+        relativeSpeed.ValueChanged += (_, _) => { engine.RelativeSensitivity = (double)relativeSpeed.Value; RefreshInputStatus(); };
         autoApply.CheckedChanged += (_, _) => { feedbackDirty = true; RefreshApplyStatus(); };
         banks.SelectedIndexChanged += (_, _) => { if (!refreshing && banks.SelectedItem is BankDefinition bank) { engine.SelectBank(bank); RefreshView(); } };
         focus.SelectedIndexChanged += (_, _) => { if (!refreshing && focus.SelectedItem is FocusItem item) { engine.FocusedKey = item.Key; feedbackDirty = true; } };
@@ -81,16 +86,16 @@ public sealed class MainForm : Forms.Form
     private void BuildLayout()
     {
         var layout = new Forms.TableLayoutPanel { Dock = Forms.DockStyle.Fill, ColumnCount = 1, RowCount = 8, Padding = new Forms.Padding(10) };
-        layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.Absolute, 150)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize));
+        layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.Absolute, 180)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize));
         layout.RowStyles.Add(new(Forms.SizeType.Absolute, 90)); layout.RowStyles.Add(new(Forms.SizeType.Percent, 72)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.Percent, 28));
         var inputs = new Forms.FlowLayoutPanel { AutoSize = true, Dock = Forms.DockStyle.Fill, WrapContents = true };
-        inputs.Controls.AddRange(new Forms.Control[] { Label("Input"), adapter, Button("Connect", async () => await ConnectAsync()), Button("Disconnect", Disconnect), Label("MIDI port"), midiDevices, Button("Refresh ports", RefreshDevices), encoding, Label("Ch (0=all)"), channel, Label("OSC port"), oscPort });
+        inputs.Controls.AddRange(new Forms.Control[] { Label("Input"), adapter, Button("Connect", async () => await ConnectAsync()), Button("Disconnect", Disconnect), Label("MIDI port"), midiDevices, Button("Refresh ports", RefreshDevices), encoding, Label("Ch (0=all)"), channel, Label("OSC port"), oscPort, Label("Relative speed ×"), relativeSpeed });
         layout.Controls.Add(inputs);
         var routing = new Forms.GroupBox { Text = "Controller routing — verify this before testing the effect", Dock = Forms.DockStyle.Fill, Padding = new Forms.Padding(8) };
-        var routingRows = new Forms.TableLayoutPanel { Dock = Forms.DockStyle.Fill, RowCount = 3, ColumnCount = 1 };
-        routingRows.RowStyles.Add(new(Forms.SizeType.Absolute, 28)); routingRows.RowStyles.Add(new(Forms.SizeType.Absolute, 28)); routingRows.RowStyles.Add(new(Forms.SizeType.Percent, 100));
+        var routingRows = new Forms.TableLayoutPanel { Dock = Forms.DockStyle.Fill, RowCount = 4, ColumnCount = 1 };
+        routingRows.RowStyles.Add(new(Forms.SizeType.Absolute, 28)); routingRows.RowStyles.Add(new(Forms.SizeType.Absolute, 28)); routingRows.RowStyles.Add(new(Forms.SizeType.Absolute, 28)); routingRows.RowStyles.Add(new(Forms.SizeType.Percent, 100));
         inputStatus.Dock = Forms.DockStyle.Fill;
-        routingRows.Controls.Add(inputStatus); routingRows.Controls.Add(hostApplyStatus); routingRows.Controls.Add(routingHint); routing.Controls.Add(routingRows); layout.Controls.Add(routing);
+        routingRows.Controls.Add(inputStatus); routingRows.Controls.Add(hostApplyStatus); routingRows.Controls.Add(movementStatus); routingRows.Controls.Add(routingHint); routing.Controls.Add(routingRows); layout.Controls.Add(routing);
         var tools = new Forms.FlowLayoutPanel { AutoSize = true, Dock = Forms.DockStyle.Fill };
         tools.Controls.AddRange(new Forms.Control[] { Label("Bank"), banks, Button("‹ Page", () => engine.SelectPage(engine.Page - 1)), Button("Page ›", () => engine.SelectPage(engine.Page + 1)), page, Button("Refresh state", () => engine.Action("refresh")), Button("Disarm", () => engine.Action("disarm")), Button("Apply now", ApplyNow), Label("Mf ring focus"), focus });
         layout.Controls.Add(tools); layout.Controls.Add(target);
@@ -166,7 +171,7 @@ public sealed class MainForm : Forms.Form
     private void Disconnect()
     {
         midi?.Dispose(); midi = null; osc?.Dispose(); osc = null; tangent?.Dispose(); tangent = null;
-        inputCount = 0; lastInputUtc = null;
+        inputCount = 0; lastInputUtc = null; lastMovement = null;
         RefreshInputStatus();
         heldFineNotes.Clear(); engine.Action("fine", false);
         // An adapter disconnect invalidates queued movement in the plugin.
@@ -177,6 +182,11 @@ public sealed class MainForm : Forms.Form
     private void ReceiveInput(ControlInput input) => UI(() =>
     {
         inputCount++; lastInputUtc = DateTime.UtcNow;
+        if (input.Kind == InputKind.Relative)
+        {
+            var label = engine.Displays().FirstOrDefault(d => d.Index == input.Index)?.Label ?? "Unavailable";
+            lastMovement = HardwareName(input.Index) + " (" + label + ") • input " + input.Value.ToString("G6", System.Globalization.CultureInfo.InvariantCulture);
+        }
         if (input.Action?.StartsWith("midi-note:", StringComparison.Ordinal) == true)
         {
             if (int.TryParse(input.Action[10..], out var note))
@@ -221,10 +231,12 @@ public sealed class MainForm : Forms.Form
         grid.Rows.Clear();
         foreach (var display in engine.Displays())
         {
-            var name = display.Index < 12 ? "Kb knob " + (display.Index + 1) : display.Index < 21 ? "Tk " + new[] { "ball 1 X", "ball 1 Y", "ring 1", "ball 2 X", "ball 2 Y", "ring 2", "ball 3 X", "ball 3 Y", "ring 3" }[display.Index - 12] : "Mf " + new[] { "ball X", "ball Y", "ring" }[display.Index - 21];
-            grid.Rows.Add(name, display.Label, display.Text, display.Available ? display.AtDefault ? "Default" : "Active" : "Unavailable");
+            grid.Rows.Add(HardwareName(display.Index), display.Label, display.Text, display.Available ? display.AtDefault ? "Default" : "Active" : "Unavailable");
         }
     }
+    private static string HardwareName(int axis) => axis is >= 0 and < 12 ? "Kb knob " + (axis + 1)
+        : axis is >= 12 and < 21 ? "Tk " + new[] { "ball 1 X", "ball 1 Y", "ring 1", "ball 2 X", "ball 2 Y", "ring 2", "ball 3 X", "ball 3 Y", "ring 3" }[axis - 12]
+        : axis is >= 21 and < 24 ? "Mf " + new[] { "ball X", "ball Y", "ring" }[axis - 21] : "Axis " + axis;
     private async Task TickAsync()
     {
         RefreshInputStatus();
@@ -297,6 +309,8 @@ public sealed class MainForm : Forms.Form
     }
     private void RefreshInputStatus()
     {
+        movementStatus.Text = lastMovement == null ? "Last movement: none. Relative speed affects continuous values; hold Fine for another 10× slower."
+            : "Last movement: " + lastMovement + " • relative speed ×" + relativeSpeed.Value.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture);
         if (tangent != null)
         {
             var d = tangent.Diagnostics;
@@ -347,6 +361,7 @@ public sealed class MainForm : Forms.Form
             if (!File.Exists(settingsPath)) return;
             var s = JsonSerializer.Deserialize<Settings>(File.ReadAllText(settingsPath)); if (s == null) return;
             adapter.SelectedItem = s.Adapter; encoding.SelectedItem = s.Encoding; channel.Value = Math.Clamp(s.Channel, 0, 16); oscPort.Value = Math.Clamp(s.OscPort, 1024, 65535);
+            relativeSpeed.Value = double.IsFinite(s.RelativeSensitivity) ? (decimal)Math.Clamp(s.RelativeSensitivity, 0.01, 4) : 1;
             midiDevices.SelectedItem = midiDevices.Items.Cast<MidiInput.Device>().FirstOrDefault(x => x.Name == s.MidiDevice);
             if (engine.Profile.Banks.FirstOrDefault(b => b.Name == s.Bank) is { } bank) { engine.SelectBank(bank); banks.SelectedItem = bank; }
             // Never restore arm state, device connections or UIA bindings automatically.
@@ -358,7 +373,7 @@ public sealed class MainForm : Forms.Form
         try
         {
             Directory.CreateDirectory(Path.GetDirectoryName(settingsPath)!);
-            File.WriteAllText(settingsPath, JsonSerializer.Serialize(new Settings(adapter.SelectedItem as string ?? "Off", (midiDevices.SelectedItem as MidiInput.Device)?.Name ?? "", (MidiEncoding)encoding.SelectedItem!, (int)channel.Value, (int)oscPort.Value, engine.Bank.Name), new JsonSerializerOptions { WriteIndented = true }));
+            File.WriteAllText(settingsPath, JsonSerializer.Serialize(new Settings(adapter.SelectedItem as string ?? "Off", (midiDevices.SelectedItem as MidiInput.Device)?.Name ?? "", (MidiEncoding)encoding.SelectedItem!, (int)channel.Value, (int)oscPort.Value, engine.Bank.Name, (double)relativeSpeed.Value), new JsonSerializerOptions { WriteIndented = true }));
         }
         catch (Exception e) when (e is IOException or UnauthorizedAccessException) { System.Diagnostics.Debug.WriteLine(e); }
     }

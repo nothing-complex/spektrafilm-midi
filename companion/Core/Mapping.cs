@@ -42,10 +42,20 @@ public sealed class ControlEngine
 {
     private readonly InstanceRegistry registry;
     private readonly object engineGate = new();
+    private double relativeSensitivity = 1;
     public MappingProfile Profile { get; }
     public BankDefinition Bank { get; private set; }
     public int Page { get; private set; }
     public bool Fine { get; private set; }
+    public double RelativeSensitivity
+    {
+        get { lock (engineGate) return relativeSensitivity; }
+        set
+        {
+            if (!double.IsFinite(value) || value is < 0.01 or > 4) throw new ArgumentOutOfRangeException(nameof(value), "Relative sensitivity must be between 0.01 and 4.");
+            lock (engineGate) relativeSensitivity = value;
+        }
+    }
     public string? FocusedKey { get; set; }
     private string? lastIdentity;
     private readonly Dictionary<int, double> previousAbsolute = new();
@@ -199,15 +209,16 @@ public sealed class ControlEngine
             {
                 // Scale all channels together at a boundary to preserve the intended direction.
                 var movement = input.Value * (Fine ? 0.1 : 1);
+                double Change(TermDefinition term, Parameter parameter) => movement * (slot.Step ?? parameter.Step) * term.Scale * (parameter.Type == "double" ? relativeSensitivity : 1);
                 var scale = 1.0;
                 foreach (var term in terms)
                 {
-                    var change = movement * (slot.Step ?? term.Param!.Step) * term.Term.Scale;
+                    var change = Change(term.Term, term.Param!);
                     if (change > 0) scale = Math.Min(scale, (term.Param!.Maximum - term.Param.Value) / change);
                     else if (change < 0) scale = Math.Min(scale, (term.Param!.Minimum - term.Param.Value) / change);
                 }
                 foreach (var term in terms)
-                    Send(target, "DELTA", Wire.Escape(term.Param!.Id), term.Param.Component.ToString(), Wire.Number(movement * (slot.Step ?? term.Param.Step) * term.Term.Scale * Math.Max(0, scale)));
+                    Send(target, "DELTA", Wire.Escape(term.Param!.Id), term.Param.Component.ToString(), Wire.Number(Change(term.Term, term.Param) * Math.Max(0, scale)));
             }
             ApplySuggested?.Invoke(); return;
         }
@@ -230,6 +241,7 @@ public sealed class ControlEngine
         else
         {
             var amount = input.Value * (slot.Step ?? p.Step) * (Fine ? 0.1 : 1);
+            if (p.Type == "double") amount *= relativeSensitivity;
             if (p.Type is "int" or "bool" or "choice")
             {
                 amount += discreteRemainders.GetValueOrDefault(p.Key);
