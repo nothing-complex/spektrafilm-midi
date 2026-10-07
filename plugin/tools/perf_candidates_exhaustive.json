@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "include_defaults": true,
+  "candidates": [
+    {
+      "name": "tg-auto",
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "core"
+      ],
+      "env": {
+        "SPEKTRAFILM_THREADGROUP": "auto"
+      },
+      "perf_args": [
+        "--threadgroup",
+        "auto"
+      ]
+    },
+    {
+      "name": "tg-16x16",
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "core"
+      ],
+      "env": {
+        "SPEKTRAFILM_THREADGROUP": "16x16"
+      },
+      "perf_args": [
+        "--threadgroup",
+        "16x16"
+      ]
+    },
+    {
+      "name": "tg-32x8",
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "core"
+      ],
+      "env": {
+        "SPEKTRAFILM_THREADGROUP": "32x8"
+      },
+      "perf_args": [
+        "--threadgroup",
+        "32x8"
+      ]
+    },
+    {
+      "name": "tg-8x32",
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "core"
+      ],
+      "env": {
+        "SPEKTRAFILM_THREADGROUP": "8x32"
+      },
+      "perf_args": [
+        "--threadgroup",
+        "8x32"
+      ]
+    },
+    {
+      "name": "tg-64x4",
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "core"
+      ],
+      "env": {
+        "SPEKTRAFILM_THREADGROUP": "64x4"
+      },
+      "perf_args": [
+        "--threadgroup",
+        "64x4"
+      ]
+    },
+    {
+      "name": "scratch-private",
+      "quality_policy": "exact",
+      "tags": [
+        "scratch",
+        "core"
+      ],
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private"
+      ]
+    },
+    {
+      "name": "scratch-shared",
+      "quality_policy": "exact",
+      "tags": [
+        "scratch",
+        "core"
+      ],
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "shared"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "shared"
+      ]
+    },
+    {
+      "name": "scanner-texture",
+      "quality_policy": "exact",
+      "tags": [
+        "scanner",
+        "exact"
+      ],
+      "env": {
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "texture"
+      },
+      "perf_args": [
+        "--scanner-image-storage",
+        "texture"
+      ]
+    },
+    {
+      "name": "scanner-mps",
+      "quality_policy": "report_only",
+      "tags": [
+        "scanner",
+        "mps",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_SCANNER_MPS": "1"
+      },
+      "perf_args": [
+        "--scanner-mps",
+        "1"
+      ]
+    },
+    {
+      "name": "scanner-mps-texture",
+      "quality_policy": "report_only",
+      "tags": [
+        "scanner",
+        "mps",
+        "approximate",
+        "combined"
+      ],
+      "env": {
+        "SPEKTRAFILM_SCANNER_MPS": "1",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "texture"
+      },
+      "perf_args": [
+        "--scanner-mps",
+        "1",
+        "--scanner-image-storage",
+        "texture"
+      ]
+    },
+    {
+      "name": "halation-grouped-tail",
+      "quality_policy": "report_only",
+      "tags": [
+        "halation",
+        "grouped-tail",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "1"
+      },
+      "perf_args": [
+        "--halation-grouped-tail",
+        "1"
+      ]
+    },
+    {
+      "name": "diffusion-group-1",
+      "quality_policy": "exact",
+      "tags": [
+        "diffusion",
+        "group-size",
+        "exact"
+      ],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1"
+      },
+      "perf_args": [
+        "--diffusion-group-size",
+        "1"
+      ]
+    },
+    {
+      "name": "diffusion-group-2",
+      "quality_policy": "exact",
+      "tags": [
+        "diffusion",
+        "group-size",
+        "exact"
+      ],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "2"
+      },
+      "perf_args": [
+        "--diffusion-group-size",
+        "2"
+      ]
+    },
+    {
+      "name": "diffusion-group-4",
+      "quality_policy": "exact",
+      "tags": [
+        "diffusion",
+        "group-size",
+        "exact"
+      ],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "4"
+      },
+      "perf_args": [
+        "--diffusion-group-size",
+        "4"
+      ]
+    },
+    {
+      "name": "blur-backend-auto",
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "backend",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_BLUR_BACKEND": "auto"
+      },
+      "perf_args": [
+        "--blur-backend",
+        "auto"
+      ]
+    },
+    {
+      "name": "blur-backend-mps",
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "backend",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_BLUR_BACKEND": "mps"
+      },
+      "perf_args": [
+        "--blur-backend",
+        "mps"
+      ]
+    },
+    {
+      "name": "blur-backend-custom",
+      "quality_policy": "exact",
+      "tags": [
+        "blur",
+        "backend",
+        "exact"
+      ],
+      "env": {
+        "SPEKTRAFILM_BLUR_BACKEND": "custom"
+      },
+      "perf_args": [
+        "--blur-backend",
+        "custom"
+      ]
+    },
+    {
+      "name": "blur-downsample-2",
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "downsample",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "2"
+      },
+      "perf_args": [
+        "--blur-downsample",
+        "2"
+      ]
+    },
+    {
+      "name": "blur-downsample-4",
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "downsample",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "4"
+      },
+      "perf_args": [
+        "--blur-downsample",
+        "4"
+      ]
+    },
+    {
+      "name": "blur-downsample-8",
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "downsample",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "8"
+      },
+      "perf_args": [
+        "--blur-downsample",
+        "8"
+      ]
+    },
+    {
+      "name": "blur-downsample-auto",
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "downsample",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "auto"
+      },
+      "perf_args": [
+        "--blur-downsample",
+        "auto"
+      ]
+    },
+    {
+      "name": "precision-half-blur",
+      "quality_policy": "report_only",
+      "tags": [
+        "precision",
+        "half",
+        "blur",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "half-blur"
+      },
+      "perf_args": [
+        "--intermediate-precision",
+        "half-blur"
+      ]
+    },
+    {
+      "name": "diffusion-cluster-005",
+      "quality_policy": "report_only",
+      "tags": [
+        "diffusion",
+        "cluster",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "0.05"
+      },
+      "perf_args": [
+        "--diffusion-cluster-sigma",
+        "0.05"
+      ]
+    },
+    {
+      "name": "diffusion-cluster-010",
+      "quality_policy": "report_only",
+      "tags": [
+        "diffusion",
+        "cluster",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "0.10"
+      },
+      "perf_args": [
+        "--diffusion-cluster-sigma",
+        "0.10"
+      ]
+    },
+    {
+      "name": "grain-blur-recurrence",
+      "quality_policy": "exact",
+      "tags": [
+        "grain",
+        "blur",
+        "recurrence",
+        "exact"
+      ],
+      "env": {
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "1"
+      },
+      "perf_args": [
+        "--grain-blur-recurrence",
+        "1"
+      ]
+    },
+    {
+      "name": "dir-tail-mps",
+      "quality_policy": "report_only",
+      "tags": [
+        "dir",
+        "mps",
+        "approximate"
+      ],
+      "env": {
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "mps"
+      },
+      "perf_args": [
+        "--dir-tail-backend",
+        "mps"
+      ]
+    },
+    {
+      "name": "dir-tail-fused",
+      "quality_policy": "exact",
+      "tags": [
+        "dir",
+        "fused",
+        "exact"
+      ],
+      "env": {
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused"
+      },
+      "perf_args": [
+        "--dir-tail-backend",
+        "fused"
+      ]
+    }
+  ]
+}

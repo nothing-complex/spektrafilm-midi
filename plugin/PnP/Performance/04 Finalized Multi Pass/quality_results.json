@@ -1,0 +1,142 @@
+[
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 33,
+    "candidate": "baseline",
+    "quality_policy": "exact",
+    "tags": [
+      "baseline"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/baseline/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/baseline/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/baseline/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 33,
+    "candidate": "round2-mixed-dg2-recurrence--downsample-auto-cluster-010-dir-mps",
+    "quality_policy": "report_only",
+    "tags": [
+      "combo",
+      "round2-combo",
+      "confirmation-brutal",
+      "mixed-combo",
+      "strict-plus-approx",
+      "approximate",
+      "diffusion",
+      "recurrence",
+      "downsample",
+      "cluster",
+      "dir",
+      "mps"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence--downsample-auto-cluster-010-dir-mps/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence--downsample-auto-cluster-010-dir-mps/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence--downsample-auto-cluster-010-dir-mps/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 33,
+    "candidate": "round2-mixed-dg2-recurrence-tg32x8--downsample-auto-cluster-010-dir-mps",
+    "quality_policy": "report_only",
+    "tags": [
+      "combo",
+      "round2-combo",
+      "confirmation-brutal",
+      "mixed-combo",
+      "strict-plus-approx",
+      "approximate",
+      "diffusion",
+      "recurrence",
+      "threadgroup",
+      "downsample",
+      "cluster",
+      "dir",
+      "mps"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence-tg32x8--downsample-auto-cluster-010-dir-mps/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence-tg32x8--downsample-auto-cluster-010-dir-mps/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence-tg32x8--downsample-auto-cluster-010-dir-mps/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 33,
+    "candidate": "round2-mixed-dg2-recurrence--downsample-auto-cluster-005-dir-mps",
+    "quality_policy": "report_only",
+    "tags": [
+      "combo",
+      "round2-combo",
+      "confirmation-brutal",
+      "mixed-combo",
+      "strict-plus-approx",
+      "approximate",
+      "diffusion",
+      "recurrence",
+      "downsample",
+      "cluster",
+      "dir",
+      "mps"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence--downsample-auto-cluster-005-dir-mps/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence--downsample-auto-cluster-005-dir-mps/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence--downsample-auto-cluster-005-dir-mps/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 33,
+    "candidate": "round2-mixed-dg2-recurrence-tg32x8--downsample-auto-cluster-005-dir-mps",
+    "quality_policy": "report_only",
+    "tags": [
+      "combo",
+      "round2-combo",
+      "confirmation-brutal",
+      "mixed-combo",
+      "strict-plus-approx",
+      "approximate",
+      "diffusion",
+      "recurrence",
+      "threadgroup",
+      "downsample",
+      "cluster",
+      "dir",
+      "mps"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence-tg32x8--downsample-auto-cluster-005-dir-mps/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence-tg32x8--downsample-auto-cluster-005-dir-mps/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-mixed-dg2-recurrence-tg32x8--downsample-auto-cluster-005-dir-mps/quality.stderr.log"
+  },
+  {
+    "status": "FAILED TEST",
+    "failed": 33,
+    "infrastructure_failures": 0,
+    "case_count": 33,
+    "candidate": "round2-quality-fail-sentinel",
+    "quality_policy": "report_only",
+    "tags": [
+      "combo",
+      "round2-combo",
+      "confirmation-brutal",
+      "quality-sentinel",
+      "report-only-failure-check"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-quality-fail-sentinel/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-quality-fail-sentinel/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/confirmation_brutal_1536_harnessfix/round2-quality-fail-sentinel/quality.stderr.log"
+  }
+]

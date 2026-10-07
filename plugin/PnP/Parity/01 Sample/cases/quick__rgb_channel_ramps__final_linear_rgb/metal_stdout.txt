@@ -1,0 +1,7 @@
+stage=final_linear_rgb
+width=1536
+height=1024
+source_format=float
+destination_format=float
+host_layout=contiguous
+output=/Volumes/Discordia/perf_run/renew_default_fast_path/baseline/quality/cases/quick__rgb_channel_ramps__final_linear_rgb/metal.f32

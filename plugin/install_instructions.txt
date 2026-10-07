@@ -1,0 +1,56 @@
+spektrafilm OFX installation
+============================
+
+DISCLAIMER: spektrafilm OFX only works in the Studio version of DaVinci Resolve. It may however work in the free version on macOS anyways for currently undetermined reasons.
+
+macOS
+-----
+
+Open the included spektrafilm-OFX-macOS.pkg installer and follow the prompts.
+macOS may ask for an administrator password because OFX plugins are installed
+into the shared system plugin folder:
+
+  /Library/OFX/Plugins/
+
+
+Windows
+-------
+
+Double-click the install.bat file to install both Windows plugins. Windows will ask for
+administrator permission because OFX plugins are installed into the shared
+system plugin folder:
+
+  C:\Program Files\Common Files\OFX\Plugins\
+
+
+Linux
+-----
+
+Linux builds are currently developer builds and do not include a packaged
+installer. Copy the built .ofx.bundle directories into the shared OFX plugin
+folder, or run cmake --install from the Linux build directory:
+
+  /usr/OFX/Plugins/
+
+After installation, restart your OFX host application so it rescans the plugin
+folder.
+
+
+User manual & reference guide
+==============================
+
+You can find plugin-relevant documentation at the root of this ZIP. The same
+manual is also bundled inside the installed plugins at:
+
+  /Library/OFX/Plugins/spektrafilm.ofx.bundle/Contents/Resources/manual.pdf
+  /Library/OFX/Plugins/spektrafilm_flow.ofx.bundle/Contents/Resources/manual.pdf
+  C:\Program Files\Common Files\OFX\Plugins\spektrafilm.ofx.bundle\Contents\Resources\manual.pdf
+  C:\Program Files\Common Files\OFX\Plugins\spektrafilm_flow.ofx.bundle\Contents\Resources\manual.pdf
+  /usr/OFX/Plugins/spektrafilm.ofx.bundle/Contents/Resources/manual.pdf
+  /usr/OFX/Plugins/spektrafilm_flow.ofx.bundle/Contents/Resources/manual.pdf
+
+or by selecting "Open User Manual" from the "Manage" section in the plugin
+interface.
+
+
+Have fun and thank you for creating with spektrafilm!

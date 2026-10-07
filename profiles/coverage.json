@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "continuousAxes": 24,
+  "programmableButtons": 24,
+  "modifiers": 8,
+  "transportButtons": 5,
+  "resetButtons": 18,
+  "metadataParameters": 144,
+  "mappedParameters": 140,
+  "mappedParameterComponents": 160,
+  "missingComponents": [],
+  "excluded": [
+    {
+      "id": "dirCalibrateToStock",
+      "reason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "dirUsesStockCalibration",
+      "reason": "Internal stock-calibration ownership; use the calibration action."
+    },
+    {
+      "id": "infoVersion",
+      "reason": "Read-only information or text management; use the OFX inspector."
+    },
+    {
+      "id": "infoCreatedBy",
+      "reason": "Read-only information or text management; use the OFX inspector."
+    },
+    {
+      "id": "infoBasedOn",
+      "reason": "Read-only information or text management; use the OFX inspector."
+    },
+    {
+      "id": "lutSize",
+      "reason": "Preset/LUT/controller management remains in the OFX inspector."
+    },
+    {
+      "id": "lutDestination",
+      "reason": "Preset/LUT/controller management remains in the OFX inspector."
+    },
+    {
+      "id": "exportLut",
+      "reason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "presetSelection",
+      "reason": "Preset/LUT/controller management remains in the OFX inspector."
+    },
+    {
+      "id": "savePreset",
+      "reason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "loadPreset",
+      "reason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "copyParams",
+      "reason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "pasteParams",
+      "reason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "saveDefaults",
+      "reason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "resetDefaults",
+      "reason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "openUserManual",
+      "reason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    }
+  ],
+  "buildConditional": [
+    {
+      "ids": [
+        "printerLightR",
+        "printerLightG",
+        "printerLightB",
+        "printerLightsGang",
+        "printerLightsGroup",
+        "printerLightCalibration"
+      ],
+      "reason": "Academy printer-density standards data is absent from the public checkout; numeric aliases fall back to filtered-enlarger C/M/Y where provided."
+    }
+  ],
+  "hardwareValidation": "Pending physical Hub/panel verification; this report validates IDs and source coverage only."
+}

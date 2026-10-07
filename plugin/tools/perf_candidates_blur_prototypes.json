@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "include_defaults": true,
+  "candidates": [
+    {
+      "name": "grain-blur-recurrence",
+      "quality_policy": "exact",
+      "tags": ["blur-prototype", "recurrence", "exact", "promotable"],
+      "env": {
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "1"
+      },
+      "perf_args": [
+        "--grain-blur-recurrence", "1"
+      ]
+    },
+    {
+      "name": "diffusion-group-2-recurrence",
+      "quality_policy": "exact",
+      "tags": ["blur-prototype", "diffusion", "recurrence", "exact", "promotable"],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "2",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "1"
+      },
+      "perf_args": [
+        "--diffusion-group-size", "2",
+        "--grain-blur-recurrence", "1"
+      ]
+    },
+    {
+      "name": "scanner-mps-texture",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "scanner", "mps", "approximate"],
+      "env": {
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "texture",
+        "SPEKTRAFILM_SCANNER_MPS": "1",
+        "SPEKTRAFILM_BLUR_BACKEND": "mps"
+      },
+      "perf_args": [
+        "--scanner-image-storage", "texture",
+        "--scanner-mps", "1",
+        "--blur-backend", "mps"
+      ]
+    },
+    {
+      "name": "blur-backend-auto",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "mps", "approximate"],
+      "env": {
+        "SPEKTRAFILM_BLUR_BACKEND": "auto"
+      },
+      "perf_args": [
+        "--blur-backend", "auto"
+      ]
+    },
+    {
+      "name": "diffusion-downsample-2",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "downsample", "approximate"],
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "2"
+      },
+      "perf_args": [
+        "--blur-downsample", "2"
+      ]
+    },
+    {
+      "name": "diffusion-downsample-4",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "downsample", "approximate"],
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "4"
+      },
+      "perf_args": [
+        "--blur-downsample", "4"
+      ]
+    },
+    {
+      "name": "diffusion-downsample-8",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "downsample", "approximate"],
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "8"
+      },
+      "perf_args": [
+        "--blur-downsample", "8"
+      ]
+    },
+    {
+      "name": "diffusion-downsample-auto",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "downsample", "approximate"],
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "auto"
+      },
+      "perf_args": [
+        "--blur-downsample", "auto"
+      ]
+    },
+    {
+      "name": "half-blur-intermediates",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "downsample", "half", "bandwidth", "approximate"],
+      "env": {
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "half-blur",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "auto"
+      },
+      "perf_args": [
+        "--intermediate-precision", "half-blur",
+        "--blur-downsample", "auto"
+      ]
+    },
+    {
+      "name": "diffusion-cluster-005",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "cluster", "approximate"],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "0.05"
+      },
+      "perf_args": [
+        "--diffusion-cluster-sigma", "0.05"
+      ]
+    },
+    {
+      "name": "diffusion-cluster-010",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "cluster", "approximate"],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "0.10"
+      },
+      "perf_args": [
+        "--diffusion-cluster-sigma", "0.10"
+      ]
+    },
+    {
+      "name": "halation-grouped-tail",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "halation", "grouped-tail", "approximate"],
+      "env": {
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "1"
+      },
+      "perf_args": [
+        "--halation-grouped-tail", "1"
+      ]
+    },
+    {
+      "name": "exact-low-risk-combined",
+      "quality_policy": "exact",
+      "tags": ["blur-prototype", "diffusion", "recurrence", "scanner", "texture", "exact", "promotable", "combined"],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "2",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "1",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "texture"
+      },
+      "perf_args": [
+        "--diffusion-group-size", "2",
+        "--grain-blur-recurrence", "1",
+        "--scanner-image-storage", "texture"
+      ]
+    },
+    {
+      "name": "scanner-texture-auto-mps-half",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "scanner", "mps", "half", "approximate", "combined"],
+      "env": {
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "texture",
+        "SPEKTRAFILM_BLUR_BACKEND": "auto",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "half-blur"
+      },
+      "perf_args": [
+        "--scanner-image-storage", "texture",
+        "--blur-backend", "auto",
+        "--intermediate-precision", "half-blur"
+      ]
+    },
+    {
+      "name": "diffusion-group-2-downsample-auto",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "downsample", "approximate", "combined"],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "2",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "1",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "auto"
+      },
+      "perf_args": [
+        "--diffusion-group-size", "2",
+        "--grain-blur-recurrence", "1",
+        "--blur-downsample", "auto"
+      ]
+    },
+    {
+      "name": "diffusion-group-2-downsample-auto-half",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "downsample", "half", "approximate", "combined"],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "2",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "1",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "auto",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "half-blur"
+      },
+      "perf_args": [
+        "--diffusion-group-size", "2",
+        "--grain-blur-recurrence", "1",
+        "--blur-downsample", "auto",
+        "--intermediate-precision", "half-blur"
+      ]
+    },
+    {
+      "name": "diffusion-group-2-downsample-auto-cluster-005",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "downsample", "cluster", "approximate", "combined"],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "2",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "1",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "auto",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "0.05"
+      },
+      "perf_args": [
+        "--diffusion-group-size", "2",
+        "--grain-blur-recurrence", "1",
+        "--blur-downsample", "auto",
+        "--diffusion-cluster-sigma", "0.05"
+      ]
+    },
+    {
+      "name": "dir-tail-mps-half",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "dir", "mps", "half", "approximate", "combined"],
+      "env": {
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "mps",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "half-blur"
+      },
+      "perf_args": [
+        "--dir-tail-backend", "mps",
+        "--intermediate-precision", "half-blur"
+      ]
+    },
+    {
+      "name": "all-blur-prototypes",
+      "quality_policy": "report_only",
+      "tags": ["blur-prototype", "diffusion", "downsample", "cluster", "halation", "scanner", "mps", "half", "approximate", "combined"],
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "2",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "1",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "auto",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "half-blur",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "0.05",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "1",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "texture",
+        "SPEKTRAFILM_BLUR_BACKEND": "auto"
+      },
+      "perf_args": [
+        "--diffusion-group-size", "2",
+        "--grain-blur-recurrence", "1",
+        "--blur-downsample", "auto",
+        "--intermediate-precision", "half-blur",
+        "--diffusion-cluster-sigma", "0.05",
+        "--halation-grouped-tail", "1",
+        "--scanner-image-storage", "texture",
+        "--blur-backend", "auto"
+      ]
+    }
+  ]
+}

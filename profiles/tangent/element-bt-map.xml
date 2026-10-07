@@ -1,0 +1,1957 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TangentWave fileType="PanelMap" fileVersion="3.0">
+    <Panels>
+        <Panel type="Element-Bt">
+            <Mode id="0x2001">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2002">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2003">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2004">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2005">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2006">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2007">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2008">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2009">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x200A">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x200B">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x200C">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x20FF">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3001</Key>
+                                <CustomName>Essentials</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3002</Key>
+                                <CustomName>Film</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3003</Key>
+                                <CustomName>Print</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3004</Key>
+                                <CustomName>Printer</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3005</Key>
+                                <CustomName>Grain</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3006</Key>
+                                <CustomName>Halation</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3007</Key>
+                                <CustomName>Diffusion</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3008</Key>
+                                <CustomName>Scanner</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3009</Key>
+                                <CustomName>Lens N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300A</Key>
+                                <CustomName>Motion N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300B</Key>
+                                <CustomName>Color / I-O</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x300C</Key>
+                                <CustomName>Favorites</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3025</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3026</Key>
+                                <CustomName>Stage On/Off</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+        </Panel>
+    </Panels>
+</TangentWave>

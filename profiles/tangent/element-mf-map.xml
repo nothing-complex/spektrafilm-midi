@@ -1,0 +1,3049 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TangentWave fileType="PanelMap" fileVersion="3.0">
+    <Panels>
+        <Panel type="Element-Mf">
+            <Mode id="0x2001">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2002">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2003">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2004">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2005">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2006">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2007">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2008">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2009">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x200A">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x200B">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x200C">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x20FF">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1201</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1202</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1203</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3011</Key>
+                                <CustomName>Disarm</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3012</Key>
+                                <CustomName>Refresh</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3013</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3014</Key>
+                                <CustomName>Next Page</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3015</Key>
+                                <CustomName>Prev Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3016</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3017</Key>
+                                <CustomName>Undo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3018</Key>
+                                <CustomName>Redo N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3019</Key>
+                                <CustomName>Capture A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301A</Key>
+                                <CustomName>Capture B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301B</Key>
+                                <CustomName>Recall A/B</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x301C</Key>
+                                <CustomName>Apply</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3027</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3028</Key>
+                                <CustomName>Next Focus</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3031</Key>
+                                <CustomName>Reverse N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3032</Key>
+                                <CustomName>Stop N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3033</Key>
+                                <CustomName>Play N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3034</Key>
+                                <CustomName>Frame- N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3035</Key>
+                                <CustomName>Frame+ N/A</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+        </Panel>
+    </Panels>
+</TangentWave>

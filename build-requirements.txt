@@ -1,0 +1,4 @@
+# Versions used for the reproducible prototype build, 7 October 2026.
+numpy==2.5.3
+scipy==1.18.1
+colour-science==0.4.7

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "include_defaults": false,
+  "description": "Focused parity-gated candidates for the standard-core final-from-film-density bottleneck.",
+  "candidates": [
+    {
+      "name": "baseline",
+      "quality_policy": "exact",
+      "tags": ["baseline", "final-core", "exact"],
+      "env": {
+        "SPEKTRAFILM_FINAL_CORE_MODE": "fused",
+        "SPEKTRAFILM_DENSITY_CURVE_LOOKUP": "binary",
+        "SPEKTRAFILM_SPECTRAL_TRANSMITTANCE": "pow"
+      },
+      "perf_args": [
+        "--final-core-mode", "fused",
+        "--density-curve-lookup", "binary",
+        "--spectral-transmittance", "pow"
+      ]
+    },
+    {
+      "name": "staged-final-core-diagnostic",
+      "quality_policy": "report_only",
+      "quality_required": true,
+      "tags": ["final-core", "staged", "diagnostic", "parity-required"],
+      "env": {
+        "SPEKTRAFILM_FINAL_CORE_MODE": "staged",
+        "SPEKTRAFILM_DENSITY_CURVE_LOOKUP": "binary",
+        "SPEKTRAFILM_SPECTRAL_TRANSMITTANCE": "pow"
+      },
+      "perf_args": [
+        "--final-core-mode", "staged",
+        "--density-curve-lookup", "binary",
+        "--spectral-transmittance", "pow"
+      ]
+    },
+    {
+      "name": "final-core-uniform-linear",
+      "quality_policy": "report_only",
+      "tags": ["final-core", "density-curve", "uniform-linear", "approximate"],
+      "env": {
+        "SPEKTRAFILM_FINAL_CORE_MODE": "fused",
+        "SPEKTRAFILM_DENSITY_CURVE_LOOKUP": "uniform-linear",
+        "SPEKTRAFILM_SPECTRAL_TRANSMITTANCE": "pow"
+      },
+      "perf_args": [
+        "--final-core-mode", "fused",
+        "--density-curve-lookup", "uniform-linear",
+        "--spectral-transmittance", "pow"
+      ]
+    },
+    {
+      "name": "final-core-fast-exp",
+      "quality_policy": "report_only",
+      "tags": ["final-core", "spectral-transmittance", "fast-exp", "approximate"],
+      "env": {
+        "SPEKTRAFILM_FINAL_CORE_MODE": "fused",
+        "SPEKTRAFILM_DENSITY_CURVE_LOOKUP": "binary",
+        "SPEKTRAFILM_SPECTRAL_TRANSMITTANCE": "fast-exp"
+      },
+      "perf_args": [
+        "--final-core-mode", "fused",
+        "--density-curve-lookup", "binary",
+        "--spectral-transmittance", "fast-exp"
+      ]
+    }
+  ]
+}

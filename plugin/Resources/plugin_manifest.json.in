@@ -1,0 +1,8 @@
+{
+  "id": "@SPEKTRAFILM_MANIFEST_ID@",
+  "name": "@SPEKTRAFILM_MANIFEST_NAME@",
+  "version": "@SPEKTRAFILM_MANIFEST_VERSION@",
+  "renderer": "@SPEKTRAFILM_MANIFEST_RENDERER@",
+  "input_assumption": "scene-linear RGB, default Rec.2020 primaries",
+  "reference_runtime": "src/spektrafilm/runtime"
+}

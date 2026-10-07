@@ -1,0 +1,7 @@
+stage=film_log_raw
+width=1536
+height=1024
+source_format=float
+destination_format=float
+host_layout=contiguous
+output=/Volumes/Discordia/perf_run/renew_default_fast_path/baseline/quality/cases/quick__log_gray_ramp__film_log_raw/metal.f32

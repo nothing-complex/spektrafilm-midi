@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "channel": 1,
+  "encoding": "RelativeBinaryOffset",
+  "axes": [
+    {
+      "axis": 0,
+      "cc": 0,
+      "resetNote": 0
+    },
+    {
+      "axis": 1,
+      "cc": 1,
+      "resetNote": 1
+    },
+    {
+      "axis": 2,
+      "cc": 2,
+      "resetNote": 2
+    },
+    {
+      "axis": 3,
+      "cc": 3,
+      "resetNote": 3
+    },
+    {
+      "axis": 4,
+      "cc": 4,
+      "resetNote": 4
+    },
+    {
+      "axis": 5,
+      "cc": 5,
+      "resetNote": 5
+    },
+    {
+      "axis": 6,
+      "cc": 6,
+      "resetNote": 6
+    },
+    {
+      "axis": 7,
+      "cc": 7,
+      "resetNote": 7
+    },
+    {
+      "axis": 8,
+      "cc": 8,
+      "resetNote": 8
+    },
+    {
+      "axis": 9,
+      "cc": 9,
+      "resetNote": 9
+    },
+    {
+      "axis": 10,
+      "cc": 10,
+      "resetNote": 10
+    },
+    {
+      "axis": 11,
+      "cc": 11,
+      "resetNote": 11
+    },
+    {
+      "axis": 12,
+      "cc": 12,
+      "resetNote": 12
+    },
+    {
+      "axis": 13,
+      "cc": 13,
+      "resetNote": 13
+    },
+    {
+      "axis": 14,
+      "cc": 14,
+      "resetNote": 14
+    },
+    {
+      "axis": 15,
+      "cc": 15,
+      "resetNote": 15
+    },
+    {
+      "axis": 16,
+      "cc": 16,
+      "resetNote": 16
+    },
+    {
+      "axis": 17,
+      "cc": 17,
+      "resetNote": 17
+    },
+    {
+      "axis": 18,
+      "cc": 18,
+      "resetNote": 18
+    },
+    {
+      "axis": 19,
+      "cc": 19,
+      "resetNote": 19
+    },
+    {
+      "axis": 20,
+      "cc": 20,
+      "resetNote": 20
+    },
+    {
+      "axis": 21,
+      "cc": 21,
+      "resetNote": 21
+    },
+    {
+      "axis": 22,
+      "cc": 22,
+      "resetNote": 22
+    },
+    {
+      "axis": 23,
+      "cc": 23,
+      "resetNote": 23
+    }
+  ],
+  "buttons": [
+    {
+      "note": 32,
+      "action": "bank:essentials",
+      "label": "Essentials"
+    },
+    {
+      "note": 33,
+      "action": "bank:film",
+      "label": "Film"
+    },
+    {
+      "note": 34,
+      "action": "bank:print",
+      "label": "Print"
+    },
+    {
+      "note": 35,
+      "action": "bank:printer",
+      "label": "Printer"
+    },
+    {
+      "note": 36,
+      "action": "bank:grain",
+      "label": "Grain"
+    },
+    {
+      "note": 37,
+      "action": "bank:halation",
+      "label": "Halation"
+    },
+    {
+      "note": 38,
+      "action": "bank:diffusion",
+      "label": "Diffusion"
+    },
+    {
+      "note": 39,
+      "action": "bank:scanner",
+      "label": "Scanner"
+    },
+    {
+      "note": 40,
+      "action": "bank:lens",
+      "label": "Lens N/A"
+    },
+    {
+      "note": 41,
+      "action": "bank:motion",
+      "label": "Motion N/A"
+    },
+    {
+      "note": 42,
+      "action": "bank:color",
+      "label": "Color / I-O"
+    },
+    {
+      "note": 43,
+      "action": "bank:favorites",
+      "label": "Favorites"
+    },
+    {
+      "note": 44,
+      "action": "disarm",
+      "label": "Disarm"
+    },
+    {
+      "note": 45,
+      "action": "refresh",
+      "label": "Refresh"
+    },
+    {
+      "note": 46,
+      "action": "page:prev",
+      "label": "Prev Page"
+    },
+    {
+      "note": 47,
+      "action": "page:next",
+      "label": "Next Page"
+    },
+    {
+      "note": 48,
+      "action": "focus:prev",
+      "label": "Prev Focus"
+    },
+    {
+      "note": 49,
+      "action": "focus:next",
+      "label": "Next Focus"
+    },
+    {
+      "note": 50,
+      "action": "unsupported:undo",
+      "label": "Undo N/A"
+    },
+    {
+      "note": 51,
+      "action": "unsupported:redo",
+      "label": "Redo N/A"
+    },
+    {
+      "note": 52,
+      "action": "capture:A",
+      "label": "Capture A"
+    },
+    {
+      "note": 53,
+      "action": "capture:B",
+      "label": "Capture B"
+    },
+    {
+      "note": 54,
+      "action": "recall:toggle",
+      "label": "Recall A/B"
+    },
+    {
+      "note": 55,
+      "action": "apply",
+      "label": "Apply"
+    },
+    {
+      "note": 56,
+      "action": "fine",
+      "label": "Fine (hold)"
+    },
+    {
+      "note": 57,
+      "action": "page:next",
+      "label": "Next Page"
+    },
+    {
+      "note": 58,
+      "action": "fine",
+      "label": "Fine (hold)"
+    },
+    {
+      "note": 59,
+      "action": "page:prev",
+      "label": "Prev Page"
+    },
+    {
+      "note": 60,
+      "action": "fine",
+      "label": "Fine (hold)"
+    },
+    {
+      "note": 61,
+      "action": "toggle:stage",
+      "label": "Stage On/Off"
+    },
+    {
+      "note": 62,
+      "action": "fine",
+      "label": "Fine (hold)"
+    },
+    {
+      "note": 63,
+      "action": "focus:next",
+      "label": "Next Focus"
+    },
+    {
+      "note": 64,
+      "action": "unsupported:play-reverse",
+      "label": "Reverse N/A"
+    },
+    {
+      "note": 65,
+      "action": "unsupported:stop",
+      "label": "Stop N/A"
+    },
+    {
+      "note": 66,
+      "action": "unsupported:play-forward",
+      "label": "Play N/A"
+    },
+    {
+      "note": 67,
+      "action": "unsupported:frame-prev",
+      "label": "Frame- N/A"
+    },
+    {
+      "note": 68,
+      "action": "unsupported:frame-next",
+      "label": "Frame+ N/A"
+    }
+  ]
+}

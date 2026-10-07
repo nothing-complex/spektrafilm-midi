@@ -1,0 +1,3528 @@
+{
+  "schemaVersion": 1,
+  "upstreamCommit": "86476afc5b077de77e2278e3658d1ba9309892a1",
+  "pluginFlavor": "FilmDev",
+  "metadataCount": 144,
+  "sourceSha256": "dd6552fe0a7aaee0c1e886fe9b04023a90c6b5ef8b3d6e567377ba8542bd482f",
+  "parameters": [
+    {
+      "id": "process",
+      "label": "Mode",
+      "sourceLine": 4903,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 2,
+      "choices": [
+        "Print simulation",
+        "Scan negative",
+        "Process negative"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scanNegativeInvert",
+      "label": "Invert Negative Scan",
+      "sourceLine": 4904,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "rgbToRawMethod",
+      "label": "RGB to Raw",
+      "sourceLine": 4906,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 2,
+      "choices": [
+        "Hanatos 2026",
+        "Hanatos 2025",
+        "Mallett 2019"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "inputColorSpace",
+      "label": "Input Color Space",
+      "sourceLine": 4967,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 25,
+      "choices": [
+        "ARRI LogC4",
+        "ARRI LogC3 EI800",
+        "BMDFilm WideGamut Gen5",
+        "DaVinci Intermediate WideGamut",
+        "RED Log3G10 REDWideGamutRGB",
+        "Sony S-Log3 S-Gamut3",
+        "Sony S-Log3 S-Gamut3.Cine",
+        "Canon Log2 CinemaGamut D55",
+        "Canon Log3 CinemaGamut D55",
+        "Panasonic V-Log V-Gamut",
+        "ACES2065-1",
+        "ACEScg",
+        "ACEScct",
+        "ACEScc",
+        "Linear Rec.2020",
+        "Linear Rec.709",
+        "Linear P3-D65",
+        "sRGB",
+        "Display P3",
+        "ProPhoto RGB",
+        "Adobe RGB (1998)",
+        "DCI-P3",
+        "P3-D65 Gamma 2.2",
+        "P3-D65 Gamma 2.6",
+        "Rec.709 Gamma 2.2",
+        "Rec.709 Gamma 2.4"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "rcmInputColorSpace",
+      "label": "Input Color Space",
+      "sourceLine": 4968,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 15,
+      "choices": [
+        "DaVinci Intermediate WideGamut",
+        "BMDFilm WideGamut Gen5",
+        "ACES2065-1",
+        "ACEScg",
+        "ACEScct",
+        "ACEScc",
+        "Linear Rec.2020",
+        "Linear Rec.709",
+        "Linear P3-D65",
+        "Rec.709 Gamma 2.4",
+        "Rec.709 Gamma 2.2",
+        "sRGB",
+        "Display P3",
+        "P3-D65 Gamma 2.2",
+        "P3-D65 Gamma 2.6",
+        "DCI-P3"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "outputRole",
+      "label": "Output Role",
+      "sourceLine": 4970,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 2,
+      "choices": [
+        "Display Out SDR",
+        "Display Out HDR",
+        "RCM/ACES (Beta)"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "sdrOutputColorSpace",
+      "label": "Output Color Space",
+      "sourceLine": 4971,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 8,
+      "choices": [
+        "sRGB",
+        "Display P3",
+        "ProPhoto RGB",
+        "Adobe RGB (1998)",
+        "DCI-P3",
+        "P3-D65 Gamma 2.2",
+        "P3-D65 Gamma 2.6",
+        "Rec.709 Gamma 2.2",
+        "Rec.709 Gamma 2.4"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        8.0
+      ],
+      "defaultExpression": [
+        "8"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "sceneOutputColorSpace",
+      "label": "Output Color Space",
+      "sourceLine": 4972,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "choices": [
+        "DaVinci Intermediate WideGamut"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "hdrPreset",
+      "label": "HDR Preset",
+      "sourceLine": 4974,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 3,
+      "choices": [
+        "PQ 1000",
+        "PQ 4000",
+        "HLG 1000",
+        "Custom"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "hdrTransfer",
+      "label": "HDR Transfer",
+      "sourceLine": 4976,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [
+        "Rec.2100 ST2084 (PQ)",
+        "Rec.2100 HLG"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "hdrReferenceWhiteNits",
+      "label": "Reference White Nits",
+      "sourceLine": 4977,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 48.0,
+      "maximum": 1000.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        203.0
+      ],
+      "defaultExpression": [
+        "203.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "hdrPeakNits",
+      "label": "Peak Nits",
+      "sourceLine": 4978,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 100.0,
+      "maximum": 10000.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1000.0
+      ],
+      "defaultExpression": [
+        "1000.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "hdrExposureEv",
+      "label": "HDR Exposure EV",
+      "sourceLine": 4979,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -8.0,
+      "maximum": 8.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "hdrToneMapping",
+      "label": "HDR Tone Mapping",
+      "sourceLine": 4981,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [
+        "Soft Rolloff",
+        "Hard Clip"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "colorAdaptation",
+      "label": "Color Adaptation",
+      "sourceLine": 4982,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "colorAdaptationInputCompression",
+      "label": "Input Compression",
+      "sourceLine": 4983,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        1
+      ],
+      "defaultExpression": [
+        "true"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "colorAdaptationCurveSmoothing",
+      "label": "Curve Smoothing",
+      "sourceLine": 4984,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        1
+      ],
+      "defaultExpression": [
+        "true"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "colorAdaptationOutputLightnessCompression",
+      "label": "Output Lightness Compression",
+      "sourceLine": 4985,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        1
+      ],
+      "defaultExpression": [
+        "true"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "colorAdaptationOutputChromaCompression",
+      "label": "Output Chroma Compression",
+      "sourceLine": 4986,
+      "group": "colorGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        1
+      ],
+      "defaultExpression": [
+        "true"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraUvFilterEnabled",
+      "label": "Filter UV",
+      "sourceLine": 4987,
+      "group": "filteringGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraUvCutNm",
+      "label": "UV Cut nm",
+      "sourceLine": 4988,
+      "group": "filteringGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 380.0,
+      "maximum": 450.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        410.0
+      ],
+      "defaultExpression": [
+        "410.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraIrFilterEnabled",
+      "label": "Filter IR",
+      "sourceLine": 4989,
+      "group": "filteringGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraIrCutNm",
+      "label": "IR Cut nm",
+      "sourceLine": 4990,
+      "group": "filteringGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 600.0,
+      "maximum": 780.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        675.0
+      ],
+      "defaultExpression": [
+        "675.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "film",
+      "label": "Stock",
+      "sourceLine": 4998,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        null
+      ],
+      "defaultExpression": [
+        "static_cast<int>(spektrafilm::kSpektraDefaultFilmIndex)"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "filmFormat",
+      "label": "Film Format",
+      "sourceLine": 5000,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 7,
+      "choices": [
+        "8mm",
+        "Super 8",
+        "16mm",
+        "Super 16",
+        "35mm",
+        "Super 35",
+        "65mm",
+        "70mm / IMAX"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        4.0
+      ],
+      "defaultExpression": [
+        "4"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "filmPushPullMode",
+      "label": "Push / Pull Mode",
+      "sourceLine": 5002,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [
+        "Standard",
+        "Experimental"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "filmPushPullStops",
+      "label": "Film Push / Pull Stops",
+      "sourceLine": 5003,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -2.0,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "negativeBleachBypassAmount",
+      "label": "Negative Bleach Bypass",
+      "sourceLine": 5004,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "negativeLeucoCyanCoupling",
+      "label": "Leuco-Cyan Coupling",
+      "sourceLine": 5005,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "paper",
+      "label": "Paper",
+      "sourceLine": 5013,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        null
+      ],
+      "defaultExpression": [
+        "static_cast<int>(spektrafilm::kSpektraDefaultPaperIndex)"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printTiming",
+      "label": "Print Timing",
+      "sourceLine": 5019,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 0,
+      "choices": [
+        "Filtered Enlarger"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printPushPullStops",
+      "label": "Print Push / Pull Stops",
+      "sourceLine": 5021,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -2.0,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printBleachBypassAmount",
+      "label": "Print Bleach Bypass",
+      "sourceLine": 5022,
+      "group": "printGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "filmExposureEv",
+      "label": "Exposure EV",
+      "sourceLine": 5024,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -8.0,
+      "maximum": 8.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "autoExposure",
+      "label": "Auto Exposure",
+      "sourceLine": 5025,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "autoExposureMethod",
+      "label": "Auto Exposure Meter",
+      "sourceLine": 5027,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [
+        "Center weighted",
+        "Median"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "filmGamma",
+      "label": "Gamma",
+      "sourceLine": 5028,
+      "group": "filmGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.1,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printExposureEv",
+      "label": "Exposure EV",
+      "sourceLine": 5029,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -5.0,
+      "maximum": 5.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printGamma",
+      "label": "Gamma",
+      "sourceLine": 5030,
+      "group": "printGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.1,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printShadowShape",
+      "label": "Shadow Shape",
+      "sourceLine": 5031,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -1.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printHighlightShape",
+      "label": "Highlight Shape",
+      "sourceLine": 5032,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -1.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "filterC",
+      "label": "C Filter",
+      "sourceLine": 5033,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 120.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "filterMShift",
+      "label": "M Filter Shift",
+      "sourceLine": 5034,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -60.0,
+      "maximum": 60.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "filterYShift",
+      "label": "Y Filter Shift",
+      "sourceLine": 5035,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -60.0,
+      "maximum": 60.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "enlargerScale",
+      "label": "Scale",
+      "sourceLine": 5036,
+      "group": "enlargerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 1.0,
+      "maximum": 32.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "enlargerOffsetXPercent",
+      "label": "Offset X %",
+      "sourceLine": 5037,
+      "group": "enlargerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -100.0,
+      "maximum": 100.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "enlargerOffsetYPercent",
+      "label": "Offset Y %",
+      "sourceLine": 5038,
+      "group": "enlargerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -100.0,
+      "maximum": 100.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "preflashExposure",
+      "label": "Preflash Exposure",
+      "sourceLine": 5039,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "preflashMFilterShift",
+      "label": "Preflash M Filter Shift",
+      "sourceLine": 5040,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -60.0,
+      "maximum": 60.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "preflashYFilterShift",
+      "label": "Preflash Y Filter Shift",
+      "sourceLine": 5041,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -60.0,
+      "maximum": 60.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printerLightsGang",
+      "label": "Gang Printer Points",
+      "sourceLine": 5043,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printerLightsGroup",
+      "label": "Group Printer Points",
+      "sourceLine": 5044,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printerLightR",
+      "label": "Printer Point R",
+      "sourceLine": 5045,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -24.0,
+      "maximum": 24.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printerLightG",
+      "label": "Printer Point G",
+      "sourceLine": 5046,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -24.0,
+      "maximum": 24.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printerLightB",
+      "label": "Printer Point B",
+      "sourceLine": 5047,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -24.0,
+      "maximum": 24.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printerLightCalibration",
+      "label": "Printer Point Calibration",
+      "sourceLine": 5048,
+      "group": "printGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        1
+      ],
+      "defaultExpression": [
+        "true"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirAmount",
+      "label": "Amount",
+      "sourceLine": 5050,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirDiffusionUm",
+      "label": "Diffusion um",
+      "sourceLine": 5051,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 100.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        20.0
+      ],
+      "defaultExpression": [
+        "20.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirDiffusionTailUm",
+      "label": "Tail um",
+      "sourceLine": 5052,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 1000.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        200.0
+      ],
+      "defaultExpression": [
+        "200.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirDiffusionTailWeight",
+      "label": "Tail Weight",
+      "sourceLine": 5053,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.06
+      ],
+      "defaultExpression": [
+        "0.06"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirInhibitionSameLayer",
+      "label": "Same-Layer Inhibition",
+      "sourceLine": 5054,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirInhibitionInterlayer",
+      "label": "Interlayer Inhibition",
+      "sourceLine": 5055,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirGammaSameLayerRgb",
+      "label": "Same-Layer Gamma RGB",
+      "sourceLine": 5056,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 3,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.336,
+        0.319,
+        0.273
+      ],
+      "defaultExpression": [
+        "0.336",
+        "0.319",
+        "0.273"
+      ],
+      "kind": "double3DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirGammaRToGb",
+      "label": "R -> G/B Gamma",
+      "sourceLine": 5057,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 2,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.353,
+        0.302
+      ],
+      "defaultExpression": [
+        "0.353",
+        "0.302"
+      ],
+      "kind": "double2DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirGammaGToRb",
+      "label": "G -> R/B Gamma",
+      "sourceLine": 5058,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 2,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.154,
+        0.353
+      ],
+      "defaultExpression": [
+        "0.154",
+        "0.353"
+      ],
+      "kind": "double2DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirGammaBToRg",
+      "label": "B -> R/G Gamma",
+      "sourceLine": 5059,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 2,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.168,
+        0.226
+      ],
+      "defaultExpression": [
+        "0.168",
+        "0.226"
+      ],
+      "kind": "double2DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "dirCalibrateToStock",
+      "label": "Calibrate to Stock",
+      "sourceLine": 5060,
+      "group": "couplerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "action",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "dirUsesStockCalibration",
+      "label": "dirUsesStockCalibration",
+      "sourceLine": 5061,
+      "group": "management",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        1
+      ],
+      "defaultExpression": [
+        "true"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": "Internal stock-calibration ownership; use the calibration action."
+    },
+    {
+      "id": "grainEnabled",
+      "label": "Enabled",
+      "sourceLine": 5062,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainModel",
+      "label": "Model",
+      "sourceLine": 5064,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 2,
+      "choices": [
+        "Preview",
+        "Production",
+        "Grain Synthesis"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainAmount",
+      "label": "Amount",
+      "sourceLine": 5065,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSaturation",
+      "label": "Saturation",
+      "sourceLine": 5066,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSublayersEnabled",
+      "label": "Sublayers",
+      "sourceLine": 5067,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        1
+      ],
+      "defaultExpression": [
+        "true"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSubLayerCount",
+      "label": "Sub Layer Count",
+      "sourceLine": 5068,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 1.0,
+      "maximum": 8.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "integer",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainParticleAreaUm2",
+      "label": "Particle Area um2",
+      "sourceLine": 5069,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.01,
+      "maximum": 5.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.1
+      ],
+      "defaultExpression": [
+        "0.1"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainParticleScale",
+      "label": "Particle Scale RGB",
+      "sourceLine": 5070,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 3,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.2,
+        1.0,
+        2.5
+      ],
+      "defaultExpression": [
+        "1.2",
+        "1.0",
+        "2.5"
+      ],
+      "kind": "double3DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainParticleScaleLayers",
+      "label": "Layer Scale",
+      "sourceLine": 5071,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 3,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        6.0,
+        1.0,
+        0.4
+      ],
+      "defaultExpression": [
+        "6.0",
+        "1.0",
+        "0.4"
+      ],
+      "kind": "double3DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainDensityMin",
+      "label": "Density Min",
+      "sourceLine": 5072,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 3,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.04,
+        0.05,
+        0.06
+      ],
+      "defaultExpression": [
+        "0.04",
+        "0.05",
+        "0.06"
+      ],
+      "kind": "double3DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainUniformity",
+      "label": "Uniformity RGB",
+      "sourceLine": 5073,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 3,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.99,
+        0.97,
+        0.98
+      ],
+      "defaultExpression": [
+        "0.99",
+        "0.97",
+        "0.98"
+      ],
+      "kind": "double3DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainFinalBlurUm",
+      "label": "Final Grain Blur",
+      "sourceLine": 5074,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 25.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        7.17
+      ],
+      "defaultExpression": [
+        "7.17"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainBlurDyeCloudsUm",
+      "label": "Dye Cloud Blur um",
+      "sourceLine": 5075,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 10.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainMicroStructure",
+      "label": "Micro Structure",
+      "sourceLine": 5076,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 2,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.2,
+        30.0
+      ],
+      "defaultExpression": [
+        "0.2",
+        "30.0"
+      ],
+      "kind": "double2DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSeed",
+      "label": "Seed",
+      "sourceLine": 5077,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1000000,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "integer",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainAnimate",
+      "label": "Animate",
+      "sourceLine": 5078,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        1
+      ],
+      "defaultExpression": [
+        "true"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisSize",
+      "label": "Synthesis Size",
+      "sourceLine": 5079,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.25,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisAmount",
+      "label": "Synthesis Amount",
+      "sourceLine": 5080,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 3.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisSharpness",
+      "label": "Synthesis Sharpness",
+      "sourceLine": 5081,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.25,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisQuality",
+      "label": "Synthesis Quality",
+      "sourceLine": 5082,
+      "group": "grainGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.25,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisSamples",
+      "label": "Samples",
+      "sourceLine": 5083,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 1.0,
+      "maximum": 2048.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "integer",
+      "default": [
+        128.0
+      ],
+      "defaultExpression": [
+        "128"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisMeanRadiusUm",
+      "label": "Mean Radius um",
+      "sourceLine": 5084,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.05,
+      "maximum": 10.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.25
+      ],
+      "defaultExpression": [
+        "0.25"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisRadiusStdDevRatio",
+      "label": "Radius StdDev Ratio",
+      "sourceLine": 5085,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisObservationSigmaUm",
+      "label": "Observation Aperture Sigma um",
+      "sourceLine": 5086,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 20.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisCellSizeRatio",
+      "label": "Cell Size Ratio",
+      "sourceLine": 5087,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.25,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisMaxRadiusQuantile",
+      "label": "Max Radius Quantile",
+      "sourceLine": 5088,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0.95,
+      "maximum": 0.9999,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.999
+      ],
+      "defaultExpression": [
+        "0.999"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisCoverageEpsilon",
+      "label": "Coverage Epsilon",
+      "sourceLine": 5089,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 1e-06,
+      "maximum": 0.01,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0001
+      ],
+      "defaultExpression": [
+        "0.0001"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisMaxGrainsPerCell",
+      "label": "Max Grains Per Cell",
+      "sourceLine": 5090,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 1.0,
+      "maximum": 128.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "integer",
+      "default": [
+        32.0
+      ],
+      "defaultExpression": [
+        "32"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisRadiusScale",
+      "label": "Radius Scale RGB",
+      "sourceLine": 5091,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 3,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.2,
+        1.0,
+        2.5
+      ],
+      "defaultExpression": [
+        "1.2",
+        "1.0",
+        "2.5"
+      ],
+      "kind": "double3DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisLayerScale",
+      "label": "Layer Scale",
+      "sourceLine": 5092,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 3,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        6.0,
+        1.0,
+        0.4
+      ],
+      "defaultExpression": [
+        "6.0",
+        "1.0",
+        "0.4"
+      ],
+      "kind": "double3DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "grainSynthesisLayered",
+      "label": "Layered",
+      "sourceLine": 5093,
+      "group": "grainSynthesisGroup",
+      "metadata": true,
+      "development": true,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        1
+      ],
+      "defaultExpression": [
+        "true"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "halationEnabled",
+      "label": "Enabled",
+      "sourceLine": 5094,
+      "group": "halationGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scatterAmount",
+      "label": "Scatter Amount",
+      "sourceLine": 5095,
+      "group": "halationGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scatterScale",
+      "label": "Scatter Scale",
+      "sourceLine": 5096,
+      "group": "halationGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "halationAmount",
+      "label": "Amount",
+      "sourceLine": 5097,
+      "group": "halationGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "halationScale",
+      "label": "Scale",
+      "sourceLine": 5098,
+      "group": "halationGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "halationBoostEv",
+      "label": "Boost EV",
+      "sourceLine": 5099,
+      "group": "halationGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 20.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "halationBoostRange",
+      "label": "Boost Range",
+      "sourceLine": 5100,
+      "group": "halationGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.3
+      ],
+      "defaultExpression": [
+        "0.3"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "halationProtectEv",
+      "label": "Protect EV",
+      "sourceLine": 5101,
+      "group": "halationGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 10.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        4.0
+      ],
+      "defaultExpression": [
+        "4.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "halationStrength",
+      "label": "Strength RGB",
+      "sourceLine": 5102,
+      "group": "halationGroup",
+      "metadata": true,
+      "development": false,
+      "components": 3,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.05,
+        0.015,
+        0.0
+      ],
+      "defaultExpression": [
+        "0.05",
+        "0.015",
+        "0.0"
+      ],
+      "kind": "double3DDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionEnabled",
+      "label": "Camera Enabled",
+      "sourceLine": 5104,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionFamily",
+      "label": "Camera Family",
+      "sourceLine": 5105,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 3,
+      "choices": [
+        "Glimmerglass",
+        "Black Pro-Mist",
+        "Pro-Mist",
+        "CineBloom"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionStrength",
+      "label": "Camera Strength",
+      "sourceLine": 5106,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.5
+      ],
+      "defaultExpression": [
+        "0.5"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionSpatialScale",
+      "label": "Camera Spatial Scale",
+      "sourceLine": 5107,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionHaloWarmth",
+      "label": "Camera Halo Warmth",
+      "sourceLine": 5108,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -1.5,
+      "maximum": 1.5,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionCoreIntensity",
+      "label": "Camera Core Intensity",
+      "sourceLine": 5109,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionCoreSize",
+      "label": "Camera Core Size",
+      "sourceLine": 5110,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.1,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionHaloIntensity",
+      "label": "Camera Halo Intensity",
+      "sourceLine": 5111,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionHaloSize",
+      "label": "Camera Halo Size",
+      "sourceLine": 5112,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.1,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionBloomIntensity",
+      "label": "Camera Bloom Intensity",
+      "sourceLine": 5113,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "cameraDiffusionBloomSize",
+      "label": "Camera Bloom Size",
+      "sourceLine": 5114,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.1,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionEnabled",
+      "label": "Print Enabled",
+      "sourceLine": 5115,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionFamily",
+      "label": "Print Family",
+      "sourceLine": 5116,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 3,
+      "choices": [
+        "Glimmerglass",
+        "Black Pro-Mist",
+        "Pro-Mist",
+        "CineBloom"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionStrength",
+      "label": "Print Strength",
+      "sourceLine": 5117,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.5
+      ],
+      "defaultExpression": [
+        "0.5"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionSpatialScale",
+      "label": "Print Spatial Scale",
+      "sourceLine": 5118,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionHaloWarmth",
+      "label": "Print Halo Warmth",
+      "sourceLine": 5119,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": -1.5,
+      "maximum": 1.5,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionCoreIntensity",
+      "label": "Print Core Intensity",
+      "sourceLine": 5120,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionCoreSize",
+      "label": "Print Core Size",
+      "sourceLine": 5121,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.1,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionHaloIntensity",
+      "label": "Print Halo Intensity",
+      "sourceLine": 5122,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionHaloSize",
+      "label": "Print Halo Size",
+      "sourceLine": 5123,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.1,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionBloomIntensity",
+      "label": "Print Bloom Intensity",
+      "sourceLine": 5124,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "printDiffusionBloomSize",
+      "label": "Print Bloom Size",
+      "sourceLine": 5125,
+      "group": "diffusionGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.1,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        1.0
+      ],
+      "defaultExpression": [
+        "1.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scannerEnabled",
+      "label": "Enabled",
+      "sourceLine": 5126,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scannerWhiteCorrection",
+      "label": "White Correction",
+      "sourceLine": 5127,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scannerBlackCorrection",
+      "label": "Black Correction",
+      "sourceLine": 5128,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "boolean",
+      "default": [
+        0
+      ],
+      "defaultExpression": [
+        "false"
+      ],
+      "kind": "boolDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scannerWhiteLevel",
+      "label": "White Level",
+      "sourceLine": 5129,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.98
+      ],
+      "defaultExpression": [
+        "0.98"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scannerBlackLevel",
+      "label": "Black Level",
+      "sourceLine": 5130,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.01
+      ],
+      "defaultExpression": [
+        "0.01"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "glarePercent",
+      "label": "Glare Percent",
+      "sourceLine": 5131,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 0.2,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.03
+      ],
+      "defaultExpression": [
+        "0.03"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "glareRoughness",
+      "label": "Glare Roughness",
+      "sourceLine": 5132,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.7
+      ],
+      "defaultExpression": [
+        "0.7"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "glareBlur",
+      "label": "Glare Blur",
+      "sourceLine": 5133,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 32.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.5
+      ],
+      "defaultExpression": [
+        "0.5"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scannerMtf50LpMm",
+      "label": "MTF50 lp/mm",
+      "sourceLine": 5134,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 300.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        60.0
+      ],
+      "defaultExpression": [
+        "60.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scannerUnsharpRadiusUm",
+      "label": "Unsharp Radius um",
+      "sourceLine": 5135,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 100.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        5.0
+      ],
+      "defaultExpression": [
+        "5.0"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "scannerUnsharpAmount",
+      "label": "Unsharp Amount",
+      "sourceLine": 5136,
+      "group": "scannerGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0.0,
+      "maximum": 4.0,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "double",
+      "default": [
+        0.7
+      ],
+      "defaultExpression": [
+        "0.7"
+      ],
+      "kind": "doubleDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "infoVersion",
+      "label": "Version:",
+      "sourceLine": 5137,
+      "group": "infoGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "text",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Read-only information or text management; use the OFX inspector."
+    },
+    {
+      "id": "infoCreatedBy",
+      "label": "Created by:",
+      "sourceLine": 5138,
+      "group": "infoGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "text",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Read-only information or text management; use the OFX inspector."
+    },
+    {
+      "id": "infoBasedOn",
+      "label": "Based on work by:",
+      "sourceLine": 5139,
+      "group": "infoGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "text",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Read-only information or text management; use the OFX inspector."
+    },
+    {
+      "id": "gpuRenderTiling",
+      "label": "GPU Render Tiling",
+      "sourceLine": 5141,
+      "group": "manageGroup",
+      "metadata": true,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [
+        "Full-frame",
+        "Experimental tiled"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [
+        0.0
+      ],
+      "defaultExpression": [
+        "0"
+      ],
+      "kind": "intDefault",
+      "excludedReason": null
+    },
+    {
+      "id": "lutSize",
+      "label": "LUT Size",
+      "sourceLine": 5144,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 1,
+      "choices": [
+        "33",
+        "65"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Preset/LUT/controller management remains in the OFX inspector."
+    },
+    {
+      "id": "lutDestination",
+      "label": "LUT Destination",
+      "sourceLine": 5145,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": 4,
+      "choices": [
+        "User",
+        "DaVinci Resolve",
+        "Nuke",
+        "Adobe Creative",
+        "Final Cut Pro"
+      ],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Preset/LUT/controller management remains in the OFX inspector."
+    },
+    {
+      "id": "exportLut",
+      "label": "Export LUT",
+      "sourceLine": 5147,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "action",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "presetSelection",
+      "label": "Preset",
+      "sourceLine": 5156,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": 0,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "choice",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Preset/LUT/controller management remains in the OFX inspector."
+    },
+    {
+      "id": "savePreset",
+      "label": "Save Preset",
+      "sourceLine": 5157,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "action",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "loadPreset",
+      "label": "Load Preset",
+      "sourceLine": 5158,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "action",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "copyParams",
+      "label": "Copy Params",
+      "sourceLine": 5159,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "action",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "pasteParams",
+      "label": "Paste Params",
+      "sourceLine": 5160,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "action",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "saveDefaults",
+      "label": "Set Defaults",
+      "sourceLine": 5161,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "action",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "resetDefaults",
+      "label": "Reset Factory Defaults",
+      "sourceLine": 5162,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "action",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    },
+    {
+      "id": "openUserManual",
+      "label": "Open User Manual",
+      "sourceLine": 5163,
+      "group": "manageGroup",
+      "metadata": false,
+      "development": false,
+      "components": 1,
+      "minimum": null,
+      "maximum": null,
+      "choices": [],
+      "runtimeAuthoritative": true,
+      "type": "action",
+      "default": [],
+      "defaultExpression": [],
+      "excludedReason": "Requires an explicit semantic host action; this numeric control protocol does not implement it."
+    }
+  ]
+}

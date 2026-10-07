@@ -1,0 +1,1370 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-05-26T10:15:39.591054+00:00",
+  "platform": {
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.5 (main, Jun 11 2025, 15:36:57) [Clang 17.0.0 (clang-1700.0.13.3)]"
+  },
+  "git": {
+    "head": "6f6854dc50f84305a8ecccfa2720ae03744231c6",
+    "status_short": "M CMakeLists.txt\n M README.md\n M Resources/plugin_manifest.json.in\n M build_macos.sh\n M shaders/SpektraFilm.metal\n M src/SpektraFilmPlugin.cpp\n M src/SpektraMetalRenderer.mm\n M src/SpektraParameters.h\n M src/SpektraRenderer.h\n M tools/SpektraMetalPerfHarness.mm\n M tools/SpektraVariantGenerator.mm\n M tools/generate_profile_curves.py\n?? build_windows.ps1\n?? perf_runs/\n?? shaders/vulkan/\n?? src/SpektraAppBridge.h\n?? src/SpektraAppBridge.mm\n?? src/SpektraVulkanRenderer.cpp\n?? src/SpektraVulkanRenderer.h\n?? tools/SpektraHarnessHostIO.h\n?? tools/SpektraMetalParityHarness.mm\n?? tools/SpektraVulkanCopyHarness.cpp\n?? tools/generate_exhaustive_manifest.py\n?? tools/generate_manual_parity_chart.py\n?? tools/perf_candidates_blur_prototypes.json\n?? tools/perf_candidates_exhaustive.json\n?? tools/run_compile_perf_sweep.py\n?? tools/run_parity_harness.py\n?? tools/run_perf_quality_sweep.py\n?? tools/test_run_perf_quality_sweep.py"
+  },
+  "build": {
+    "build_dir": "/Users/test/Desktop/spektrafilm/OFX/SpektraFilm/build",
+    "perf_harness": "/Users/test/Desktop/spektrafilm/OFX/SpektraFilm/build/SpektraFilmPerfHarness",
+    "parity_harness": "/Users/test/Desktop/spektrafilm/OFX/SpektraFilm/build/SpektraFilmParityHarness",
+    "parity_runner": "/Users/test/Desktop/spektrafilm/OFX/SpektraFilm/tools/run_parity_harness.py",
+    "cmake_cache": {
+      "CMAKE_BUILD_TYPE": "Release",
+      "SPEKTRAFILM_METAL_EXTRA_FLAGS": "",
+      "SPEKTRAFILM_METAL_FAST_MATH": "OFF",
+      "SPEKTRAFILM_NATIVE_FAST_MATH": "OFF"
+    }
+  },
+  "run": {
+    "case": "all",
+    "cases": [
+      "all"
+    ],
+    "sizes": [
+      "1920x1080",
+      "3840x2160"
+    ],
+    "iterations": 5,
+    "warmup": 2,
+    "parity_mode": "quick",
+    "parity_width": 96,
+    "parity_height": 64,
+    "patterns": null,
+    "stages": null,
+    "skip_quality": false,
+    "pass_timing": "off",
+    "detail": false,
+    "reference_cache_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/python_reference_cache",
+    "refresh_reference_cache": false,
+    "python_data_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/python_data",
+    "python_runtime_cache_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/python_runtime_cache",
+    "candidate_manifest": [
+      "tools/perf_candidates_exhaustive.json"
+    ],
+    "candidate_tags": null
+  },
+  "candidates": [
+    {
+      "name": "baseline",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private",
+        "SPEKTRAFILM_THREADGROUP": "auto",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private",
+        "--threadgroup",
+        "auto",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "baseline",
+        "exact"
+      ]
+    },
+    {
+      "name": "shared-scratch",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "shared",
+        "SPEKTRAFILM_THREADGROUP": "auto",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "shared",
+        "--threadgroup",
+        "auto",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "scratch",
+        "exact"
+      ]
+    },
+    {
+      "name": "threadgroup-16x16",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private",
+        "SPEKTRAFILM_THREADGROUP": "16x16",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private",
+        "--threadgroup",
+        "16x16",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "exact"
+      ]
+    },
+    {
+      "name": "threadgroup-32x8",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private",
+        "SPEKTRAFILM_THREADGROUP": "32x8",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private",
+        "--threadgroup",
+        "32x8",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "exact"
+      ]
+    },
+    {
+      "name": "threadgroup-8x32",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private",
+        "SPEKTRAFILM_THREADGROUP": "8x32",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private",
+        "--threadgroup",
+        "8x32",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "exact"
+      ]
+    },
+    {
+      "name": "threadgroup-64x4",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private",
+        "SPEKTRAFILM_THREADGROUP": "64x4",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private",
+        "--threadgroup",
+        "64x4",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "exact"
+      ]
+    },
+    {
+      "name": "diffusion-group-2",
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "2"
+      },
+      "perf_args": [
+        "--diffusion-group-size",
+        "2"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "diffusion",
+        "group-size",
+        "exact"
+      ]
+    },
+    {
+      "name": "diffusion-group-4",
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "4"
+      },
+      "perf_args": [
+        "--diffusion-group-size",
+        "4"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "diffusion",
+        "group-size",
+        "exact"
+      ]
+    },
+    {
+      "name": "scanner-texture",
+      "env": {
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "texture"
+      },
+      "perf_args": [
+        "--scanner-image-storage",
+        "texture"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "scanner",
+        "exact"
+      ]
+    },
+    {
+      "name": "dir-tail-mps",
+      "env": {
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "mps"
+      },
+      "perf_args": [
+        "--dir-tail-backend",
+        "mps"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "dir",
+        "mps",
+        "approximate"
+      ]
+    },
+    {
+      "name": "host-half-source",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private",
+        "SPEKTRAFILM_THREADGROUP": "auto",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private",
+        "--threadgroup",
+        "auto",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "half",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "half",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "contiguous"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "host-io",
+        "half",
+        "exact"
+      ]
+    },
+    {
+      "name": "host-half-destination",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private",
+        "SPEKTRAFILM_THREADGROUP": "auto",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private",
+        "--threadgroup",
+        "auto",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "float",
+        "--destination-format",
+        "half",
+        "--host-layout",
+        "contiguous",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "float",
+        "--destination-format",
+        "half",
+        "--host-layout",
+        "contiguous"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "host-io",
+        "half",
+        "exact"
+      ]
+    },
+    {
+      "name": "host-half-io",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private",
+        "SPEKTRAFILM_THREADGROUP": "auto",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private",
+        "--threadgroup",
+        "auto",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "half",
+        "--destination-format",
+        "half",
+        "--host-layout",
+        "contiguous",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "half",
+        "--destination-format",
+        "half",
+        "--host-layout",
+        "contiguous"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "host-io",
+        "half",
+        "exact"
+      ]
+    },
+    {
+      "name": "host-strided-float",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private",
+        "SPEKTRAFILM_THREADGROUP": "auto",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private",
+        "--threadgroup",
+        "auto",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "strided",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "strided"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "host-io",
+        "layout",
+        "exact"
+      ]
+    },
+    {
+      "name": "host-offset-float",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private",
+        "SPEKTRAFILM_THREADGROUP": "auto",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "buffer",
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1",
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused",
+        "SPEKTRAFILM_BLUR_BACKEND": "custom",
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "off",
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "float",
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "off",
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "0",
+        "SPEKTRAFILM_SCANNER_MPS": "0",
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "0",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_SAMPLER": "r2",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_RADIUS_LUT": "512",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_TARGET_STORAGE": "float-buffer",
+        "SPEKTRAFILM_GRAIN_SYNTHESIS_CELL_MODE": "offset-list"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private",
+        "--threadgroup",
+        "auto",
+        "--scanner-image-storage",
+        "buffer",
+        "--diffusion-group-size",
+        "1",
+        "--blur-backend",
+        "custom",
+        "--blur-downsample",
+        "off",
+        "--intermediate-precision",
+        "float",
+        "--diffusion-cluster-sigma",
+        "off",
+        "--halation-grouped-tail",
+        "0",
+        "--scanner-mps",
+        "0",
+        "--grain-blur-recurrence",
+        "0",
+        "--dir-tail-backend",
+        "fused",
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "offset",
+        "--grain-synthesis-sampler",
+        "r2",
+        "--grain-synthesis-radius-lut",
+        "512",
+        "--grain-synthesis-target-storage",
+        "float-buffer",
+        "--grain-synthesis-cell-mode",
+        "offset-list"
+      ],
+      "quality_args": [
+        "--source-format",
+        "float",
+        "--destination-format",
+        "float",
+        "--host-layout",
+        "offset"
+      ],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "host-io",
+        "layout",
+        "exact"
+      ]
+    },
+    {
+      "name": "tg-auto",
+      "env": {
+        "SPEKTRAFILM_THREADGROUP": "auto"
+      },
+      "perf_args": [
+        "--threadgroup",
+        "auto"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "core"
+      ]
+    },
+    {
+      "name": "tg-16x16",
+      "env": {
+        "SPEKTRAFILM_THREADGROUP": "16x16"
+      },
+      "perf_args": [
+        "--threadgroup",
+        "16x16"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "core"
+      ]
+    },
+    {
+      "name": "tg-32x8",
+      "env": {
+        "SPEKTRAFILM_THREADGROUP": "32x8"
+      },
+      "perf_args": [
+        "--threadgroup",
+        "32x8"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "core"
+      ]
+    },
+    {
+      "name": "tg-8x32",
+      "env": {
+        "SPEKTRAFILM_THREADGROUP": "8x32"
+      },
+      "perf_args": [
+        "--threadgroup",
+        "8x32"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "core"
+      ]
+    },
+    {
+      "name": "tg-64x4",
+      "env": {
+        "SPEKTRAFILM_THREADGROUP": "64x4"
+      },
+      "perf_args": [
+        "--threadgroup",
+        "64x4"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "threadgroup",
+        "core"
+      ]
+    },
+    {
+      "name": "scratch-private",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "private"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "private"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "scratch",
+        "core"
+      ]
+    },
+    {
+      "name": "scratch-shared",
+      "env": {
+        "SPEKTRAFILM_SCRATCH_STORAGE": "shared"
+      },
+      "perf_args": [
+        "--scratch-storage",
+        "shared"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "scratch",
+        "core"
+      ]
+    },
+    {
+      "name": "scanner-mps",
+      "env": {
+        "SPEKTRAFILM_SCANNER_MPS": "1"
+      },
+      "perf_args": [
+        "--scanner-mps",
+        "1"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "scanner",
+        "mps",
+        "approximate"
+      ]
+    },
+    {
+      "name": "scanner-mps-texture",
+      "env": {
+        "SPEKTRAFILM_SCANNER_MPS": "1",
+        "SPEKTRAFILM_SCANNER_IMAGE_STORAGE": "texture"
+      },
+      "perf_args": [
+        "--scanner-mps",
+        "1",
+        "--scanner-image-storage",
+        "texture"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "scanner",
+        "mps",
+        "approximate",
+        "combined"
+      ]
+    },
+    {
+      "name": "halation-grouped-tail",
+      "env": {
+        "SPEKTRAFILM_HALATION_GROUPED_TAIL": "1"
+      },
+      "perf_args": [
+        "--halation-grouped-tail",
+        "1"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "halation",
+        "grouped-tail",
+        "approximate"
+      ]
+    },
+    {
+      "name": "diffusion-group-1",
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_GROUP_SIZE": "1"
+      },
+      "perf_args": [
+        "--diffusion-group-size",
+        "1"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "diffusion",
+        "group-size",
+        "exact"
+      ]
+    },
+    {
+      "name": "blur-backend-auto",
+      "env": {
+        "SPEKTRAFILM_BLUR_BACKEND": "auto"
+      },
+      "perf_args": [
+        "--blur-backend",
+        "auto"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "backend",
+        "approximate"
+      ]
+    },
+    {
+      "name": "blur-backend-mps",
+      "env": {
+        "SPEKTRAFILM_BLUR_BACKEND": "mps"
+      },
+      "perf_args": [
+        "--blur-backend",
+        "mps"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "backend",
+        "approximate"
+      ]
+    },
+    {
+      "name": "blur-backend-custom",
+      "env": {
+        "SPEKTRAFILM_BLUR_BACKEND": "custom"
+      },
+      "perf_args": [
+        "--blur-backend",
+        "custom"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "blur",
+        "backend",
+        "exact"
+      ]
+    },
+    {
+      "name": "blur-downsample-2",
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "2"
+      },
+      "perf_args": [
+        "--blur-downsample",
+        "2"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "downsample",
+        "approximate"
+      ]
+    },
+    {
+      "name": "blur-downsample-4",
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "4"
+      },
+      "perf_args": [
+        "--blur-downsample",
+        "4"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "downsample",
+        "approximate"
+      ]
+    },
+    {
+      "name": "blur-downsample-8",
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "8"
+      },
+      "perf_args": [
+        "--blur-downsample",
+        "8"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "downsample",
+        "approximate"
+      ]
+    },
+    {
+      "name": "blur-downsample-auto",
+      "env": {
+        "SPEKTRAFILM_BLUR_DOWNSAMPLE": "auto"
+      },
+      "perf_args": [
+        "--blur-downsample",
+        "auto"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "blur",
+        "downsample",
+        "approximate"
+      ]
+    },
+    {
+      "name": "precision-half-blur",
+      "env": {
+        "SPEKTRAFILM_INTERMEDIATE_PRECISION": "half-blur"
+      },
+      "perf_args": [
+        "--intermediate-precision",
+        "half-blur"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "precision",
+        "half",
+        "blur",
+        "approximate"
+      ]
+    },
+    {
+      "name": "diffusion-cluster-005",
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "0.05"
+      },
+      "perf_args": [
+        "--diffusion-cluster-sigma",
+        "0.05"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "diffusion",
+        "cluster",
+        "approximate"
+      ]
+    },
+    {
+      "name": "diffusion-cluster-010",
+      "env": {
+        "SPEKTRAFILM_DIFFUSION_CLUSTER_SIGMA": "0.10"
+      },
+      "perf_args": [
+        "--diffusion-cluster-sigma",
+        "0.10"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "report_only",
+      "tags": [
+        "diffusion",
+        "cluster",
+        "approximate"
+      ]
+    },
+    {
+      "name": "grain-blur-recurrence",
+      "env": {
+        "SPEKTRAFILM_GRAIN_BLUR_RECURRENCE": "1"
+      },
+      "perf_args": [
+        "--grain-blur-recurrence",
+        "1"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "grain",
+        "blur",
+        "recurrence",
+        "exact"
+      ]
+    },
+    {
+      "name": "dir-tail-fused",
+      "env": {
+        "SPEKTRAFILM_DIR_TAIL_BACKEND": "fused"
+      },
+      "perf_args": [
+        "--dir-tail-backend",
+        "fused"
+      ],
+      "quality_args": [],
+      "quality_required": true,
+      "quality_policy": "exact",
+      "tags": [
+        "dir",
+        "fused",
+        "exact"
+      ]
+    }
+  ]
+}

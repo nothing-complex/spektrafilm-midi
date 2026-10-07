@@ -1,0 +1,5433 @@
+{
+  "schemaVersion": 1,
+  "appName": "Spektrafilm MIDI",
+  "tangentPort": 64246,
+  "defaultBank": "essentials",
+  "fineScale": 0.1,
+  "axes": [
+    {
+      "id": "0x1001",
+      "index": 0,
+      "label": "Film Exp",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 0,
+      "midiCC": 0,
+      "midiResetNote": 0
+    },
+    {
+      "id": "0x1002",
+      "index": 1,
+      "label": "Print Exp",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 1,
+      "midiCC": 1,
+      "midiResetNote": 1
+    },
+    {
+      "id": "0x1003",
+      "index": 2,
+      "label": "Film Push",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 2,
+      "midiCC": 2,
+      "midiResetNote": 2
+    },
+    {
+      "id": "0x1004",
+      "index": 3,
+      "label": "Print Push",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 3,
+      "midiCC": 3,
+      "midiResetNote": 3
+    },
+    {
+      "id": "0x1005",
+      "index": 4,
+      "label": "C Filter",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 4,
+      "midiCC": 4,
+      "midiResetNote": 4
+    },
+    {
+      "id": "0x1006",
+      "index": 5,
+      "label": "M Filter",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 5,
+      "midiCC": 5,
+      "midiResetNote": 5
+    },
+    {
+      "id": "0x1007",
+      "index": 6,
+      "label": "Y Filter",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 6,
+      "midiCC": 6,
+      "midiResetNote": 6
+    },
+    {
+      "id": "0x1008",
+      "index": 7,
+      "label": "Print Shadow",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 7,
+      "midiCC": 7,
+      "midiResetNote": 7
+    },
+    {
+      "id": "0x1009",
+      "index": 8,
+      "label": "Print Hi",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 8,
+      "midiCC": 8,
+      "midiResetNote": 8
+    },
+    {
+      "id": "0x100A",
+      "index": 9,
+      "label": "Grain",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 9,
+      "midiCC": 9,
+      "midiResetNote": 9
+    },
+    {
+      "id": "0x100B",
+      "index": 10,
+      "label": "Halation",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 10,
+      "midiCC": 10,
+      "midiResetNote": 10
+    },
+    {
+      "id": "0x100C",
+      "index": 11,
+      "label": "Cam Diffuse",
+      "panel": "Kb",
+      "physicalType": "Encoder",
+      "number": 11,
+      "midiCC": 11,
+      "midiResetNote": 11
+    },
+    {
+      "id": "0x1101",
+      "index": 12,
+      "label": "M Filter",
+      "panel": "Tk",
+      "physicalType": "Encoder",
+      "number": 0,
+      "midiCC": 12,
+      "midiResetNote": 12
+    },
+    {
+      "id": "0x1102",
+      "index": 13,
+      "label": "Y Filter",
+      "panel": "Tk",
+      "physicalType": "Encoder",
+      "number": 1,
+      "midiCC": 13,
+      "midiResetNote": 13
+    },
+    {
+      "id": "0x1103",
+      "index": 14,
+      "label": "C Filter",
+      "panel": "Tk",
+      "physicalType": "Encoder",
+      "number": 2,
+      "midiCC": 14,
+      "midiResetNote": 14
+    },
+    {
+      "id": "0x1104",
+      "index": 15,
+      "label": "Enlarge X",
+      "panel": "Tk",
+      "physicalType": "Encoder",
+      "number": 3,
+      "midiCC": 15,
+      "midiResetNote": 15
+    },
+    {
+      "id": "0x1105",
+      "index": 16,
+      "label": "Enlarge Y",
+      "panel": "Tk",
+      "physicalType": "Encoder",
+      "number": 4,
+      "midiCC": 16,
+      "midiResetNote": 16
+    },
+    {
+      "id": "0x1106",
+      "index": 17,
+      "label": "Enlarge Size",
+      "panel": "Tk",
+      "physicalType": "Encoder",
+      "number": 5,
+      "midiCC": 17,
+      "midiResetNote": 17
+    },
+    {
+      "id": "0x1107",
+      "index": 18,
+      "label": "Preflash M",
+      "panel": "Tk",
+      "physicalType": "Encoder",
+      "number": 6,
+      "midiCC": 18,
+      "midiResetNote": 18
+    },
+    {
+      "id": "0x1108",
+      "index": 19,
+      "label": "Preflash Y",
+      "panel": "Tk",
+      "physicalType": "Encoder",
+      "number": 7,
+      "midiCC": 19,
+      "midiResetNote": 19
+    },
+    {
+      "id": "0x1109",
+      "index": 20,
+      "label": "Preflash Exp",
+      "panel": "Tk",
+      "physicalType": "Encoder",
+      "number": 8,
+      "midiCC": 20,
+      "midiResetNote": 20
+    },
+    {
+      "id": "0x1201",
+      "index": 21,
+      "label": "Print Shadow",
+      "panel": "Mf",
+      "physicalType": "Encoder",
+      "number": 0,
+      "midiCC": 21,
+      "midiResetNote": 21
+    },
+    {
+      "id": "0x1202",
+      "index": 22,
+      "label": "Print Hi",
+      "panel": "Mf",
+      "physicalType": "Encoder",
+      "number": 1,
+      "midiCC": 22,
+      "midiResetNote": 22
+    },
+    {
+      "id": "0x1203",
+      "index": 23,
+      "label": "Focus Trim",
+      "panel": "Mf",
+      "physicalType": "Encoder",
+      "number": 2,
+      "midiCC": 23,
+      "midiResetNote": 23
+    }
+  ],
+  "banks": [
+    {
+      "id": "0x2001",
+      "name": "essentials",
+      "label": "Essentials",
+      "supported": true,
+      "unavailableReason": null,
+      "pages": [
+        {
+          "name": "Essentials",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "filmExposureEv",
+              "component": 0,
+              "label": "Film Exp",
+              "step": 0.025
+            },
+            {
+              "parameter": "printExposureEv",
+              "component": 0,
+              "label": "Print Exp",
+              "step": 0.025
+            },
+            {
+              "parameter": "filmPushPullStops",
+              "component": 0,
+              "label": "Film Push",
+              "step": 0.01
+            },
+            {
+              "parameter": "printPushPullStops",
+              "component": 0,
+              "label": "Print Push",
+              "step": 0.01
+            },
+            {
+              "parameter": "printerLightR",
+              "component": 0,
+              "label": "Printer R",
+              "step": 0.1,
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "printerLightG",
+              "component": 0,
+              "label": "Printer G",
+              "step": 0.1,
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "printerLightB",
+              "component": 0,
+              "label": "Printer B",
+              "step": 0.1,
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "parameter": "grainAmount",
+              "component": 0,
+              "label": "Grain",
+              "step": 0.01
+            },
+            {
+              "parameter": "halationAmount",
+              "component": 0,
+              "label": "Halation",
+              "step": 0.01
+            },
+            {
+              "parameter": "cameraDiffusionStrength",
+              "component": 0,
+              "label": "Cam Diffuse",
+              "step": 0.01
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x2002",
+      "name": "film",
+      "label": "Film",
+      "supported": true,
+      "unavailableReason": null,
+      "pages": [
+        {
+          "name": "Film",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "rgbToRawMethod",
+              "component": 0,
+              "label": "RGB to Raw",
+              "step": 1
+            },
+            {
+              "parameter": "cameraUvFilterEnabled",
+              "component": 0,
+              "label": "Filter UV",
+              "step": 1
+            },
+            {
+              "parameter": "cameraUvCutNm",
+              "component": 0,
+              "label": "UV Cut nm",
+              "step": 0.175
+            },
+            {
+              "parameter": "cameraIrFilterEnabled",
+              "component": 0,
+              "label": "Filter IR",
+              "step": 1
+            },
+            {
+              "parameter": "cameraIrCutNm",
+              "component": 0,
+              "label": "IR Cut nm",
+              "step": 0.45
+            },
+            {
+              "parameter": "film",
+              "component": 0,
+              "label": "Stock",
+              "step": 1
+            },
+            {
+              "parameter": "filmFormat",
+              "component": 0,
+              "label": "Film Format",
+              "step": 1
+            },
+            {
+              "parameter": "filmPushPullMode",
+              "component": 0,
+              "label": "Push / Pull ",
+              "step": 1
+            },
+            {
+              "parameter": "filmPushPullStops",
+              "component": 0,
+              "label": "Film Push / ",
+              "step": 0.01
+            },
+            {
+              "parameter": "negativeBleachBypassAmount",
+              "component": 0,
+              "label": "Negative Ble",
+              "step": 0.0025
+            },
+            {
+              "parameter": "negativeLeucoCyanCoupling",
+              "component": 0,
+              "label": "Leuco-Cyan C",
+              "step": 0.005
+            },
+            {
+              "parameter": "filmExposureEv",
+              "component": 0,
+              "label": "Exposure EV",
+              "step": 0.025
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        },
+        {
+          "name": "Film 2",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "autoExposure",
+              "component": 0,
+              "label": "Auto Exposur",
+              "step": 1
+            },
+            {
+              "parameter": "autoExposureMethod",
+              "component": 0,
+              "label": "Auto Exposur",
+              "step": 1
+            },
+            {
+              "parameter": "filmGamma",
+              "component": 0,
+              "label": "Gamma",
+              "step": 0.00475
+            },
+            {
+              "parameter": "dirAmount",
+              "component": 0,
+              "label": "Amount",
+              "step": 0.005
+            },
+            {
+              "parameter": "dirDiffusionUm",
+              "component": 0,
+              "label": "Diffusion um",
+              "step": 0.25
+            },
+            {
+              "parameter": "dirDiffusionTailUm",
+              "component": 0,
+              "label": "Tail um",
+              "step": 2.5
+            },
+            {
+              "parameter": "dirDiffusionTailWeight",
+              "component": 0,
+              "label": "Tail Weight",
+              "step": 0.0025
+            },
+            {
+              "parameter": "dirInhibitionSameLayer",
+              "component": 0,
+              "label": "Same-Layer I",
+              "step": 0.005
+            },
+            {
+              "parameter": "dirInhibitionInterlayer",
+              "component": 0,
+              "label": "Interlayer I",
+              "step": 0.005
+            },
+            {
+              "parameter": "dirGammaSameLayerRgb",
+              "component": 0,
+              "label": "Same-Layer G",
+              "step": 0.0025
+            },
+            {
+              "parameter": "dirGammaSameLayerRgb",
+              "component": 1,
+              "label": "Same-Layer G",
+              "step": 0.0025
+            },
+            {
+              "parameter": "dirGammaSameLayerRgb",
+              "component": 2,
+              "label": "Same-Layer G",
+              "step": 0.0025
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        },
+        {
+          "name": "Film 3",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "dirGammaRToGb",
+              "component": 0,
+              "label": "R -> G/B Gam",
+              "step": 0.0025
+            },
+            {
+              "parameter": "dirGammaRToGb",
+              "component": 1,
+              "label": "R -> G/B Gam",
+              "step": 0.0025
+            },
+            {
+              "parameter": "dirGammaGToRb",
+              "component": 0,
+              "label": "G -> R/B Gam",
+              "step": 0.0025
+            },
+            {
+              "parameter": "dirGammaGToRb",
+              "component": 1,
+              "label": "G -> R/B Gam",
+              "step": 0.0025
+            },
+            {
+              "parameter": "dirGammaBToRg",
+              "component": 0,
+              "label": "B -> R/G Gam",
+              "step": 0.0025
+            },
+            {
+              "parameter": "dirGammaBToRg",
+              "component": 1,
+              "label": "B -> R/G Gam",
+              "step": 0.0025
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x2003",
+      "name": "print",
+      "label": "Print",
+      "supported": true,
+      "unavailableReason": null,
+      "pages": [
+        {
+          "name": "Print",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "paper",
+              "component": 0,
+              "label": "Paper",
+              "step": 1
+            },
+            {
+              "parameter": "printTiming",
+              "component": 0,
+              "label": "Print Timing",
+              "step": 1
+            },
+            {
+              "parameter": "printPushPullStops",
+              "component": 0,
+              "label": "Print Push /",
+              "step": 0.01
+            },
+            {
+              "parameter": "printBleachBypassAmount",
+              "component": 0,
+              "label": "Print Bleach",
+              "step": 0.0025
+            },
+            {
+              "parameter": "printExposureEv",
+              "component": 0,
+              "label": "Exposure EV",
+              "step": 0.025
+            },
+            {
+              "parameter": "printGamma",
+              "component": 0,
+              "label": "Gamma",
+              "step": 0.00475
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Shadow Shape",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Highlight Sh",
+              "step": 0.005
+            },
+            {
+              "parameter": "filterC",
+              "component": 0,
+              "label": "C Filter",
+              "step": 0.3
+            },
+            {
+              "parameter": "filterMShift",
+              "component": 0,
+              "label": "M Filter Shi",
+              "step": 0.3
+            },
+            {
+              "parameter": "filterYShift",
+              "component": 0,
+              "label": "Y Filter Shi",
+              "step": 0.3
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        },
+        {
+          "name": "Print 2",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M F",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y F",
+              "step": 0.1
+            },
+            {
+              "parameter": "printerLightsGang",
+              "component": 0,
+              "label": "Gang Printer",
+              "step": 1
+            },
+            {
+              "parameter": "printerLightsGroup",
+              "component": 0,
+              "label": "Group Printe",
+              "step": 1
+            },
+            {
+              "parameter": "printerLightR",
+              "component": 0,
+              "label": "Printer Poin",
+              "step": 0.1
+            },
+            {
+              "parameter": "printerLightG",
+              "component": 0,
+              "label": "Printer Poin",
+              "step": 0.1
+            },
+            {
+              "parameter": "printerLightB",
+              "component": 0,
+              "label": "Printer Poin",
+              "step": 0.1
+            },
+            {
+              "parameter": "printerLightCalibration",
+              "component": 0,
+              "label": "Printer Poin",
+              "step": 1
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x2004",
+      "name": "printer",
+      "label": "Printer",
+      "supported": true,
+      "unavailableReason": null,
+      "pages": [
+        {
+          "name": "Printer",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "printerLightR",
+              "component": 0,
+              "label": "Printer Poin",
+              "step": 0.1
+            },
+            {
+              "parameter": "printerLightG",
+              "component": 0,
+              "label": "Printer Poin",
+              "step": 0.1
+            },
+            {
+              "parameter": "printerLightB",
+              "component": 0,
+              "label": "Printer Poin",
+              "step": 0.1
+            },
+            {
+              "parameter": "printerLightsGang",
+              "component": 0,
+              "label": "Gang Printer",
+              "step": 1
+            },
+            {
+              "parameter": "printerLightsGroup",
+              "component": 0,
+              "label": "Group Printe",
+              "step": 1
+            },
+            {
+              "parameter": "printerLightCalibration",
+              "component": 0,
+              "label": "Printer Poin",
+              "step": 1
+            },
+            {
+              "parameter": "filterC",
+              "component": 0,
+              "label": "C Filter",
+              "step": 0.3
+            },
+            {
+              "parameter": "filterMShift",
+              "component": 0,
+              "label": "M Filter Shi",
+              "step": 0.3
+            },
+            {
+              "parameter": "filterYShift",
+              "component": 0,
+              "label": "Y Filter Shi",
+              "step": 0.3
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M F",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y F",
+              "step": 0.1
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        },
+        {
+          "name": "Printer 2",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Scale",
+              "step": 0.01
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Offset X %",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Offset Y %",
+              "step": 0.1
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x2005",
+      "name": "grain",
+      "label": "Grain",
+      "supported": true,
+      "unavailableReason": null,
+      "pages": [
+        {
+          "name": "Grain",
+          "stageParameter": "grainEnabled",
+          "slots": [
+            {
+              "parameter": "grainEnabled",
+              "component": 0,
+              "label": "Enabled",
+              "step": 1
+            },
+            {
+              "parameter": "grainModel",
+              "component": 0,
+              "label": "Model",
+              "step": 1
+            },
+            {
+              "parameter": "grainAmount",
+              "component": 0,
+              "label": "Amount",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainSaturation",
+              "component": 0,
+              "label": "Saturation",
+              "step": 0.0025
+            },
+            {
+              "parameter": "grainSublayersEnabled",
+              "component": 0,
+              "label": "Sublayers",
+              "step": 1
+            },
+            {
+              "parameter": "grainSubLayerCount",
+              "component": 0,
+              "label": "Sub Layer Co",
+              "step": 1
+            },
+            {
+              "parameter": "grainParticleAreaUm2",
+              "component": 0,
+              "label": "Particle Are",
+              "step": 0.012475
+            },
+            {
+              "parameter": "grainParticleScale",
+              "component": 0,
+              "label": "Particle Sca",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainParticleScale",
+              "component": 1,
+              "label": "Particle Sca",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainParticleScale",
+              "component": 2,
+              "label": "Particle Sca",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainParticleScaleLayers",
+              "component": 0,
+              "label": "Layer Scale ",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainParticleScaleLayers",
+              "component": 1,
+              "label": "Layer Scale ",
+              "step": 0.01
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        },
+        {
+          "name": "Grain 2",
+          "stageParameter": "grainEnabled",
+          "slots": [
+            {
+              "parameter": "grainParticleScaleLayers",
+              "component": 2,
+              "label": "Layer Scale ",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainDensityMin",
+              "component": 0,
+              "label": "Density Min ",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainDensityMin",
+              "component": 1,
+              "label": "Density Min ",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainDensityMin",
+              "component": 2,
+              "label": "Density Min ",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainUniformity",
+              "component": 0,
+              "label": "Uniformity R",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainUniformity",
+              "component": 1,
+              "label": "Uniformity R",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainUniformity",
+              "component": 2,
+              "label": "Uniformity R",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainFinalBlurUm",
+              "component": 0,
+              "label": "Final Grain ",
+              "step": 0.0625
+            },
+            {
+              "parameter": "grainBlurDyeCloudsUm",
+              "component": 0,
+              "label": "Dye Cloud Bl",
+              "step": 0.025
+            },
+            {
+              "parameter": "grainMicroStructure",
+              "component": 0,
+              "label": "Micro Struct",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainMicroStructure",
+              "component": 1,
+              "label": "Micro Struct",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainSeed",
+              "component": 0,
+              "label": "Seed",
+              "step": 1
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        },
+        {
+          "name": "Grain 3",
+          "stageParameter": "grainEnabled",
+          "slots": [
+            {
+              "parameter": "grainAnimate",
+              "component": 0,
+              "label": "Animate",
+              "step": 1
+            },
+            {
+              "parameter": "grainSynthesisSize",
+              "component": 0,
+              "label": "Synthesis Si",
+              "step": 0.009375
+            },
+            {
+              "parameter": "grainSynthesisAmount",
+              "component": 0,
+              "label": "Synthesis Am",
+              "step": 0.0075
+            },
+            {
+              "parameter": "grainSynthesisSharpness",
+              "component": 0,
+              "label": "Synthesis Sh",
+              "step": 0.009375
+            },
+            {
+              "parameter": "grainSynthesisQuality",
+              "component": 0,
+              "label": "Synthesis Qu",
+              "step": 0.009375
+            },
+            {
+              "parameter": "grainSynthesisSamples",
+              "component": 0,
+              "label": "Samples",
+              "step": 1
+            },
+            {
+              "parameter": "grainSynthesisMeanRadiusUm",
+              "component": 0,
+              "label": "Mean Radius ",
+              "step": 0.024875
+            },
+            {
+              "parameter": "grainSynthesisRadiusStdDevRatio",
+              "component": 0,
+              "label": "Radius StdDe",
+              "step": 0.0025
+            },
+            {
+              "parameter": "grainSynthesisObservationSigmaUm",
+              "component": 0,
+              "label": "Observation ",
+              "step": 0.05
+            },
+            {
+              "parameter": "grainSynthesisCellSizeRatio",
+              "component": 0,
+              "label": "Cell Size Ra",
+              "step": 0.004375
+            },
+            {
+              "parameter": "grainSynthesisMaxRadiusQuantile",
+              "component": 0,
+              "label": "Max Radius Q",
+              "step": 0.00012475
+            },
+            {
+              "parameter": "grainSynthesisCoverageEpsilon",
+              "component": 0,
+              "label": "Coverage Eps",
+              "step": 2.49975e-05
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        },
+        {
+          "name": "Grain 4",
+          "stageParameter": "grainEnabled",
+          "slots": [
+            {
+              "parameter": "grainSynthesisMaxGrainsPerCell",
+              "component": 0,
+              "label": "Max Grains P",
+              "step": 1
+            },
+            {
+              "parameter": "grainSynthesisRadiusScale",
+              "component": 0,
+              "label": "Radius Scale",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainSynthesisRadiusScale",
+              "component": 1,
+              "label": "Radius Scale",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainSynthesisRadiusScale",
+              "component": 2,
+              "label": "Radius Scale",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainSynthesisLayerScale",
+              "component": 0,
+              "label": "Layer Scale ",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainSynthesisLayerScale",
+              "component": 1,
+              "label": "Layer Scale ",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainSynthesisLayerScale",
+              "component": 2,
+              "label": "Layer Scale ",
+              "step": 0.01
+            },
+            {
+              "parameter": "grainSynthesisLayered",
+              "component": 0,
+              "label": "Layered",
+              "step": 1
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x2006",
+      "name": "halation",
+      "label": "Halation",
+      "supported": true,
+      "unavailableReason": null,
+      "pages": [
+        {
+          "name": "Halation",
+          "stageParameter": "halationEnabled",
+          "slots": [
+            {
+              "parameter": "halationEnabled",
+              "component": 0,
+              "label": "Enabled",
+              "step": 1
+            },
+            {
+              "parameter": "scatterAmount",
+              "component": 0,
+              "label": "Scatter Amou",
+              "step": 0.005
+            },
+            {
+              "parameter": "scatterScale",
+              "component": 0,
+              "label": "Scatter Scal",
+              "step": 0.01
+            },
+            {
+              "parameter": "halationAmount",
+              "component": 0,
+              "label": "Amount",
+              "step": 0.01
+            },
+            {
+              "parameter": "halationScale",
+              "component": 0,
+              "label": "Scale",
+              "step": 0.01
+            },
+            {
+              "parameter": "halationBoostEv",
+              "component": 0,
+              "label": "Boost EV",
+              "step": 0.05
+            },
+            {
+              "parameter": "halationBoostRange",
+              "component": 0,
+              "label": "Boost Range",
+              "step": 0.0025
+            },
+            {
+              "parameter": "halationProtectEv",
+              "component": 0,
+              "label": "Protect EV",
+              "step": 0.025
+            },
+            {
+              "parameter": "halationStrength",
+              "component": 0,
+              "label": "Strength RGB",
+              "step": 0.01
+            },
+            {
+              "parameter": "halationStrength",
+              "component": 1,
+              "label": "Strength RGB",
+              "step": 0.01
+            },
+            {
+              "parameter": "halationStrength",
+              "component": 2,
+              "label": "Strength RGB",
+              "step": 0.01
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x2007",
+      "name": "diffusion",
+      "label": "Diffusion",
+      "supported": true,
+      "unavailableReason": null,
+      "pages": [
+        {
+          "name": "Diffusion",
+          "stageParameter": "cameraDiffusionEnabled",
+          "slots": [
+            {
+              "parameter": "cameraDiffusionEnabled",
+              "component": 0,
+              "label": "Camera Enabl",
+              "step": 1
+            },
+            {
+              "parameter": "cameraDiffusionFamily",
+              "component": 0,
+              "label": "Camera Famil",
+              "step": 1
+            },
+            {
+              "parameter": "cameraDiffusionStrength",
+              "component": 0,
+              "label": "Camera Stren",
+              "step": 0.01
+            },
+            {
+              "parameter": "cameraDiffusionSpatialScale",
+              "component": 0,
+              "label": "Camera Spati",
+              "step": 0.01
+            },
+            {
+              "parameter": "cameraDiffusionHaloWarmth",
+              "component": 0,
+              "label": "Camera Halo ",
+              "step": 0.0075
+            },
+            {
+              "parameter": "cameraDiffusionCoreIntensity",
+              "component": 0,
+              "label": "Camera Core ",
+              "step": 0.01
+            },
+            {
+              "parameter": "cameraDiffusionCoreSize",
+              "component": 0,
+              "label": "Camera Core ",
+              "step": 0.00975
+            },
+            {
+              "parameter": "cameraDiffusionHaloIntensity",
+              "component": 0,
+              "label": "Camera Halo ",
+              "step": 0.01
+            },
+            {
+              "parameter": "cameraDiffusionHaloSize",
+              "component": 0,
+              "label": "Camera Halo ",
+              "step": 0.00975
+            },
+            {
+              "parameter": "cameraDiffusionBloomIntensity",
+              "component": 0,
+              "label": "Camera Bloom",
+              "step": 0.01
+            },
+            {
+              "parameter": "cameraDiffusionBloomSize",
+              "component": 0,
+              "label": "Camera Bloom",
+              "step": 0.00975
+            },
+            {
+              "parameter": "printDiffusionEnabled",
+              "component": 0,
+              "label": "Print Enable",
+              "step": 1
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        },
+        {
+          "name": "Diffusion 2",
+          "stageParameter": "printDiffusionEnabled",
+          "slots": [
+            {
+              "parameter": "printDiffusionFamily",
+              "component": 0,
+              "label": "Print Family",
+              "step": 1
+            },
+            {
+              "parameter": "printDiffusionStrength",
+              "component": 0,
+              "label": "Print Streng",
+              "step": 0.005
+            },
+            {
+              "parameter": "printDiffusionSpatialScale",
+              "component": 0,
+              "label": "Print Spatia",
+              "step": 0.01
+            },
+            {
+              "parameter": "printDiffusionHaloWarmth",
+              "component": 0,
+              "label": "Print Halo W",
+              "step": 0.0075
+            },
+            {
+              "parameter": "printDiffusionCoreIntensity",
+              "component": 0,
+              "label": "Print Core I",
+              "step": 0.01
+            },
+            {
+              "parameter": "printDiffusionCoreSize",
+              "component": 0,
+              "label": "Print Core S",
+              "step": 0.00975
+            },
+            {
+              "parameter": "printDiffusionHaloIntensity",
+              "component": 0,
+              "label": "Print Halo I",
+              "step": 0.01
+            },
+            {
+              "parameter": "printDiffusionHaloSize",
+              "component": 0,
+              "label": "Print Halo S",
+              "step": 0.00975
+            },
+            {
+              "parameter": "printDiffusionBloomIntensity",
+              "component": 0,
+              "label": "Print Bloom ",
+              "step": 0.01
+            },
+            {
+              "parameter": "printDiffusionBloomSize",
+              "component": 0,
+              "label": "Print Bloom ",
+              "step": 0.00975
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x2008",
+      "name": "scanner",
+      "label": "Scanner",
+      "supported": true,
+      "unavailableReason": null,
+      "pages": [
+        {
+          "name": "Scanner",
+          "stageParameter": "scannerEnabled",
+          "slots": [
+            {
+              "parameter": "scannerEnabled",
+              "component": 0,
+              "label": "Enabled",
+              "step": 1
+            },
+            {
+              "parameter": "scannerWhiteCorrection",
+              "component": 0,
+              "label": "White Correc",
+              "step": 1
+            },
+            {
+              "parameter": "scannerBlackCorrection",
+              "component": 0,
+              "label": "Black Correc",
+              "step": 1
+            },
+            {
+              "parameter": "scannerWhiteLevel",
+              "component": 0,
+              "label": "White Level",
+              "step": 0.0025
+            },
+            {
+              "parameter": "scannerBlackLevel",
+              "component": 0,
+              "label": "Black Level",
+              "step": 0.0025
+            },
+            {
+              "parameter": "glarePercent",
+              "component": 0,
+              "label": "Glare Percen",
+              "step": 0.0005
+            },
+            {
+              "parameter": "glareRoughness",
+              "component": 0,
+              "label": "Glare Roughn",
+              "step": 0.01
+            },
+            {
+              "parameter": "glareBlur",
+              "component": 0,
+              "label": "Glare Blur",
+              "step": 0.08
+            },
+            {
+              "parameter": "scannerMtf50LpMm",
+              "component": 0,
+              "label": "MTF50 lp/mm",
+              "step": 0.75
+            },
+            {
+              "parameter": "scannerUnsharpRadiusUm",
+              "component": 0,
+              "label": "Unsharp Radi",
+              "step": 0.25
+            },
+            {
+              "parameter": "scannerUnsharpAmount",
+              "component": 0,
+              "label": "Unsharp Amou",
+              "step": 0.01
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x2009",
+      "name": "lens",
+      "label": "Lens N/A",
+      "supported": false,
+      "unavailableReason": "This baseline has no newer Lens / Gate / Motion effects.",
+      "pages": [
+        {
+          "name": "Lens N/A",
+          "stageParameter": null,
+          "slots": [
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x200A",
+      "name": "motion",
+      "label": "Motion N/A",
+      "supported": false,
+      "unavailableReason": "This baseline has no newer Lens / Gate / Motion effects.",
+      "pages": [
+        {
+          "name": "Motion N/A",
+          "stageParameter": null,
+          "slots": [
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            },
+            {
+              "operation": "unavailable",
+              "label": "N/A",
+              "reason": "Absent from the public source baseline."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x200B",
+      "name": "color",
+      "label": "Color / I-O",
+      "supported": true,
+      "unavailableReason": null,
+      "pages": [
+        {
+          "name": "Color / I-O",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "process",
+              "component": 0,
+              "label": "Mode",
+              "step": 1
+            },
+            {
+              "parameter": "scanNegativeInvert",
+              "component": 0,
+              "label": "Invert Negat",
+              "step": 1
+            },
+            {
+              "parameter": "inputColorSpace",
+              "component": 0,
+              "label": "Input Color ",
+              "step": 1
+            },
+            {
+              "parameter": "rcmInputColorSpace",
+              "component": 0,
+              "label": "Input Color ",
+              "step": 1
+            },
+            {
+              "parameter": "outputRole",
+              "component": 0,
+              "label": "Output Role",
+              "step": 1
+            },
+            {
+              "parameter": "sdrOutputColorSpace",
+              "component": 0,
+              "label": "Output Color",
+              "step": 1
+            },
+            {
+              "parameter": "sceneOutputColorSpace",
+              "component": 0,
+              "label": "Output Color",
+              "step": 1
+            },
+            {
+              "parameter": "hdrPreset",
+              "component": 0,
+              "label": "HDR Preset",
+              "step": 1
+            },
+            {
+              "parameter": "hdrTransfer",
+              "component": 0,
+              "label": "HDR Transfer",
+              "step": 1
+            },
+            {
+              "parameter": "hdrReferenceWhiteNits",
+              "component": 0,
+              "label": "Reference Wh",
+              "step": 2.38
+            },
+            {
+              "parameter": "hdrPeakNits",
+              "component": 0,
+              "label": "Peak Nits",
+              "step": 24.75
+            },
+            {
+              "parameter": "hdrExposureEv",
+              "component": 0,
+              "label": "HDR Exposure",
+              "step": 0.04
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        },
+        {
+          "name": "Color / I-O 2",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "hdrToneMapping",
+              "component": 0,
+              "label": "HDR Tone Map",
+              "step": 1
+            },
+            {
+              "parameter": "colorAdaptation",
+              "component": 0,
+              "label": "Color Adapta",
+              "step": 1
+            },
+            {
+              "parameter": "colorAdaptationInputCompression",
+              "component": 0,
+              "label": "Input Compre",
+              "step": 1
+            },
+            {
+              "parameter": "colorAdaptationCurveSmoothing",
+              "component": 0,
+              "label": "Curve Smooth",
+              "step": 1
+            },
+            {
+              "parameter": "colorAdaptationOutputLightnessCompression",
+              "component": 0,
+              "label": "Output Light",
+              "step": 1
+            },
+            {
+              "parameter": "colorAdaptationOutputChromaCompression",
+              "component": 0,
+              "label": "Output Chrom",
+              "step": 1
+            },
+            {
+              "parameter": "gpuRenderTiling",
+              "component": 0,
+              "label": "GPU Render T",
+              "step": 1
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "unavailable",
+              "label": "--",
+              "reason": "No additional parameter on this page."
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0x200C",
+      "name": "favorites",
+      "label": "Favorites",
+      "supported": true,
+      "unavailableReason": null,
+      "pages": [
+        {
+          "name": "Favorites",
+          "stageParameter": null,
+          "slots": [
+            {
+              "parameter": "filmExposureEv",
+              "component": 0,
+              "label": "Film Exp",
+              "step": 0.025
+            },
+            {
+              "parameter": "printExposureEv",
+              "component": 0,
+              "label": "Print Exp",
+              "step": 0.025
+            },
+            {
+              "parameter": "filmPushPullStops",
+              "component": 0,
+              "label": "Film Push",
+              "step": 0.01
+            },
+            {
+              "parameter": "printPushPullStops",
+              "component": 0,
+              "label": "Print Push",
+              "step": 0.01
+            },
+            {
+              "parameter": "printerLightR",
+              "component": 0,
+              "label": "Printer R",
+              "step": 0.1,
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "printerLightG",
+              "component": 0,
+              "label": "Printer G",
+              "step": 0.1,
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "printerLightB",
+              "component": 0,
+              "label": "Printer B",
+              "step": 0.1,
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "parameter": "grainAmount",
+              "component": 0,
+              "label": "Grain",
+              "step": 0.01
+            },
+            {
+              "parameter": "halationAmount",
+              "component": 0,
+              "label": "Halation",
+              "step": 0.01
+            },
+            {
+              "parameter": "cameraDiffusionStrength",
+              "component": 0,
+              "label": "Cam Diffuse",
+              "step": 0.01
+            },
+            {
+              "operation": "printer-x",
+              "label": "Print R/B",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 0
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -1
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterMShift",
+                  "component": 0,
+                  "label": "M Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-y",
+              "label": "Print G/RB",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": -0.5
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": -0.5
+                }
+              ],
+              "reset": "printer-chroma",
+              "fallbacks": [
+                {
+                  "parameter": "filterYShift",
+                  "component": 0,
+                  "label": "Y Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "operation": "printer-neutral",
+              "label": "Print Level",
+              "step": 0.1,
+              "terms": [
+                {
+                  "parameter": "printerLightR",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightG",
+                  "component": 0,
+                  "scale": 1
+                },
+                {
+                  "parameter": "printerLightB",
+                  "component": 0,
+                  "scale": 1
+                }
+              ],
+              "reset": "printer-neutral",
+              "fallbacks": [
+                {
+                  "parameter": "filterC",
+                  "component": 0,
+                  "label": "C Filter",
+                  "step": 0.3
+                }
+              ]
+            },
+            {
+              "parameter": "enlargerOffsetXPercent",
+              "component": 0,
+              "label": "Enlarge X",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerOffsetYPercent",
+              "component": 0,
+              "label": "Enlarge Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "enlargerScale",
+              "component": 0,
+              "label": "Enlarge Size",
+              "step": 0.01
+            },
+            {
+              "parameter": "preflashMFilterShift",
+              "component": 0,
+              "label": "Preflash M",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashYFilterShift",
+              "component": 0,
+              "label": "Preflash Y",
+              "step": 0.1
+            },
+            {
+              "parameter": "preflashExposure",
+              "component": 0,
+              "label": "Preflash Exp",
+              "step": 0.005
+            },
+            {
+              "parameter": "printShadowShape",
+              "component": 0,
+              "label": "Print Shadow",
+              "step": 0.005
+            },
+            {
+              "parameter": "printHighlightShape",
+              "component": 0,
+              "label": "Print Hi",
+              "step": 0.005
+            },
+            {
+              "operation": "focused",
+              "label": "Focus Trim",
+              "step": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "id": "0x3001",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 0,
+      "action": "bank:essentials",
+      "label": "Essentials",
+      "kind": "programmable",
+      "midiNote": 32
+    },
+    {
+      "id": "0x3002",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 1,
+      "action": "bank:film",
+      "label": "Film",
+      "kind": "programmable",
+      "midiNote": 33
+    },
+    {
+      "id": "0x3003",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 2,
+      "action": "bank:print",
+      "label": "Print",
+      "kind": "programmable",
+      "midiNote": 34
+    },
+    {
+      "id": "0x3004",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 3,
+      "action": "bank:printer",
+      "label": "Printer",
+      "kind": "programmable",
+      "midiNote": 35
+    },
+    {
+      "id": "0x3005",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 4,
+      "action": "bank:grain",
+      "label": "Grain",
+      "kind": "programmable",
+      "midiNote": 36
+    },
+    {
+      "id": "0x3006",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 5,
+      "action": "bank:halation",
+      "label": "Halation",
+      "kind": "programmable",
+      "midiNote": 37
+    },
+    {
+      "id": "0x3007",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 6,
+      "action": "bank:diffusion",
+      "label": "Diffusion",
+      "kind": "programmable",
+      "midiNote": 38
+    },
+    {
+      "id": "0x3008",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 7,
+      "action": "bank:scanner",
+      "label": "Scanner",
+      "kind": "programmable",
+      "midiNote": 39
+    },
+    {
+      "id": "0x3009",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 8,
+      "action": "bank:lens",
+      "label": "Lens N/A",
+      "kind": "programmable",
+      "midiNote": 40
+    },
+    {
+      "id": "0x300A",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 9,
+      "action": "bank:motion",
+      "label": "Motion N/A",
+      "kind": "programmable",
+      "midiNote": 41
+    },
+    {
+      "id": "0x300B",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 10,
+      "action": "bank:color",
+      "label": "Color / I-O",
+      "kind": "programmable",
+      "midiNote": 42
+    },
+    {
+      "id": "0x300C",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 11,
+      "action": "bank:favorites",
+      "label": "Favorites",
+      "kind": "programmable",
+      "midiNote": 43
+    },
+    {
+      "id": "0x3011",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 0,
+      "action": "disarm",
+      "label": "Disarm",
+      "kind": "programmable",
+      "midiNote": 44
+    },
+    {
+      "id": "0x3012",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 1,
+      "action": "refresh",
+      "label": "Refresh",
+      "kind": "programmable",
+      "midiNote": 45
+    },
+    {
+      "id": "0x3013",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 2,
+      "action": "page:prev",
+      "label": "Prev Page",
+      "kind": "programmable",
+      "midiNote": 46
+    },
+    {
+      "id": "0x3014",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 3,
+      "action": "page:next",
+      "label": "Next Page",
+      "kind": "programmable",
+      "midiNote": 47
+    },
+    {
+      "id": "0x3015",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 4,
+      "action": "focus:prev",
+      "label": "Prev Focus",
+      "kind": "programmable",
+      "midiNote": 48
+    },
+    {
+      "id": "0x3016",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 5,
+      "action": "focus:next",
+      "label": "Next Focus",
+      "kind": "programmable",
+      "midiNote": 49
+    },
+    {
+      "id": "0x3017",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 6,
+      "action": "unsupported:undo",
+      "label": "Undo N/A",
+      "kind": "programmable",
+      "midiNote": 50
+    },
+    {
+      "id": "0x3018",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 7,
+      "action": "unsupported:redo",
+      "label": "Redo N/A",
+      "kind": "programmable",
+      "midiNote": 51
+    },
+    {
+      "id": "0x3019",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 8,
+      "action": "capture:A",
+      "label": "Capture A",
+      "kind": "programmable",
+      "midiNote": 52
+    },
+    {
+      "id": "0x301A",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 9,
+      "action": "capture:B",
+      "label": "Capture B",
+      "kind": "programmable",
+      "midiNote": 53
+    },
+    {
+      "id": "0x301B",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 10,
+      "action": "recall:toggle",
+      "label": "Recall A/B",
+      "kind": "programmable",
+      "midiNote": 54
+    },
+    {
+      "id": "0x301C",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 11,
+      "action": "apply",
+      "label": "Apply",
+      "kind": "programmable",
+      "midiNote": 55
+    },
+    {
+      "id": "0x3021",
+      "panel": "Kb",
+      "physicalType": "Button",
+      "number": 12,
+      "action": "fine",
+      "label": "Fine (hold)",
+      "kind": "modifier",
+      "midiNote": 56,
+      "momentary": true
+    },
+    {
+      "id": "0x3022",
+      "panel": "Kb",
+      "physicalType": "Button",
+      "number": 13,
+      "action": "page:next",
+      "label": "Next Page",
+      "kind": "modifier",
+      "midiNote": 57
+    },
+    {
+      "id": "0x3023",
+      "panel": "Tk",
+      "physicalType": "Button",
+      "number": 0,
+      "action": "fine",
+      "label": "Fine (hold)",
+      "kind": "modifier",
+      "midiNote": 58,
+      "momentary": true
+    },
+    {
+      "id": "0x3024",
+      "panel": "Tk",
+      "physicalType": "Button",
+      "number": 7,
+      "action": "page:prev",
+      "label": "Prev Page",
+      "kind": "modifier",
+      "midiNote": 59
+    },
+    {
+      "id": "0x3025",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 12,
+      "action": "fine",
+      "label": "Fine (hold)",
+      "kind": "modifier",
+      "midiNote": 60,
+      "momentary": true
+    },
+    {
+      "id": "0x3026",
+      "panel": "Bt",
+      "physicalType": "Button",
+      "number": 13,
+      "action": "toggle:stage",
+      "label": "Stage On/Off",
+      "kind": "modifier",
+      "midiNote": 61
+    },
+    {
+      "id": "0x3027",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 12,
+      "action": "fine",
+      "label": "Fine (hold)",
+      "kind": "modifier",
+      "midiNote": 62,
+      "momentary": true
+    },
+    {
+      "id": "0x3028",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 18,
+      "action": "focus:next",
+      "label": "Next Focus",
+      "kind": "modifier",
+      "midiNote": 63
+    },
+    {
+      "id": "0x3031",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 13,
+      "action": "unsupported:play-reverse",
+      "label": "Reverse N/A",
+      "kind": "transport",
+      "midiNote": 64
+    },
+    {
+      "id": "0x3032",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 14,
+      "action": "unsupported:stop",
+      "label": "Stop N/A",
+      "kind": "transport",
+      "midiNote": 65
+    },
+    {
+      "id": "0x3033",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 15,
+      "action": "unsupported:play-forward",
+      "label": "Play N/A",
+      "kind": "transport",
+      "midiNote": 66
+    },
+    {
+      "id": "0x3034",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 16,
+      "action": "unsupported:frame-prev",
+      "label": "Frame- N/A",
+      "kind": "transport",
+      "midiNote": 67
+    },
+    {
+      "id": "0x3035",
+      "panel": "Mf",
+      "physicalType": "Button",
+      "number": 17,
+      "action": "unsupported:frame-next",
+      "label": "Frame+ N/A",
+      "kind": "transport",
+      "midiNote": 68
+    }
+  ],
+  "resets": [
+    {
+      "panel": "Kb",
+      "knobNumber": 1,
+      "kind": "encoder-press",
+      "axes": [
+        0
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 2,
+      "kind": "encoder-press",
+      "axes": [
+        1
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 3,
+      "kind": "encoder-press",
+      "axes": [
+        2
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 4,
+      "kind": "encoder-press",
+      "axes": [
+        3
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 5,
+      "kind": "encoder-press",
+      "axes": [
+        4
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 6,
+      "kind": "encoder-press",
+      "axes": [
+        5
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 7,
+      "kind": "encoder-press",
+      "axes": [
+        6
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 8,
+      "kind": "encoder-press",
+      "axes": [
+        7
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 9,
+      "kind": "encoder-press",
+      "axes": [
+        8
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 10,
+      "kind": "encoder-press",
+      "axes": [
+        9
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 11,
+      "kind": "encoder-press",
+      "axes": [
+        10
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Kb",
+      "knobNumber": 12,
+      "kind": "encoder-press",
+      "axes": [
+        11
+      ],
+      "via": "Hub ParameterReset of mapped encoder"
+    },
+    {
+      "panel": "Tk",
+      "ballNumber": 1,
+      "kind": "ball-reset",
+      "axes": [
+        12,
+        13
+      ],
+      "via": "Hub ParameterReset of mapped XY encoders"
+    },
+    {
+      "panel": "Tk",
+      "ringNumber": 1,
+      "kind": "ring-reset",
+      "axes": [
+        14
+      ],
+      "via": "Hub ParameterReset of mapped ring"
+    },
+    {
+      "panel": "Tk",
+      "ballNumber": 2,
+      "kind": "ball-reset",
+      "axes": [
+        15,
+        16
+      ],
+      "via": "Hub ParameterReset of mapped XY encoders"
+    },
+    {
+      "panel": "Tk",
+      "ringNumber": 2,
+      "kind": "ring-reset",
+      "axes": [
+        17
+      ],
+      "via": "Hub ParameterReset of mapped ring"
+    },
+    {
+      "panel": "Tk",
+      "ballNumber": 3,
+      "kind": "ball-reset",
+      "axes": [
+        18,
+        19
+      ],
+      "via": "Hub ParameterReset of mapped XY encoders"
+    },
+    {
+      "panel": "Tk",
+      "ringNumber": 3,
+      "kind": "ring-reset",
+      "axes": [
+        20
+      ],
+      "via": "Hub ParameterReset of mapped ring"
+    }
+  ],
+  "notes": [
+    "Live OFX schema and explicit arming control availability.",
+    "Reset buttons are associated with encoders by Tangent Hub, not remapped as action buttons.",
+    "Undo and transport are deliberately unavailable until a foreground Resolve command adapter is validated.",
+    "All source-development controls are exposed by the sibling FilmDev flavor; conditional processing/stage availability still applies.",
+    "Source-only Academy printer density requires standards data missing from this checkout. Slots fall back to filtered-enlarger C/M/Y when printer points are absent from the live schema."
+  ]
+}

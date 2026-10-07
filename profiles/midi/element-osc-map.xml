@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TangentWave fileType="PanelMap" fileVersion="3.0">
+    <UserModes>
+        <Mode id="0x83001001">
+            <Name>Spektrafilm MIDI OSC</Name>
+        </Mode>
+    </UserModes>
+    <Panels>
+        <Panel type="Element-Kb" number="1">
+            <Mode id="0x83001001">
+                <ControlBank id="Encoder">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/0</CustomControl>
+                                <CustomName>Film Exp</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/0</CustomControl>
+                                <CustomName>Film Exp</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/1</CustomControl>
+                                <CustomName>Print Exp</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/1</CustomControl>
+                                <CustomName>Print Exp</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/2</CustomControl>
+                                <CustomName>Film Push</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/2</CustomControl>
+                                <CustomName>Film Push</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/3</CustomControl>
+                                <CustomName>Print Push</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/3</CustomControl>
+                                <CustomName>Print Push</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/4</CustomControl>
+                                <CustomName>C Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/4</CustomControl>
+                                <CustomName>C Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/5</CustomControl>
+                                <CustomName>M Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/5</CustomControl>
+                                <CustomName>M Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/6</CustomControl>
+                                <CustomName>Y Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/6</CustomControl>
+                                <CustomName>Y Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/7</CustomControl>
+                                <CustomName>Print Shadow</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/7</CustomControl>
+                                <CustomName>Print Shadow</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/8</CustomControl>
+                                <CustomName>Print Hi</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/8</CustomControl>
+                                <CustomName>Print Hi</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/9</CustomControl>
+                                <CustomName>Grain</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/9</CustomControl>
+                                <CustomName>Grain</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/10</CustomControl>
+                                <CustomName>Halation</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/10</CustomControl>
+                                <CustomName>Halation</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/11</CustomControl>
+                                <CustomName>Cam Diffuse</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/11</CustomControl>
+                                <CustomName>Cam Diffuse</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/56</CustomControl>
+                                <CustomName>Fine (hold)</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/56</CustomControl>
+                                <CustomName>Fine (hold)</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/57</CustomControl>
+                                <CustomName>Next Page</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/57</CustomControl>
+                                <CustomName>Next Page</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+        </Panel>
+        <Panel type="Element-Tk" number="1">
+            <Mode id="0x83001001">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/12</CustomControl>
+                                <CustomName>M Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/12</CustomControl>
+                                <CustomName>M Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/13</CustomControl>
+                                <CustomName>Y Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/13</CustomControl>
+                                <CustomName>Y Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/14</CustomControl>
+                                <CustomName>C Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/14</CustomControl>
+                                <CustomName>C Filter</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/15</CustomControl>
+                                <CustomName>Enlarge X</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/15</CustomControl>
+                                <CustomName>Enlarge X</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/16</CustomControl>
+                                <CustomName>Enlarge Y</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/16</CustomControl>
+                                <CustomName>Enlarge Y</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/17</CustomControl>
+                                <CustomName>Enlarge Size</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/17</CustomControl>
+                                <CustomName>Enlarge Size</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/18</CustomControl>
+                                <CustomName>Preflash M</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/18</CustomControl>
+                                <CustomName>Preflash M</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/19</CustomControl>
+                                <CustomName>Preflash Y</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/19</CustomControl>
+                                <CustomName>Preflash Y</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/20</CustomControl>
+                                <CustomName>Preflash Exp</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/20</CustomControl>
+                                <CustomName>Preflash Exp</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/58</CustomControl>
+                                <CustomName>Fine (hold)</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/58</CustomControl>
+                                <CustomName>Fine (hold)</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/59</CustomControl>
+                                <CustomName>Prev Page</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/59</CustomControl>
+                                <CustomName>Prev Page</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+        </Panel>
+        <Panel type="Element-Bt" number="1">
+            <Mode id="0x83001001">
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/32</CustomControl>
+                                <CustomName>Essentials</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/32</CustomControl>
+                                <CustomName>Essentials</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/33</CustomControl>
+                                <CustomName>Film</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/33</CustomControl>
+                                <CustomName>Film</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/34</CustomControl>
+                                <CustomName>Print</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/34</CustomControl>
+                                <CustomName>Print</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/35</CustomControl>
+                                <CustomName>Printer</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/35</CustomControl>
+                                <CustomName>Printer</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/36</CustomControl>
+                                <CustomName>Grain</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/36</CustomControl>
+                                <CustomName>Grain</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/37</CustomControl>
+                                <CustomName>Halation</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/37</CustomControl>
+                                <CustomName>Halation</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/38</CustomControl>
+                                <CustomName>Diffusion</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/38</CustomControl>
+                                <CustomName>Diffusion</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/39</CustomControl>
+                                <CustomName>Scanner</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/39</CustomControl>
+                                <CustomName>Scanner</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/40</CustomControl>
+                                <CustomName>Lens N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/40</CustomControl>
+                                <CustomName>Lens N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/41</CustomControl>
+                                <CustomName>Motion N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/41</CustomControl>
+                                <CustomName>Motion N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/42</CustomControl>
+                                <CustomName>Color / I-O</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/42</CustomControl>
+                                <CustomName>Color / I-O</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/43</CustomControl>
+                                <CustomName>Favorites</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/43</CustomControl>
+                                <CustomName>Favorites</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/60</CustomControl>
+                                <CustomName>Fine (hold)</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/60</CustomControl>
+                                <CustomName>Fine (hold)</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/61</CustomControl>
+                                <CustomName>Stage On/Off</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/61</CustomControl>
+                                <CustomName>Stage On/Off</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+        </Panel>
+        <Panel type="Element-Mf" number="1">
+            <Mode id="0x83001001">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/21</CustomControl>
+                                <CustomName>Print Shadow</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/21</CustomControl>
+                                <CustomName>Print Shadow</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/22</CustomControl>
+                                <CustomName>Print Hi</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/22</CustomControl>
+                                <CustomName>Print Hi</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/23</CustomControl>
+                                <CustomName>Focus Trim</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key>
+                                <CustomControl>/spektrafilm/axis/23</CustomControl>
+                                <CustomName>Focus Trim</CustomName>
+                                <Argument>0x00000000</Argument>
+                                <Display>Number</Display>
+                                <Value1>-1000.000000</Value1>
+                                <Value2>1000.000000</Value2>
+                                <Value3>1.000000</Value3>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/44</CustomControl>
+                                <CustomName>Disarm</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/44</CustomControl>
+                                <CustomName>Disarm</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/45</CustomControl>
+                                <CustomName>Refresh</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/45</CustomControl>
+                                <CustomName>Refresh</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/46</CustomControl>
+                                <CustomName>Prev Page</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/46</CustomControl>
+                                <CustomName>Prev Page</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/47</CustomControl>
+                                <CustomName>Next Page</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/47</CustomControl>
+                                <CustomName>Next Page</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/48</CustomControl>
+                                <CustomName>Prev Focus</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/48</CustomControl>
+                                <CustomName>Prev Focus</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/49</CustomControl>
+                                <CustomName>Next Focus</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/49</CustomControl>
+                                <CustomName>Next Focus</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/50</CustomControl>
+                                <CustomName>Undo N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/50</CustomControl>
+                                <CustomName>Undo N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/51</CustomControl>
+                                <CustomName>Redo N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/51</CustomControl>
+                                <CustomName>Redo N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/52</CustomControl>
+                                <CustomName>Capture A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/52</CustomControl>
+                                <CustomName>Capture A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/53</CustomControl>
+                                <CustomName>Capture B</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/53</CustomControl>
+                                <CustomName>Capture B</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/54</CustomControl>
+                                <CustomName>Recall A/B</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/54</CustomControl>
+                                <CustomName>Recall A/B</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/55</CustomControl>
+                                <CustomName>Apply</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/55</CustomControl>
+                                <CustomName>Apply</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/62</CustomControl>
+                                <CustomName>Fine (hold)</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/62</CustomControl>
+                                <CustomName>Fine (hold)</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="18">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/63</CustomControl>
+                                <CustomName>Next Focus</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/63</CustomControl>
+                                <CustomName>Next Focus</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/64</CustomControl>
+                                <CustomName>Reverse N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/64</CustomControl>
+                                <CustomName>Reverse N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="14">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/65</CustomControl>
+                                <CustomName>Stop N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/65</CustomControl>
+                                <CustomName>Stop N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/66</CustomControl>
+                                <CustomName>Play N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/66</CustomControl>
+                                <CustomName>Play N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/67</CustomControl>
+                                <CustomName>Frame- N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/67</CustomControl>
+                                <CustomName>Frame- N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17">
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/68</CustomControl>
+                                <CustomName>Frame+ N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key>
+                                <CustomControl>/spektrafilm/button/68</CustomControl>
+                                <CustomName>Frame+ N/A</CustomName>
+                                <Argument>0x00000000</Argument>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+        </Panel>
+    </Panels>
+    <GlobalSettings>
+        <KnobSensitivity std="1" alt="1" />
+        <JogDialSensitivity std="1" alt="1" />
+        <TrackerballSensitivity std="1" alt="1" />
+        <TrackerballDialSensitivity std="1" alt="1" />
+        <IndependentPanelBanks enabled="false" />
+        <OSCPort>9000</OSCPort>
+    </GlobalSettings>
+</TangentWave>

@@ -1,0 +1,1567 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TangentWave fileType="PanelMap" fileVersion="3.0">
+    <Panels>
+        <Panel type="Element-Tk">
+            <Mode id="0x2001">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2002">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2003">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2004">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2005">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2006">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2007">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2008">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x2009">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x200A">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x200B">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x200C">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x20FF">
+                <ControlBank id="Trackerball">
+                    <Bank>
+                        <Control type="Encoder" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1101</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1">
+                            <Mapping mode="Std">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1102</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2">
+                            <Mapping mode="Std">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1103</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3">
+                            <Mapping mode="Std">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1104</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4">
+                            <Mapping mode="Std">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1105</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5">
+                            <Mapping mode="Std">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1106</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6">
+                            <Mapping mode="Std">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1107</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1108</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8">
+                            <Mapping mode="Std">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x1109</Key>
+                                <Display>Number</Display>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="0">
+                            <Mapping mode="Std">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3023</Key>
+                                <CustomName>Fine (hold)</CustomName>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7">
+                            <Mapping mode="Std">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x3024</Key>
+                                <CustomName>Prev Page</CustomName>
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+        </Panel>
+    </Panels>
+</TangentWave>

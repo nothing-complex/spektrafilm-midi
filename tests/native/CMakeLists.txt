@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.24)
+project(TangentMidiHostTests LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(HostHarness HostHarness.cpp)
+target_include_directories(HostHarness PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../../dependencies/openfx/include")
+target_link_libraries(HostHarness PRIVATE ws2_32)

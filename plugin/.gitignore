@@ -1,0 +1,83 @@
+# CMake output and build directories
+build/
+build-release/
+build-*/
+.cache/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+compile_commands.json
+install_manifest.txt
+cmake-build-*/
+.ninja_deps
+.ninja_log
+
+# macOS metadata
+.DS_Store
+
+# External SDKs
+third_party/openfx/
+
+# Metal compilation output and caches
+*.air
+*.metallib
+metal-module-cache/
+
+# Plugin bundles and manifests
+*.ofx/
+*.ofx.bundle/
+*-Info.plist
+*-plugin_manifest.json
+
+# Generated data and code
+generated/
+*.spkdata
+*.manifest.json
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+tests/test_ofx_tools.py
+
+# Local environments and editor state
+.venv/
+venv/
+.env
+.env.local
+.vscode/
+.idea/
+
+# Local logs, scratch files, and debug output
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.dSYM/
+*.profraw
+*.profdata
+profile-runs/
+
+# Local/private project notes
+PRIVATE_README.md
+PHOTOCHEMICAL_IDEAS.md
+WINDOWS_PORT.md
+standard_core_optimizations.md
+
+# Licensed SMPTE standards CSVs are local-only build inputs.
+Resources/data/standards/
+Resources/data/standards/smpte_st_2065_2/st2065-2a-2020.csv
+Resources/data/standards/smpte_st_2065_2/st2065-2b-2020.csv
+
+# Executables
+SpektraFilmPerfHarness
+SpektraFilmEvaluationHarness
+SpektraVariantGenerator

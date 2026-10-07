@@ -1,0 +1,637 @@
+[
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "baseline",
+    "quality_policy": "exact",
+    "tags": [
+      "baseline",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/baseline/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/baseline/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/baseline/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "shared-scratch",
+    "quality_policy": "exact",
+    "tags": [
+      "scratch",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/shared-scratch/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/shared-scratch/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/shared-scratch/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "threadgroup-16x16",
+    "quality_policy": "exact",
+    "tags": [
+      "threadgroup",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-16x16/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-16x16/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-16x16/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "threadgroup-32x8",
+    "quality_policy": "exact",
+    "tags": [
+      "threadgroup",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-32x8/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-32x8/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-32x8/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "threadgroup-8x32",
+    "quality_policy": "exact",
+    "tags": [
+      "threadgroup",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-8x32/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-8x32/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-8x32/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "threadgroup-64x4",
+    "quality_policy": "exact",
+    "tags": [
+      "threadgroup",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-64x4/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-64x4/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/threadgroup-64x4/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "diffusion-group-2",
+    "quality_policy": "exact",
+    "tags": [
+      "diffusion",
+      "group-size",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-group-2/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-group-2/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-group-2/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "diffusion-group-4",
+    "quality_policy": "exact",
+    "tags": [
+      "diffusion",
+      "group-size",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-group-4/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-group-4/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-group-4/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "scanner-texture",
+    "quality_policy": "exact",
+    "tags": [
+      "scanner",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scanner-texture/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scanner-texture/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scanner-texture/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "dir-tail-mps",
+    "quality_policy": "report_only",
+    "tags": [
+      "dir",
+      "mps",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/dir-tail-mps/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/dir-tail-mps/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/dir-tail-mps/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "host-half-source",
+    "quality_policy": "exact",
+    "tags": [
+      "host-io",
+      "half",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-half-source/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-half-source/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-half-source/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "host-half-destination",
+    "quality_policy": "exact",
+    "tags": [
+      "host-io",
+      "half",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-half-destination/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-half-destination/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-half-destination/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "host-half-io",
+    "quality_policy": "exact",
+    "tags": [
+      "host-io",
+      "half",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-half-io/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-half-io/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-half-io/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "host-strided-float",
+    "quality_policy": "exact",
+    "tags": [
+      "host-io",
+      "layout",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-strided-float/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-strided-float/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-strided-float/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "host-offset-float",
+    "quality_policy": "exact",
+    "tags": [
+      "host-io",
+      "layout",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-offset-float/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-offset-float/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/host-offset-float/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "tg-auto",
+    "quality_policy": "exact",
+    "tags": [
+      "threadgroup",
+      "core"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-auto/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-auto/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-auto/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "tg-16x16",
+    "quality_policy": "exact",
+    "tags": [
+      "threadgroup",
+      "core"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-16x16/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-16x16/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-16x16/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "tg-32x8",
+    "quality_policy": "exact",
+    "tags": [
+      "threadgroup",
+      "core"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-32x8/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-32x8/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-32x8/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "tg-8x32",
+    "quality_policy": "exact",
+    "tags": [
+      "threadgroup",
+      "core"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-8x32/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-8x32/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-8x32/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "tg-64x4",
+    "quality_policy": "exact",
+    "tags": [
+      "threadgroup",
+      "core"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-64x4/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-64x4/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/tg-64x4/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "scratch-private",
+    "quality_policy": "exact",
+    "tags": [
+      "scratch",
+      "core"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scratch-private/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scratch-private/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scratch-private/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "scratch-shared",
+    "quality_policy": "exact",
+    "tags": [
+      "scratch",
+      "core"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scratch-shared/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scratch-shared/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scratch-shared/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "scanner-mps",
+    "quality_policy": "report_only",
+    "tags": [
+      "scanner",
+      "mps",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scanner-mps/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scanner-mps/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scanner-mps/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "scanner-mps-texture",
+    "quality_policy": "report_only",
+    "tags": [
+      "scanner",
+      "mps",
+      "approximate",
+      "combined"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scanner-mps-texture/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scanner-mps-texture/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/scanner-mps-texture/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "halation-grouped-tail",
+    "quality_policy": "report_only",
+    "tags": [
+      "halation",
+      "grouped-tail",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/halation-grouped-tail/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/halation-grouped-tail/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/halation-grouped-tail/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "diffusion-group-1",
+    "quality_policy": "exact",
+    "tags": [
+      "diffusion",
+      "group-size",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-group-1/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-group-1/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-group-1/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "blur-backend-auto",
+    "quality_policy": "report_only",
+    "tags": [
+      "blur",
+      "backend",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-backend-auto/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-backend-auto/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-backend-auto/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "blur-backend-mps",
+    "quality_policy": "report_only",
+    "tags": [
+      "blur",
+      "backend",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-backend-mps/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-backend-mps/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-backend-mps/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "blur-backend-custom",
+    "quality_policy": "exact",
+    "tags": [
+      "blur",
+      "backend",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-backend-custom/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-backend-custom/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-backend-custom/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "blur-downsample-2",
+    "quality_policy": "report_only",
+    "tags": [
+      "blur",
+      "downsample",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-2/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-2/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-2/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "blur-downsample-4",
+    "quality_policy": "report_only",
+    "tags": [
+      "blur",
+      "downsample",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-4/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-4/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-4/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "blur-downsample-8",
+    "quality_policy": "report_only",
+    "tags": [
+      "blur",
+      "downsample",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-8/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-8/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-8/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "blur-downsample-auto",
+    "quality_policy": "report_only",
+    "tags": [
+      "blur",
+      "downsample",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-auto/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-auto/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/blur-downsample-auto/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "precision-half-blur",
+    "quality_policy": "report_only",
+    "tags": [
+      "precision",
+      "half",
+      "blur",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/precision-half-blur/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/precision-half-blur/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/precision-half-blur/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "diffusion-cluster-005",
+    "quality_policy": "report_only",
+    "tags": [
+      "diffusion",
+      "cluster",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-cluster-005/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-cluster-005/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-cluster-005/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "diffusion-cluster-010",
+    "quality_policy": "report_only",
+    "tags": [
+      "diffusion",
+      "cluster",
+      "approximate"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-cluster-010/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-cluster-010/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/diffusion-cluster-010/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "grain-blur-recurrence",
+    "quality_policy": "exact",
+    "tags": [
+      "grain",
+      "blur",
+      "recurrence",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/grain-blur-recurrence/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/grain-blur-recurrence/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/grain-blur-recurrence/quality.stderr.log"
+  },
+  {
+    "status": "PASSED",
+    "failed": 0,
+    "infrastructure_failures": 0,
+    "case_count": 32,
+    "candidate": "dir-tail-fused",
+    "quality_policy": "exact",
+    "tags": [
+      "dir",
+      "fused",
+      "exact"
+    ],
+    "returncode": 0,
+    "output_dir": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/dir-tail-fused/quality",
+    "stdout_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/dir-tail-fused/quality.stdout.log",
+    "stderr_log": "/Volumes/Discordia/perf_run/exhaustive_sweep_new/dir-tail-fused/quality.stderr.log"
+  }
+]

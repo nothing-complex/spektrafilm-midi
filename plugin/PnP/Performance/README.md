@@ -1,0 +1,1 @@
+In pursuit of better performance, I tested the speed and output parity of multiple shortcuts. They save memory bandwidth and/or compute cycles but come at the cost of accuracy. The harness evaluates the timings of each method and checks output parity to the original python implementation similar to methodology found in PnP/Parity

@@ -1,0 +1,77 @@
+spektrafilm OFX Exported LUT License
+Version 1.0
+
+Copyright (c) 2026 Aedan Diez. All rights reserved.
+
+This license applies to LUT files exported from the spektrafilm OFX plugin
+suite, including spektrafilm, spektrafilm flow, and spektrafilm dev, where this
+license is referenced.
+
+1. Grant of rights
+
+You are allowed to:
+- Use exported LUTs to create images, videos, grades, previews, dailies, and
+  other content for personal, educational, professional, and commercial
+  projects.
+- Install and use exported LUTs on multiple devices that you personally use,
+  or within a single organization or production.
+- Share exported LUT files for free with collaborators, clients, colleagues,
+  or production partners, provided the files are shared for a specific project
+  or workflow and include a copy of this license or a clear reference to it.
+
+2. Restrictions
+
+You are not allowed to:
+- Sell, resell, rent, sublicense, or otherwise charge money specifically for
+  exported LUT files, whether original or modified.
+- Sell, resell, rent, sublicense, or otherwise charge money specifically for
+  derived LUTs, transforms, presets, or similar artifacts made from exported
+  LUTs.
+- Distribute exported LUTs, original or modified, as a standalone LUT product,
+  LUT pack, preset bundle, plugin, template pack, training asset, hosted
+  service, paid add-on, or similar color grading product.
+- Include exported LUTs, original or modified, in any paid product or service
+  whose main value is distributing LUTs, presets, transforms, or similar color
+  grading tools.
+- Claim authorship of exported LUTs or remove spektrafilm OFX attribution from
+  accompanying metadata, documentation, or license materials.
+
+3. Derivative LUTs
+
+If you modify or build upon exported LUTs, including by tweaking, re-gridding,
+combining, converting, or baking them into other transforms, you may:
+- Use the modified LUTs in your own personal, educational, professional, and
+  commercial projects under the same conditions as section 1.
+- Share the modified LUTs for free, provided that you do not sell them, you
+  include clear credit to the original spektrafilm OFX exported LUTs, and you
+  include a copy of this license or a clear reference to it.
+
+Derivative LUTs must be released under this same spektrafilm OFX Exported LUT
+License. You may not sell, license, or distribute modified LUTs in a way that
+allows others to avoid these no-resale conditions.
+
+4. Attribution
+
+Attribution is not required for rendered images, videos, stills, grades, or
+other creative outputs made with exported LUTs.
+
+When practical, for example in project documentation, workflow notes, about
+pages, or video descriptions, attribution is appreciated. Suitable examples
+include:
+
+"spektrafilm OFX LUTs"
+"film emulation powered by spektrafilm"
+
+5. No warranty
+
+Exported LUTs are provided "as is", without warranty of any kind, express or
+implied, including but not limited to fitness for a particular purpose,
+merchantability, title, and noninfringement. You use them at your own risk.
+
+6. Other terms
+
+This license covers only LUT assets exported from the spektrafilm OFX plugin
+suite. The spektrafilm OFX source code is licensed separately under GPL-3.0.
+Official binary distribution notices for packaged/built plugin archives are
+provided separately in SPEKTRAFILM_OFX_LICENSE.txt. Third-party notices are
+provided separately in THIRD_PARTY_NOTICES.txt.

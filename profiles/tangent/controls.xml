@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TangentWave fileType="ControlSystem" fileVersion="3.0">
+    <Capabilities>
+        <Jog enabled="false" />
+        <Shuttle enabled="false" />
+        <StatusDisplay lineCount="3" />
+    </Capabilities>
+    <DefaultGlobalSettings>
+        <KnobSensitivity std="1" alt="1" />
+        <JogDialSensitivity std="1" alt="1" />
+        <TrackerballSensitivity std="1" alt="1" />
+        <TrackerballDialSensitivity std="1" alt="1" />
+        <IndependentPanelBanks enabled="false" />
+    </DefaultGlobalSettings>
+    <Modes>
+        <Mode id="0x2001">
+            <Name>Essentials</Name>
+        </Mode>
+        <Mode id="0x2002">
+            <Name>Film</Name>
+        </Mode>
+        <Mode id="0x2003">
+            <Name>Print</Name>
+        </Mode>
+        <Mode id="0x2004">
+            <Name>Printer</Name>
+        </Mode>
+        <Mode id="0x2005">
+            <Name>Grain</Name>
+        </Mode>
+        <Mode id="0x2006">
+            <Name>Halation</Name>
+        </Mode>
+        <Mode id="0x2007">
+            <Name>Diffusion</Name>
+        </Mode>
+        <Mode id="0x2008">
+            <Name>Scanner</Name>
+        </Mode>
+        <Mode id="0x2009">
+            <Name>Lens N/A</Name>
+        </Mode>
+        <Mode id="0x200A">
+            <Name>Motion N/A</Name>
+        </Mode>
+        <Mode id="0x200B">
+            <Name>Color / I-O</Name>
+        </Mode>
+        <Mode id="0x200C">
+            <Name>Favorites</Name>
+        </Mode>
+        <Mode id="0x20FF">
+            <Name>All Parameters</Name>
+        </Mode>
+    </Modes>
+    <Controls>
+        <Parameter id="0x1001">
+            <Name>Film Exp</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1002">
+            <Name>Print Exp</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1003">
+            <Name>Film Push</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1004">
+            <Name>Print Push</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1005">
+            <Name>C Filter</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1006">
+            <Name>M Filter</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1007">
+            <Name>Y Filter</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1008">
+            <Name>Print Shadow</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1009">
+            <Name>Print Hi</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x100A">
+            <Name>Grain</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x100B">
+            <Name>Halation</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x100C">
+            <Name>Cam Diffuse</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1101">
+            <Name>M Filter</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1102">
+            <Name>Y Filter</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1103">
+            <Name>C Filter</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1104">
+            <Name>Enlarge X</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1105">
+            <Name>Enlarge Y</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1106">
+            <Name>Enlarge Size</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1107">
+            <Name>Preflash M</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1108">
+            <Name>Preflash Y</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1109">
+            <Name>Preflash Exp</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1201">
+            <Name>Print Shadow</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1202">
+            <Name>Print Hi</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Parameter id="0x1203">
+            <Name>Focus Trim</Name>
+            <MinValue>-1000000</MinValue>
+            <MaxValue>1000000</MaxValue>
+            <StepSize>1</StepSize>
+        </Parameter>
+        <Action id="0x3001">
+            <Name>Essentials</Name>
+        </Action>
+        <Action id="0x3002">
+            <Name>Film</Name>
+        </Action>
+        <Action id="0x3003">
+            <Name>Print</Name>
+        </Action>
+        <Action id="0x3004">
+            <Name>Printer</Name>
+        </Action>
+        <Action id="0x3005">
+            <Name>Grain</Name>
+        </Action>
+        <Action id="0x3006">
+            <Name>Halation</Name>
+        </Action>
+        <Action id="0x3007">
+            <Name>Diffusion</Name>
+        </Action>
+        <Action id="0x3008">
+            <Name>Scanner</Name>
+        </Action>
+        <Action id="0x3009">
+            <Name>Lens N/A</Name>
+        </Action>
+        <Action id="0x300A">
+            <Name>Motion N/A</Name>
+        </Action>
+        <Action id="0x300B">
+            <Name>Color / I-O</Name>
+        </Action>
+        <Action id="0x300C">
+            <Name>Favorites</Name>
+        </Action>
+        <Action id="0x3011">
+            <Name>Disarm</Name>
+        </Action>
+        <Action id="0x3012">
+            <Name>Refresh</Name>
+        </Action>
+        <Action id="0x3013">
+            <Name>Prev Page</Name>
+        </Action>
+        <Action id="0x3014">
+            <Name>Next Page</Name>
+        </Action>
+        <Action id="0x3015">
+            <Name>Prev Focus</Name>
+        </Action>
+        <Action id="0x3016">
+            <Name>Next Focus</Name>
+        </Action>
+        <Action id="0x3017">
+            <Name>Undo N/A</Name>
+        </Action>
+        <Action id="0x3018">
+            <Name>Redo N/A</Name>
+        </Action>
+        <Action id="0x3019">
+            <Name>Capture A</Name>
+        </Action>
+        <Action id="0x301A">
+            <Name>Capture B</Name>
+        </Action>
+        <Action id="0x301B">
+            <Name>Recall A/B</Name>
+        </Action>
+        <Action id="0x301C">
+            <Name>Apply</Name>
+        </Action>
+        <Action id="0x3021">
+            <Name>Fine (hold)</Name>
+        </Action>
+        <Action id="0x3022">
+            <Name>Next Page</Name>
+        </Action>
+        <Action id="0x3023">
+            <Name>Fine (hold)</Name>
+        </Action>
+        <Action id="0x3024">
+            <Name>Prev Page</Name>
+        </Action>
+        <Action id="0x3025">
+            <Name>Fine (hold)</Name>
+        </Action>
+        <Action id="0x3026">
+            <Name>Stage On/Off</Name>
+        </Action>
+        <Action id="0x3027">
+            <Name>Fine (hold)</Name>
+        </Action>
+        <Action id="0x3028">
+            <Name>Next Focus</Name>
+        </Action>
+        <Action id="0x3031">
+            <Name>Reverse N/A</Name>
+        </Action>
+        <Action id="0x3032">
+            <Name>Stop N/A</Name>
+        </Action>
+        <Action id="0x3033">
+            <Name>Play N/A</Name>
+        </Action>
+        <Action id="0x3034">
+            <Name>Frame- N/A</Name>
+        </Action>
+        <Action id="0x3035">
+            <Name>Frame+ N/A</Name>
+        </Action>
+    </Controls>
+</TangentWave>

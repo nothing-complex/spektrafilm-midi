@@ -1,0 +1,7 @@
+stage=print_density_cmy
+width=1536
+height=1024
+source_format=float
+destination_format=float
+host_layout=contiguous
+output=/Volumes/Discordia/perf_run/renew_default_fast_path/baseline/quality/cases/quick__hard_edge__print_density_cmy/metal.f32

@@ -1,0 +1,8 @@
+{
+  "diff.exr": "Raw signed float difference: Metal - Python. This often looks black in viewers because values are tiny and negative values clip.",
+  "abs_diff.exr": "Raw absolute float difference. This can also look black when errors are small.",
+  "abs_diff_preview.exr": "Viewable contrast-stretched absolute difference using the same display normalization as the contact sheet.",
+  "signed_diff_preview.exr": "Viewable signed difference. 0.5 is no difference; above 0.5 means Metal is higher; below 0.5 means Metal is lower.",
+  "signed_preview_scale": 1.1195093018168123e-06,
+  "signed_preview_formula": "clip((Metal - Python) / (2 * signed_preview_scale) + 0.5, 0, 1)"
+}
