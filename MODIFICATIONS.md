@@ -17,4 +17,6 @@ New native integration files:
 
 The surrounding companion, panel profiles, root build/package scripts, tests and community documentation are new project additions. The unchanged baseline source under `profiles/reference/` is retained for repeatable catalogue extraction.
 
+Companion 0.1.2 adds bounded foreground retries, preserves input received during a host invocation, enables automatic Apply after verified binding, and adds explicit Apply now and persistent dispatch status. Its native OFX binary is unchanged from 0.1.0/0.1.1. The installed Resolve inspector has passed binding and an empty host Apply callback; continuous physical-panel operation remains pending.
+
 The prototype is a separate community effect, not a replacement for or current-feature-equivalent version of the official plugin. See [README](README.md) and [build status](docs/BUILD_STATUS.md) for supported behavior and open acceptance conditions.

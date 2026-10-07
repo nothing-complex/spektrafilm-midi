@@ -4,7 +4,7 @@ A free, open-source Windows prototype for controlling a community build of Spekt
 
 **Early prototype, looking for testers.** The software builds and automated tests pass. Physical Element operation and actual Resolve integration have not yet completed acceptance testing. Continuous automatic control depends on Resolve exposing the effect's **Apply MIDI** button and target marker through Windows accessibility. Manual Apply is the fallback. Please start with a disposable project.
 
-[Download the Windows prototype and matching source](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.1-prototype) · [Setup](docs/SETUP.md) · [Controls](docs/CONTROLS.md) · [Verified status](docs/BUILD_STATUS.md)
+[Download the Windows prototype and matching source](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.2-prototype) · [Setup](docs/SETUP.md) · [Controls](docs/CONTROLS.md) · [Verified status](docs/BUILD_STATUS.md)
 
 ## What it does
 
@@ -34,16 +34,16 @@ The installer targets only the MIDI bundle. Existing regular Spektrafilm nodes k
 
 Requirements: **Windows x64**, the **.NET 9 Windows Desktop runtime**, a Vulkan-capable GPU/driver supported by the public renderer, and Tangent Hub for the native Element route. No virtual MIDI driver is installed by this project.
 
-1. Download and extract `Spektrafilm-MIDI-0.1.1-prototype.zip` from the [prerelease](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.1-prototype).
+1. Download and extract `Spektrafilm-MIDI-0.1.2-prototype.zip` from the [prerelease](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.2-prototype).
 2. Close Resolve. From the extracted package, preview `./Install.ps1` in PowerShell. Then use `./Install.ps1 -Apply` in an administrator PowerShell to install the separate MIDI bundle.
 3. Restart Resolve and add **Spektrafilm MIDI (Community Beta)** to a disposable test grade.
 4. Run **Launch Companion.cmd**, choose one input route and click **Connect** each session. For Element, choose **Tangent Hub**.
 5. For native Element control, open Mapper's **Select Application** menu and turn **Auto-select Application** off. Select **Spektrafilm MIDI** so it has the checkmark; the arrow beside it opens its maps. Auto-select otherwise switches the panels back to the default Resolve setup when Resolve gains focus.
 6. Confirm the Kb screens show Spektrafilm labels such as **Film Exp** and **Print Exp** on the Essentials bank, possibly marked off before arming. If they still show Resolve's controls, complete the [Tangent switching steps](docs/SETUP.md#switching-element-from-resolve-to-spektrafilm) first.
 7. Click **Arm MIDI** in the intended effect and wait for a complete armed target in the companion.
-8. Move a control, then click **Apply MIDI** in the effect within two seconds. Confirm the inspector value, image and feedback agree.
+8. With the effect's MIDI controls visible, click **Find visible Apply buttons** in the companion, select the intended button, then **Bind + enable Auto Apply**. Return to Resolve and confirm the companion reports **Host Apply: AUTO enabled (Resolve active)**. Move a control and check for an **APPLIED** acknowledgment and a matching inspector/image change.
 
-For optional automatic Apply, find and explicitly bind the correct accessible inspector button in the companion, then enable Automatic Apply. It requires foreground Resolve and the exact instance marker. There is no automatic selected-node following or coordinate-click fallback. See [setup](docs/SETUP.md) and [companion details](companion/README.md).
+**DELTA: QUEUED only confirms receipt; it does not mean the effect changed.** Automatic Apply is off until you bind the button each session. The persistent **Host Apply** line shows OFF, waiting for foreground Resolve, or enabled, together with the last Apply result. After binding, **Apply now** in the companion invokes the verified effect button immediately, including while Resolve is in the background. If binding is unavailable, move a control and click **Apply MIDI** in the effect within two seconds for manual testing. Automatic hardware input requires foreground Resolve and the exact instance marker; continuous operation still needs acceptance testing. See [setup](docs/SETUP.md) and [companion details](companion/README.md).
 
 Disarm before export or switching the full panel set back to Resolve's native application. Select DaVinci Resolve in Mapper, and restore Auto-select if you want normal focus switching again. Keep your normal Resolve maps; the A+B shortcut between Resolve's native/mappable modes does not select this separate application. Use the [acceptance checklist](docs/ACCEPTANCE.md) to check undo, persistence, cache invalidation and renders before using a real job.
 
@@ -71,7 +71,7 @@ Bootstrap creates an isolated Python environment with pinned data-generation dep
 
 The build includes a regular baseline for coexistence tests; the distribution packages the MIDI sibling alone. Build/package scripts do not install OFX binaries or change Tangent user maps. Output goes into `.build/` and `dist/`.
 
-Automated verification covers native OFX host-action/thread boundaries, targeting, HDR dependencies, animation protection, queue expiry, 18 companion tests, 11 profile/bridge tests, cross-language integration, installer isolation and Vulkan core/print-scan smoke tests. [Build status](docs/BUILD_STATUS.md) separates those results from outstanding host/hardware work.
+Automated verification covers native OFX host-action/thread boundaries, targeting, HDR dependencies, animation protection, queue expiry, companion state/protocol tests, 11 profile/bridge tests, cross-language integration, installer isolation and Vulkan core/print-scan smoke tests. [Build status](docs/BUILD_STATUS.md) separates those results from outstanding host/hardware work.
 
 ## Feedback and contributions
 

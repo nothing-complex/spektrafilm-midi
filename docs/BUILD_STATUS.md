@@ -1,6 +1,6 @@
 # Build status — 7 October 2026
 
-**Built Windows x64 prototype. Physical Element and actual Resolve acceptance remain pending.** The binary package contains only the separately identified MIDI sibling and its desktop companion. No system OFX installation, original plugin replacement, or Tangent user-map change was performed during this build.
+**Built Windows x64 prototype. Continuous physical Element operation in Resolve remains pending.** The binary package contains the separately identified MIDI sibling and its desktop companion. The installed MIDI binary matches the tested build; the regular plugin remains separate. During live diagnosis, Tangent Mapper was switched to manual application selection and Spektrafilm MIDI was selected.
 
 ## Implemented
 
@@ -18,9 +18,9 @@
 | C++ and Windows companion build | Success; companion 0 warnings, 0 errors |
 | Native broker tests | Parser, finite values, targeting, lifecycle and stale generation checks pass |
 | Minimal OFX host harness | Host action/thread boundaries, bounds, animation/expression rejection, HDR dependency semantics, hidden/internal rejection, queue expiry, heartbeat disarm, exclusive arm, defaults isolation, balanced edits and unload pass |
-| Companion tests | 20 pass, including full 24-axis bursts, actual loopback discovery/reconnection, sustained-input Apply scheduling, snapshots, MIDI formats, OSC, Tangent framing, handshake/re-initiation and stage toggles |
-| Installed Tangent Hub | Companion completes the real protocol-14 handshake and receives four connected Element panel reports; physical knob input and active application routing remain to be tested |
-| Actual Resolve UI | Installed MIDI binary matches the tested build; companion discovers three live effect instances and their 155-component snapshots. Resolve exposes Arm/Apply buttons and the exact instance marker through accessibility; automatic binding/invocation remains untested |
+| Companion tests | 24 pass, including full 24-axis bursts, loopback discovery/reconnection, sustained-input scheduling, foreground retry/expiry, input during dispatch, snapshots, MIDI formats, OSC, Tangent framing, handshake/re-initiation and stage toggles |
+| Installed Tangent Hub | Companion completes the real protocol-14 handshake and receives four connected Element panel reports. Mapper Auto-select was disabled and Spektrafilm MIDI selected; physical input while Resolve is foreground remains to be confirmed |
+| Actual Resolve UI | Companion discovers three live effect instances and their 155-component snapshots. Exact-marker binding succeeds; explicit invocation of the bound Apply button returns APPLY: APPLIED 0 from the real host callback with an empty queue. Continuous physical control remains untested |
 | Profile/OSC bridge tests | 11 pass; 160 editable source components mapped without omissions; generated artifacts match the bundled upstream reference |
 | Cross-language integration | Real C# companion receives the DLL snapshot, OSC movement reaches the DLL, synthetic legal host Apply changes exposure and authoritative state |
 | Installer contract | Preview, install, repeat update, conflict rejection, uninstall and regular-bundle preservation pass within workspace |
@@ -34,11 +34,11 @@ The print/scan smoke harness's stale expected dispatch count was corrected to in
 
 ## Open acceptance conditions
 
-The key remaining condition is **continuous host dispatch in Resolve**. Manual Apply is implemented. The optional Windows accessibility adapter requires Resolve to expose the exact armed-instance marker and its Apply MIDI button, a unique explicit binding, and foreground Resolve. It refuses ambiguous targets. This adapter has not been validated against the installed Resolve UI. If accessibility does not expose those controls, continuous automatic operation is unavailable with this adapter.
+The key remaining condition is **continuous physical control and host dispatch in Resolve**. The optional Windows accessibility adapter requires the exact armed-instance marker, a unique visible Apply MIDI button, a fresh target and an explicit binding. Binding and an empty host callback have been verified against the installed Resolve UI. Automatic dispatch requires foreground Resolve; an explicit companion **Apply now** click can invoke the same verified button while Resolve is in the background. Temporary foreground/readiness interruptions retain pending dispatch only within the native two-second input lifetime. Ambiguous or changed inspectors invalidate the binding. On hosts that do not expose these accessibility controls, use the effect's Apply MIDI button.
 
 Actual panel movement, dynamic display layout, native application switching, hardware disconnect behavior, MIDI port traffic, Resolve redraw/cache invalidation, undo/redo, project save/reopen and exports still need [the acceptance procedure](ACCEPTANCE.md). The companion GUI was inspected with live Resolve discovery and a real Tangent Hub connection. Automated and headless companion verification completed independently.
 
-The first user test reported that the panels retained Resolve's default mapping. The installed Hub configuration has Auto-select enabled and associates Resolve with its usual applications. The setup guide now explicitly requires disabling Auto-select before selecting Spektrafilm MIDI; the companion shows persistent routing instructions and distinguishes socket/definition progress from actual hardware input. No Tangent application-selection settings were changed during diagnosis.
+The first user test reported that the panels retained Resolve's default mapping. Subsequent tests reported queued deltas without visible edits and input working only with the companion active. The Hub had Auto-select enabled, associated Resolve with its normal application and associated the companion executable with Spektrafilm MIDI. Mapper was changed to manual selection to keep Spektrafilm MIDI active across focus changes. The companion now shows persistent routing and Host Apply status, enables Auto Apply after successful binding, and retries pending work while it is fresh. A socket connection or QUEUED response alone does not prove a hardware event changed the effect.
 
 Five transport buttons and the planned Resolve undo/redo command adapter are unimplemented and report unavailable. Calibration, presets and LUT management stay in the effect inspector. Animated parameters are rejected rather than edited. Explicitly disarm before export; automatic offline-render disarming is not claimed. One full gesture per undo entry is not implemented.
 

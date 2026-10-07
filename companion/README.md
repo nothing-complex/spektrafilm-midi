@@ -10,13 +10,19 @@ Run `companion/Launch.ps1` after the project build, or run the packaged `Spektra
 2. For native Element control, open Tangent Mapper's **Select Application** menu, turn **Auto-select Application** off, and select **Spektrafilm MIDI** so it has the checkmark. The arrow beside the application only opens its maps. Auto-select otherwise restores the default Resolve setup when Resolve gains focus. On the Essentials bank, check for Kb labels such as Film Exp and Print Exp, possibly marked off while unarmed. See the [switching guide](../docs/SETUP.md#switching-element-from-resolve-to-spektrafilm).
 3. Add **Spektrafilm MIDI (Community Beta)** to the intended Resolve node. In its MIDI controls, click **Arm MIDI**. Existing regular Spektrafilm nodes remain independent.
 4. Wait for the companion to show one armed instance and its authoritative parameter state. Select a feature bank, or **All available parameters** for automatic coverage of the current schema.
-5. Move a controller. The plugin queues the edits for up to two seconds. **Click Apply MIDI in the plugin** to commit them through a normal host action. A stopped playhead does not itself dispatch queued edits.
+5. Bind automatic Apply as described below, return to Resolve, then move a controller. Check **Host Apply: AUTO enabled (Resolve active)** and the last Apply acknowledgment. For manual testing, move a controller and **click Apply MIDI in the plugin within two seconds**. A stopped playhead does not itself dispatch queued edits.
+
+**DELTA: QUEUED means the plugin received an edit; it does not mean a parameter changed.** The companion's persistent Host Apply line separately shows dispatch status and the last Apply result. Confirm an **APPLIED** acknowledgment and matching inspector/image feedback.
 
 This is a feasibility build. Actual Resolve redraw, undo, project persistence, device behavior, and realtime performance still require host/hardware validation. The program never sets OFX parameters from MIDI, network or render callbacks.
 
 ## Optional automatic Apply
 
-In the companion, click **Find visible Apply buttons**, explicitly select the intended button, then **Bind selected button**. Binding requires the exact `MIDI target: <full instance ID>` marker exposed next to that button. Enable the automatic Apply checkbox only after binding.
+In the companion, click **Find visible Apply buttons**, explicitly select the intended button, then **Bind + enable Auto Apply**. Binding requires the exact `MIDI target: <full instance ID>` marker exposed next to that button. A successful bind also enables the automatic Apply checkbox. Automatic Apply starts off and bindings are not restored each session, even when a previous controller connection worked.
+
+The Host Apply line shows **OFF**, **AUTO waiting for Resolve foreground**, or **AUTO enabled (Resolve active)**, plus the last Apply acknowledgment. Move a controller with Resolve foreground. If input arrives while another window is active, automatic application waits for Resolve for up to two seconds after the latest input, matching the plugin's input expiry. Return to Resolve promptly or move the control again once Resolve is foreground.
+
+After binding, **Apply now** provides explicit manual dispatch from the companion. It immediately invokes the verified host button, including while Resolve is in the background and automatic Apply is off. It still requires the fresh armed target, unique bound button and exact target marker. Input older than two seconds has already expired.
 
 Automatic application uses UI Automation `InvokePattern`, with all of these conditions checked again before each invocation:
 
@@ -26,6 +32,8 @@ Automatic application uses UI Automation `InvokePattern`, with all of these cond
 - The exact instance marker remains in that button's nearby accessible group.
 
 If Resolve does not expose an accessible button or marker, the companion remains in manual Apply mode. It does not fall back to mouse coordinates, global keystrokes or private host calls. Bindings are never saved or restored, and selection/target changes invalidate them.
+
+The button and target marker have been found and bound in an installed Resolve inspector, and an empty host Apply callback returned `APPLY: APPLIED 0`. This confirms callback dispatch with no queued edits; continuous invocation and changed values from physical panels remain under acceptance testing.
 
 ## Input routes
 

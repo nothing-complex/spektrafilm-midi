@@ -17,6 +17,10 @@ public sealed class SafeApplyBinding
     private int[]? runtimeId;
     private string? instance;
     public bool IsBound => bound != null;
+    public bool ResolveInForeground
+    {
+        get { GetWindowThreadProcessId(GetForegroundWindow(), out var foreground); return bound != null && foreground == bound.ProcessId; }
+    }
     public void Clear() { bound = null; targetIdentity = null; runtimeId = null; instance = null; }
     public static IReadOnlyList<Candidate> FindCandidates()
     {
@@ -59,14 +63,17 @@ public sealed class SafeApplyBinding
         }
         return false;
     }
-    public bool Invoke(Target? target, out string reason)
+    public bool Invoke(Target? target, out string reason, out bool retryable, bool allowBackground = false)
     {
+        retryable = false;
         reason = "Manual Apply MIDI required.";
         if (target == null || bound == null || target.Identity != targetIdentity || !target.Fresh(DateTime.UtcNow)) { Clear(); return false; }
         try
         {
             GetWindowThreadProcessId(GetForegroundWindow(), out var foreground);
-            if (foreground != bound.ProcessId) { reason = "Waiting for foreground Resolve; manual Apply MIDI remains available."; return false; }
+            // Automatic hardware dispatch requires foreground Resolve. An explicit
+            // companion Apply click may invoke the same verified button in the background.
+            if (!allowBackground && foreground != bound.ProcessId) { retryable = true; reason = "Waiting for foreground Resolve; pending Apply expires after two seconds without new input."; return false; }
             var candidates = FindCandidates();
             if (candidates.Count != 1 || !candidates[0].Element.GetRuntimeId().SequenceEqual(runtimeId ?? Array.Empty<int>()) || !OwnerConfirmed(candidates[0].Element, instance!))
             { Clear(); reason = "Apply binding invalidated by inspector/selection change. Manual Apply MIDI required."; return false; }

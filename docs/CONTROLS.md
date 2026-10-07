@@ -56,7 +56,7 @@ Mf programmable buttons 1–12 are:
 9. Capture comparison A for this target.
 10. Capture comparison B for this target.
 11. Queue alternate A/B recall.
-12. Request Apply.
+12. Request host Apply (requires an explicit automatic binding, or the effect's Apply MIDI button).
 
 Initial arming is deliberately an **Arm MIDI** action in the intended OFX instance. A panel cannot infer the selected Resolve node. Capture reads the last authoritative snapshot; apply any pending edits before capture. Comparison recall is queued and uses the same host commit mechanism as individual edits.
 

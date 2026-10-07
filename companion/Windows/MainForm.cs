@@ -24,6 +24,7 @@ public sealed class MainForm : Forms.Form
     private readonly Forms.ComboBox focus = new() { DropDownStyle = Forms.ComboBoxStyle.DropDownList, Width = 280 };
     private readonly Forms.Label target = new() { AutoSize = true, Text = "No armed target. Add the MIDI effect and press Arm MIDI in its controls." };
     private readonly Forms.Label inputStatus = new() { Dock = Forms.DockStyle.Top, Height = 28, Text = "Controller disconnected. Choose an input and click Connect; keep this companion open." };
+    private readonly Forms.Label hostApplyStatus = new() { Dock = Forms.DockStyle.Fill };
     private readonly Forms.Label routingHint = new() { Dock = Forms.DockStyle.Fill, Text = "For Element: connect Tangent Hub, turn off Auto-select Application in Tangent Mapper, then select Spektrafilm MIDI." };
     private readonly Forms.Label page = new() { AutoSize = true };
     private readonly Forms.Label status = new() { AutoSize = false, Height = 45, Dock = Forms.DockStyle.Fill, Text = "Manual Apply MIDI required. Controller input queues edits; the plugin Apply MIDI button commits them." };
@@ -43,12 +44,14 @@ public sealed class MainForm : Forms.Form
     private bool refreshing;
     private bool connecting;
     private bool feedbackSending;
+    private bool applyInProgress;
     private string? focusIdentity;
     private string? catalogIdentity;
     private string? boundIdentity;
     private string? lastStatus;
     private long inputCount;
     private DateTime? lastInputUtc;
+    private string lastApplyResult = "No host Apply confirmed.";
     private readonly HashSet<int> heldFineNotes = new();
     private readonly string settingsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "TangentMidi", "Spektrafilm", "companion-v1.json");
     private sealed record Settings(string Adapter, string MidiDevice, MidiEncoding Encoding, int Channel, int OscPort, string Bank);
@@ -61,13 +64,14 @@ public sealed class MainForm : Forms.Form
         Font = new Font("Segoe UI", 10);
         plugin = new PluginConnection(); engine = new ControlEngine(plugin.Registry, profile);
         engine.CommandReady += plugin.Send;
-        plugin.Status += s => UI(() => SetStatus(s)); engine.Status += s => UI(() => SetStatus(s));
+        plugin.Status += s => UI(() => { if (s.StartsWith("APPLY:", StringComparison.Ordinal)) lastApplyResult = s; SetStatus(s); }); engine.Status += s => UI(() => SetStatus(s));
         engine.ApplySuggested += () => UI(() => { applyScheduler.Request(DateTime.UtcNow); SetStatus("Edits queued. " + (autoApply.Checked && binding.IsBound ? "Automatic Apply pending." : "Press Apply MIDI in the armed plugin within two seconds.")); });
         engine.DisplaysChanged += () => UI(() => feedbackDirty = true);
         BuildLayout();
         adapter.Items.AddRange(new object[] { "Off", "MIDI", "OSC", "Tangent Hub" }); adapter.SelectedIndex = 0;
         encoding.Items.AddRange(Enum.GetValues<MidiEncoding>().Cast<object>().ToArray()); encoding.SelectedItem = MidiEncoding.RelativeBinaryOffset;
         RefreshDevices(); RefreshBanks(); LoadSettings();
+        autoApply.CheckedChanged += (_, _) => { feedbackDirty = true; RefreshApplyStatus(); };
         banks.SelectedIndexChanged += (_, _) => { if (!refreshing && banks.SelectedItem is BankDefinition bank) { engine.SelectBank(bank); RefreshView(); } };
         focus.SelectedIndexChanged += (_, _) => { if (!refreshing && focus.SelectedItem is FocusItem item) { engine.FocusedKey = item.Key; feedbackDirty = true; } };
         grid.CellDoubleClick += (_, e) => { if (e.RowIndex >= 0) { engine.Handle(new(InputKind.Reset, e.RowIndex)); } };
@@ -77,25 +81,25 @@ public sealed class MainForm : Forms.Form
     private void BuildLayout()
     {
         var layout = new Forms.TableLayoutPanel { Dock = Forms.DockStyle.Fill, ColumnCount = 1, RowCount = 8, Padding = new Forms.Padding(10) };
-        layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.Absolute, 120)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize));
+        layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.Absolute, 150)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize));
         layout.RowStyles.Add(new(Forms.SizeType.Absolute, 90)); layout.RowStyles.Add(new(Forms.SizeType.Percent, 72)); layout.RowStyles.Add(new(Forms.SizeType.AutoSize)); layout.RowStyles.Add(new(Forms.SizeType.Percent, 28));
         var inputs = new Forms.FlowLayoutPanel { AutoSize = true, Dock = Forms.DockStyle.Fill, WrapContents = true };
         inputs.Controls.AddRange(new Forms.Control[] { Label("Input"), adapter, Button("Connect", async () => await ConnectAsync()), Button("Disconnect", Disconnect), Label("MIDI port"), midiDevices, Button("Refresh ports", RefreshDevices), encoding, Label("Ch (0=all)"), channel, Label("OSC port"), oscPort });
         layout.Controls.Add(inputs);
         var routing = new Forms.GroupBox { Text = "Controller routing — verify this before testing the effect", Dock = Forms.DockStyle.Fill, Padding = new Forms.Padding(8) };
-        var routingRows = new Forms.TableLayoutPanel { Dock = Forms.DockStyle.Fill, RowCount = 2, ColumnCount = 1 };
-        routingRows.RowStyles.Add(new(Forms.SizeType.Absolute, 28)); routingRows.RowStyles.Add(new(Forms.SizeType.Percent, 100));
+        var routingRows = new Forms.TableLayoutPanel { Dock = Forms.DockStyle.Fill, RowCount = 3, ColumnCount = 1 };
+        routingRows.RowStyles.Add(new(Forms.SizeType.Absolute, 28)); routingRows.RowStyles.Add(new(Forms.SizeType.Absolute, 28)); routingRows.RowStyles.Add(new(Forms.SizeType.Percent, 100));
         inputStatus.Dock = Forms.DockStyle.Fill;
-        routingRows.Controls.Add(inputStatus); routingRows.Controls.Add(routingHint); routing.Controls.Add(routingRows); layout.Controls.Add(routing);
+        routingRows.Controls.Add(inputStatus); routingRows.Controls.Add(hostApplyStatus); routingRows.Controls.Add(routingHint); routing.Controls.Add(routingRows); layout.Controls.Add(routing);
         var tools = new Forms.FlowLayoutPanel { AutoSize = true, Dock = Forms.DockStyle.Fill };
-        tools.Controls.AddRange(new Forms.Control[] { Label("Bank"), banks, Button("‹ Page", () => engine.SelectPage(engine.Page - 1)), Button("Page ›", () => engine.SelectPage(engine.Page + 1)), page, Button("Refresh state", () => engine.Action("refresh")), Button("Disarm", () => engine.Action("disarm")), Button("Request Apply", () => engine.Action("apply")), Label("Mf ring focus"), focus });
+        tools.Controls.AddRange(new Forms.Control[] { Label("Bank"), banks, Button("‹ Page", () => engine.SelectPage(engine.Page - 1)), Button("Page ›", () => engine.SelectPage(engine.Page + 1)), page, Button("Refresh state", () => engine.Action("refresh")), Button("Disarm", () => engine.Action("disarm")), Button("Apply now", ApplyNow), Label("Mf ring focus"), focus });
         layout.Controls.Add(tools); layout.Controls.Add(target);
         var targets = new Forms.GroupBox { Text = "Discovered instances — arming is performed inside the intended plugin", Dock = Forms.DockStyle.Fill };
         targets.Controls.Add(instances); layout.Controls.Add(targets);
         foreach (var name in new[] { "Hardware", "Control", "Actual value", "State" }) grid.Columns.Add(name, name);
         layout.Controls.Add(grid);
         var apply = new Forms.FlowLayoutPanel { Dock = Forms.DockStyle.Fill, AutoSize = true };
-        apply.Controls.AddRange(new Forms.Control[] { autoApply, Button("Find visible Apply buttons", FindApply), applyCandidates, Button("Bind selected button", BindApply), Button("Clear binding", () => { binding.Clear(); autoApply.Checked = false; SetStatus("Manual Apply MIDI required."); }) });
+        apply.Controls.AddRange(new Forms.Control[] { autoApply, Button("Find visible Apply buttons", FindApply), applyCandidates, Button("Bind + enable Auto Apply", BindApply), Button("Clear binding", () => { binding.Clear(); autoApply.Checked = false; SetStatus("Manual Apply MIDI required."); }) });
         layout.Controls.Add(apply);
         var bottom = new Forms.TableLayoutPanel { Dock = Forms.DockStyle.Fill, RowCount = 2, ColumnCount = 1 };
         bottom.RowStyles.Add(new(Forms.SizeType.Absolute, 45)); bottom.RowStyles.Add(new(Forms.SizeType.Percent, 100)); bottom.Controls.Add(status); bottom.Controls.Add(log); layout.Controls.Add(bottom);
@@ -168,6 +172,7 @@ public sealed class MainForm : Forms.Form
         // An adapter disconnect invalidates queued movement in the plugin.
         foreach (var t in plugin.Registry.Instances.Where(t => t.Armed)) plugin.Send(t, Wire.Command(t, "DISARM"));
         binding.Clear(); boundIdentity = null; autoApply.Checked = false; applyScheduler.Clear();
+        lastApplyResult = "No host Apply confirmed.";
     }
     private void ReceiveInput(ControlInput input) => UI(() =>
     {
@@ -224,8 +229,10 @@ public sealed class MainForm : Forms.Form
     {
         RefreshInputStatus();
         RefreshView();
+        RefreshApplyStatus();
         var applyNow = DateTime.UtcNow;
-        if (applyScheduler.IsDue(applyNow))
+        if (applyScheduler.ExpireIfStale(applyNow)) SetStatus("Pending Apply expired while Resolve was unavailable. Turn a control again with Resolve active.");
+        if (!applyInProgress && applyScheduler.IsDue(applyNow))
         {
             if (autoApply.Checked)
             {
@@ -233,7 +240,22 @@ public sealed class MainForm : Forms.Form
                 var raw = plugin.Registry.Instances.Where(t => t.Armed && t.Fresh(DateTime.UtcNow)).Take(2).ToArray();
                 if (active == null && raw.Length == 1 && raw[0].Identity == boundIdentity)
                 { SetStatus("Waiting for complete authoritative state before Apply."); }
-                else if (applyScheduler.TryTakeDue(applyNow)) { binding.Invoke(active, out var reason); SetStatus(reason); }
+                else
+                {
+                    var requestVersion = applyScheduler.RequestVersion;
+                    applyInProgress = true;
+                    try
+                    {
+                        var invoked = binding.Invoke(active, out var reason, out var retryable);
+                        // UI Automation may pump messages. Preserve input queued
+                        // during the host callback for the next dispatch.
+                        if (invoked || !retryable) applyScheduler.ClearIfUnchanged(requestVersion);
+                        if (invoked) lastApplyResult = "Host button invoked; awaiting confirmation.";
+                        if (!binding.IsBound) autoApply.Checked = false;
+                        SetStatus(reason);
+                    }
+                    finally { applyInProgress = false; }
+                }
             }
             else applyScheduler.Clear();
         }
@@ -247,6 +269,31 @@ public sealed class MainForm : Forms.Form
             }
             finally { feedbackSending = false; }
         }
+    }
+    private void RefreshApplyStatus()
+    {
+        var automatic = autoApply.Checked && binding.IsBound;
+        var ready = automatic && binding.ResolveInForeground;
+        hostApplyStatus.ForeColor = ready ? Color.DarkGreen : Color.DarkOrange;
+        hostApplyStatus.Text = !automatic ? "Host Apply: OFF — edits only queue. Find the Apply button, then Bind + enable Auto Apply."
+            : "Host Apply: " + (ready ? "AUTO enabled (Resolve active)" : "AUTO waiting for Resolve foreground") + " • " + lastApplyResult;
+    }
+    private void ApplyNow()
+    {
+        if (applyInProgress) { SetStatus("A host Apply is already in progress."); return; }
+        if (!binding.IsBound) { SetStatus("Bind the effect's Apply button first, or click Apply MIDI directly in the effect."); return; }
+        // This explicit click commits through Resolve's verified host button even
+        // while the companion has focus. Automatic input still requires Resolve focus.
+        var requestVersion = applyScheduler.RequestVersion;
+        applyInProgress = true;
+        try
+        {
+            if (binding.Invoke(plugin.Registry.ArmedTarget, out var reason, out _, allowBackground: true))
+                lastApplyResult = "Host button invoked; awaiting confirmation.";
+            if (!binding.IsBound) autoApply.Checked = false;
+            applyScheduler.ClearIfUnchanged(requestVersion); SetStatus(reason); RefreshApplyStatus();
+        }
+        finally { applyInProgress = false; }
     }
     private void RefreshInputStatus()
     {
@@ -286,7 +333,11 @@ public sealed class MainForm : Forms.Form
     {
         var active = plugin.Registry.ArmedTarget;
         if (active == null || applyCandidates.SelectedItem is not SafeApplyBinding.Candidate candidate) { SetStatus("Arm the intended effect and find its visible Apply MIDI button first."); return; }
-        try { SetStatus(binding.Bind(candidate, active)); boundIdentity = binding.IsBound ? active.Identity : null; }
+        try
+        {
+            SetStatus(binding.Bind(candidate, active)); boundIdentity = binding.IsBound ? active.Identity : null;
+            autoApply.Checked = binding.IsBound; feedbackDirty = true; RefreshApplyStatus();
+        }
         catch (Exception e) { binding.Clear(); SetStatus("Binding failed: " + e.Message + ". Manual Apply MIDI required."); }
     }
     private void LoadSettings()

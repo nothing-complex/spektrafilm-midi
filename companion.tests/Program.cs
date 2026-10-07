@@ -212,6 +212,61 @@ Test("Incomplete snapshot keeps earliest Apply deadline; disconnect clears pendi
     scheduler.Request(start.AddSeconds(2)); scheduler.Clear();
     Check(!scheduler.TryTakeDue(start.AddSeconds(3)));
 });
+Test("Apply retries retain their deadline when Resolve becomes foreground within two seconds", () =>
+{
+    var scheduler = new ApplyScheduler(); var start = new DateTime(2026, 10, 7, 0, 0, 0, DateTimeKind.Utc);
+    scheduler.Request(start); var due = scheduler.DueUtc;
+    Check(scheduler.ExpiresUtc == start.AddSeconds(2));
+    Check(!scheduler.TryTakeDue(start.AddMilliseconds(100), ready: false));
+    Check(!scheduler.TryTakeDue(start.AddMilliseconds(1500), ready: false));
+    Check(scheduler.Pending && scheduler.DueUtc == due && !scheduler.ExpireIfStale(start.AddMilliseconds(1999)));
+    Check(scheduler.TryTakeDue(start.AddMilliseconds(1999), ready: true));
+    Check(!scheduler.Pending && scheduler.ExpiresUtc == DateTime.MaxValue);
+});
+Test("Apply retries expire at two seconds and cannot replay when foreground returns", () =>
+{
+    var scheduler = new ApplyScheduler(); var start = new DateTime(2026, 10, 7, 0, 0, 0, DateTimeKind.Utc);
+    scheduler.Request(start);
+    Check(!scheduler.TryTakeDue(start.AddSeconds(2), ready: true));
+    Check(!scheduler.Pending && !scheduler.IsDue(start.AddSeconds(3)));
+    Check(scheduler.DueUtc == DateTime.MaxValue && scheduler.ExpiresUtc == DateTime.MaxValue);
+    scheduler.Request(start.AddSeconds(4));
+    Check(scheduler.ExpireIfStale(start.AddSeconds(7)) && !scheduler.ExpireIfStale(start.AddSeconds(8)));
+    Check(!scheduler.TryTakeDue(start.AddSeconds(8), ready: true));
+});
+Test("New input extends retry lifetime without postponing dispatch, and expired gestures start afresh", () =>
+{
+    var scheduler = new ApplyScheduler(); var start = new DateTime(2026, 10, 7, 0, 0, 0, DateTimeKind.Utc);
+    scheduler.Request(start); var due = scheduler.DueUtc;
+    for (var milliseconds = 5; milliseconds <= 3000; milliseconds += 5)
+    {
+        var now = start.AddMilliseconds(milliseconds); scheduler.Request(now);
+        Check(scheduler.DueUtc == due && scheduler.ExpiresUtc == now.AddSeconds(2));
+        Check(!scheduler.TryTakeDue(now, ready: false));
+    }
+    Check(scheduler.TryTakeDue(start.AddMilliseconds(3100), ready: true), "Continuous input starved a foreground retry");
+    scheduler.Request(start.AddSeconds(6));
+    scheduler.Request(start.AddSeconds(9));
+    Check(scheduler.DueUtc == start.AddSeconds(9).AddMilliseconds(65) && scheduler.ExpiresUtc == start.AddSeconds(11));
+    Check(!scheduler.TryTakeDue(start.AddSeconds(9), ready: true));
+    scheduler.Clear(); Check(scheduler.DueUtc == DateTime.MaxValue && scheduler.ExpiresUtc == DateTime.MaxValue);
+});
+Test("Host dispatch completion preserves input received reentrantly, even at the same timestamp", () =>
+{
+    var scheduler = new ApplyScheduler(); var start = new DateTime(2026, 10, 7, 0, 0, 0, DateTimeKind.Utc);
+    scheduler.Request(start); var dispatchVersion = scheduler.RequestVersion; var due = scheduler.DueUtc; var expiry = scheduler.ExpiresUtc;
+    // UI Automation may pump a second input message while the first host call runs.
+    // Equal timestamps deliberately prove that deadline comparison alone is insufficient.
+    scheduler.Request(start);
+    Check(scheduler.RequestVersion != dispatchVersion && scheduler.DueUtc == due && scheduler.ExpiresUtc == expiry);
+    Check(!scheduler.ClearIfUnchanged(dispatchVersion) && scheduler.Pending, "Older dispatch discarded newer input");
+    var nextDispatchVersion = scheduler.RequestVersion;
+    Check(scheduler.ClearIfUnchanged(nextDispatchVersion) && !scheduler.Pending);
+    Check(scheduler.RequestVersion == nextDispatchVersion, "Clear reset the request generation");
+    scheduler.Request(start.AddSeconds(1));
+    Check(!scheduler.ClearIfUnchanged(nextDispatchVersion) && scheduler.Pending, "A late completion cleared a new gesture");
+    Check(scheduler.ClearIfUnchanged(scheduler.RequestVersion) && !scheduler.Pending);
+});
 Test("Discovery survives plugin endpoint teardown and receives a new broker", () =>
 {
     using var connection = new PluginConnection(55054);
