@@ -24,6 +24,10 @@ These public projects informed the initial investigation of Tangent/MIDI integra
 
 They are not bundled runtime dependencies. This implementation uses the native Tangent protocol, Windows WinMM and the OFX parameter/action interfaces described in the project source.
 
+## Microsoft .NET runtime
+
+Windows binary releases include the self-contained [Microsoft .NET runtime](https://github.com/dotnet/runtime) and [Windows Desktop runtime](https://github.com/dotnet/windowsdesktop). Their original licence and third-party notices ship in `licenses/dotnet/` in both release archives. `build-manifest.json` records the included framework versions. The repository does not vendor these runtimes; `Package.ps1` restores their Microsoft NuGet runtime packs for publication. These components retain their own licences.
+
 ## New project code
 
 New companion, profiles, build/package scripts and test code are provided under GPL-3.0-or-later. See [LICENSE.txt](LICENSE.txt). The project is free to download and use under its licence. Names of third-party products identify compatibility; no endorsement or affiliation is claimed.

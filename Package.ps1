@@ -1,5 +1,5 @@
 [CmdletBinding()]
-param([string]$Version='0.1.3-prototype', [switch]$Zip, [switch]$Source = $true)
+param([string]$Version='0.2.0-prototype', [switch]$Zip, [switch]$Source = $true)
 $ErrorActionPreference='Stop'
 $projectRoot=$PSScriptRoot
 if ($Version -notmatch '^[0-9A-Za-z._-]+$') { throw 'Invalid version string.' }
@@ -23,12 +23,38 @@ New-Item -ItemType Directory -Path $packageRoot -Force | Out-Null
 $env:DOTNET_CLI_HOME=Join-Path $projectRoot '.build/dotnet-home'
 $env:DOTNET_CLI_TELEMETRY_OPTOUT='1'
 $env:DOTNET_GENERATE_ASPNET_CERTIFICATE='false'
-& dotnet publish (Join-Path $projectRoot 'companion/Windows/SpektrafilmMidi.csproj') -c Release --no-restore --self-contained false -o (Join-Path $packageRoot 'companion')
+$packageArtifacts=Join-Path $projectRoot '.build/package-artifacts'
+# Keep RID-specific restore/build outputs separate from ordinary developer builds.
+# The runtime packs are cached after the first package; no separate Desktop Runtime
+# installation is needed on the user's machine.
+& dotnet restore (Join-Path $projectRoot 'companion/Windows/SpektrafilmMidi.csproj') -r win-x64 -p:SelfContained=true --artifacts-path $packageArtifacts --source https://api.nuget.org/v3/index.json
+if ($LASTEXITCODE -ne 0) { throw 'Companion runtime restore failed. Packaging requires the Windows x64 .NET runtime packs.' }
+& dotnet publish (Join-Path $projectRoot 'companion/Windows/SpektrafilmMidi.csproj') -c Release --no-restore -r win-x64 --self-contained true --artifacts-path $packageArtifacts -o (Join-Path $packageRoot 'companion')
 if ($LASTEXITCODE -ne 0) { throw 'Companion publication failed.' }
+$runtimeConfig=Get-Content -LiteralPath (Join-Path $packageRoot 'companion/SpektrafilmMidi.runtimeconfig.json') -Raw | ConvertFrom-Json
+$runtimeFrameworks=@($runtimeConfig.runtimeOptions.includedFrameworks)
+if ($runtimeFrameworks.Count -lt 2) { throw 'Companion publication did not include its .NET and Windows Desktop runtimes.' }
+$runtimeAssets=Get-Content -LiteralPath (Join-Path $packageArtifacts 'obj/SpektrafilmMidi/project.assets.json') -Raw | ConvertFrom-Json
+$runtimeNotices=Join-Path $packageRoot 'licenses/dotnet'
+New-Item -ItemType Directory -Path $runtimeNotices -Force | Out-Null
+foreach ($framework in $runtimeFrameworks) {
+  $packName=$framework.name.ToLowerInvariant()+'.runtime.win-x64'
+  $packRoot=$null
+  foreach ($cacheRoot in $runtimeAssets.packageFolders.PSObject.Properties.Name) {
+    $candidate=Join-Path (Join-Path $cacheRoot $packName) $framework.version
+    if (Test-Path -LiteralPath $candidate) { $packRoot=$candidate; break }
+  }
+  if (-not $packRoot) { throw "Cannot locate licence notices for included runtime $($framework.name) $($framework.version)." }
+  $noticeFiles=@(Get-ChildItem -LiteralPath $packRoot -File | Where-Object { $_.Name -match '^(LICENSE(\.TXT)?|THIRD-PARTY-NOTICES\.TXT)$' })
+  if (-not ($noticeFiles | Where-Object Name -Match '^LICENSE')) { throw "No licence found for included runtime $($framework.name)." }
+  foreach ($notice in $noticeFiles) {
+    Copy-Item -LiteralPath $notice.FullName -Destination (Join-Path $runtimeNotices ($framework.name+'-'+$framework.version+'-'+$notice.Name)) -Force
+  }
+}
 Copy-Item -LiteralPath $bundleRoot -Destination $packageRoot -Recurse -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot 'profiles') -Destination $packageRoot -Recurse -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot 'docs') -Destination $packageRoot -Recurse -Force
-Copy-Item -LiteralPath (Join-Path $projectRoot 'packaging/Install.ps1'),(Join-Path $projectRoot 'packaging/Uninstall.ps1') -Destination $packageRoot -Force
+Copy-Item -LiteralPath (Join-Path $projectRoot 'packaging/Install.ps1'),(Join-Path $projectRoot 'packaging/Uninstall.ps1'),(Join-Path $projectRoot 'packaging/Install MIDI Effect.ps1'),(Join-Path $projectRoot 'packaging/Install MIDI Effect.cmd'),(Join-Path $projectRoot 'packaging/Start Spektrafilm MIDI.cmd'),(Join-Path $projectRoot 'packaging/START HERE.txt') -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot 'README.md') -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot 'THIRD_PARTY_NOTICES.md'),(Join-Path $projectRoot 'MODIFICATIONS.md') -Destination $packageRoot -Force
 Copy-Item -LiteralPath (Join-Path $projectRoot 'companion/README.md') -Destination (Join-Path $packageRoot 'docs/COMPANION.md') -Force
@@ -38,13 +64,11 @@ Copy-Item -LiteralPath (Join-Path $projectRoot 'LICENSE.txt') -Destination $pack
 Get-ChildItem -LiteralPath (Join-Path $packageRoot 'profiles') -Recurse -Directory -Filter '__pycache__' | ForEach-Object {
   if ($_.FullName.StartsWith((Join-Path $packageRoot 'profiles') + [IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)) { Remove-Item -LiteralPath $_.FullName -Recurse -Force }
 }
-@'
-@echo off
-cd /d "%~dp0"
-start "" "%~dp0companion\SpektrafilmMidi.exe" --profiles "%~dp0profiles"
-'@ | Set-Content -LiteralPath (Join-Path $packageRoot 'Launch Companion.cmd') -Encoding ascii
+Copy-Item -LiteralPath (Join-Path $projectRoot 'packaging/Start Spektrafilm MIDI.cmd') -Destination (Join-Path $packageRoot 'Launch Companion.cmd') -Force
 $manifest=[ordered]@{
-  version=$Version; status='prototype'; platform='Windows x64'; requires='.NET 9 Desktop Runtime and Vulkan-capable GPU';
+  version=$Version; status='prototype'; platform='Windows x64'; requires='Windows x64 and Vulkan-capable GPU; .NET runtime included';
+  companionDeployment='Self-contained win-x64; runtime packs included in the companion folder.';
+  runtimeFrameworks=$runtimeFrameworks;
   pluginId='local.tangentmidi.spektrafilm'; upstreamCommit='86476afc5b077de77e2278e3658d1ba9309892a1';
   openfxCommit='e40728885390ec16276d11e00025de9b4282060c';
   automaticDispatch='Explicit UIAutomation binding to a unique visible Apply MIDI button with exact armed target marker. Automatic input requires foreground Resolve; explicit Apply now may invoke the bound button in the background. Pending work expires two seconds after latest input.';
@@ -56,8 +80,9 @@ if ($Zip) { Compress-Archive -LiteralPath $packageRoot -DestinationPath "$packag
 if ($Source) {
   $sourceRoot=Join-Path $distRoot "Spektrafilm-MIDI-$Version-source"
   Reset-PackageDirectory $sourceRoot
-  $rootFiles=@('README.md','Build.ps1','Test.ps1','Package.ps1','build-requirements.txt','.gitignore','THIRD_PARTY_NOTICES.md','MODIFICATIONS.md','LICENSE.txt')
+  $rootFiles=@('README.md','AGENTS.md','Build.ps1','Test.ps1','Package.ps1','build-requirements.txt','.gitignore','THIRD_PARTY_NOTICES.md','MODIFICATIONS.md','LICENSE.txt')
   foreach ($name in $rootFiles) { Copy-Item -LiteralPath (Join-Path $projectRoot $name) -Destination $sourceRoot -Force }
+  Copy-Item -LiteralPath (Join-Path $packageRoot 'licenses') -Destination $sourceRoot -Recurse -Force
   foreach ($folder in @('companion','companion.tests','profiles','tests','docs','packaging')) {
     Get-ChildItem -LiteralPath (Join-Path $projectRoot $folder) -Recurse -File | Where-Object { $_.FullName -notmatch '[\\/](bin|obj|__pycache__)[\\/]' } | ForEach-Object {
       $target=Join-Path $sourceRoot ([IO.Path]::GetRelativePath($projectRoot,$_.FullName))

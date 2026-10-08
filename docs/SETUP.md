@@ -1,50 +1,65 @@
-# Prototype setup and operating sequence
+# Setup and everyday use
 
-This is a separately identified community build. Read the root README for the current build/install commands and host-dispatch status. The regular Spektrafilm bundle is not a deployment target. Close Resolve before installing/removing an OFX binary.
+Download the [Windows 0.2.0 prototype](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.2.0-prototype) and extract the whole ZIP into a folder you can keep. The companion includes its .NET runtime. You need Windows x64, a compatible Vulkan GPU/driver, and Tangent Hub/Mapper with your Element panels connected.
 
-1. Build/package the sibling and companion using the root scripts. Preview the installer first; its explicit apply option installs only `spektrafilm_midi.ofx.bundle`.
-2. Restart Resolve. Confirm that regular Spektrafilm and **Spektrafilm MIDI (Community Beta)** both appear. Add the MIDI variant to a disposable test grade; keep a regular instance for coexistence checks. The regular effect has no MIDI controls.
-3. Start the companion, choose one input route and click **Connect** each session. For Element's native route, choose **Tangent Hub** and complete the application-switching steps below before arming. Choosing an adapter alone does not connect it.
-4. In the intended MIDI effect, click **Arm MIDI**. Confirm the companion identifies one fresh armed target. There is no automatic selected-node following.
-5. Bind automatic Apply as described below, return to Resolve and turn Kb 1. Confirm **Host Apply: AUTO enabled (Resolve active)** and an **APPLIED** acknowledgment. For a manual test, turn Kb 1 and click the effect's **Apply MIDI** button within two seconds. **DELTA: QUEUED** confirms input receipt only; the host Apply action must run before OFX state changes.
-6. Confirm the inspector value, image, companion value and panel feedback agree. Then test undo, save/reopen and rendered output before using a real project.
-7. Disarm before switching targets or returning the panels to native Resolve operation. Select DaVinci Resolve in Mapper and restore Auto-select if wanted. The regular plugin remains independently usable.
+## First installation
 
-The automatic Apply path locates the actual Apply MIDI inspector button through Windows UI Automation. With the intended inspector visible, use **Find visible Apply buttons**, select its button, then **Bind + enable Auto Apply**. This enables the checkbox after binding succeeds. Binding requires the armed instance's target marker beside that button; a matching name alone is insufficient. Automatic hardware dispatch requires foreground Resolve and the still-valid ownership marker. Bindings are cleared on target/inspector changes and are never restored automatically.
+1. Close DaVinci Resolve.
+2. Double-click **Install MIDI Effect.cmd** in the extracted folder. Approve the Windows permission prompt; the installer shows its result and waits for Enter.
+3. Reopen Resolve and add **Spektrafilm MIDI (Community Beta)** to a disposable test node. Regular Spektrafilm remains independently available.
 
-The persistent **Host Apply** line shows whether automatic Apply is **OFF**, **AUTO waiting for Resolve foreground**, or **AUTO enabled (Resolve active)**, plus the last Apply acknowledgment. Earlier settings can leave automatic Apply off despite a working controller connection. When Resolve is in the background, automatic application waits for it to regain focus, for up to two seconds after the latest input. Return to Resolve within that interval, or move a control again after returning. Expired input is discarded.
+The installer targets only spektrafilm_midi.ofx.bundle and checks its separate identity. It refuses to install while Resolve is running. It does not close Resolve or change user presets. For a command-line preview, run ./Install.ps1; ./Install.ps1 -Apply performs installation.
 
-For explicit manual dispatch from the companion, click **Apply now** after binding. It immediately invokes the same verified host button even while Resolve is in the background; automatic Apply need not be enabled. The fresh armed target, unique button and exact instance-marker checks still apply. Queued input must still be less than two seconds old. A short live Element test has confirmed nonempty host Apply acknowledgments and changing Film Exposure, Print Exposure and Film Push/Pull in Resolve. Sensitivity calibration and the full hardware/host acceptance checklist remain open.
+**Updating from 0.1.x?** The OFX binary is unchanged. Skip the installer and run the new companion with the new package's bundled profiles.
 
-A transport request alone cannot manufacture an OFX UI-thread callback. If the button or ownership marker is not accessible, keep manual Apply. This capability is a prototype aid; physical Resolve acceptance is still required.
+## Connect and grade
+
+1. Show the intended MIDI effect's controls in Resolve's inspector.
+2. Double-click **Start Spektrafilm MIDI.cmd**. On first launch it connects to Tangent Hub; later it reconnects your saved route. An unavailable Tangent Hub connection is retried about every five seconds. The headline setup status explains what is missing.
+3. Click **Control this effect** in the companion. It invokes the uniquely identified visible effect's real **Arm MIDI** button. If that button is inaccessible, click **Arm MIDI** directly in Resolve.
+4. Wait for linked/ready status. Once one fresh armed target and its exact visible target marker are available, the companion links **Apply MIDI** automatically. Normal setup does not require Find/Bind steps.
+5. Return to Resolve and turn Kb knob 1. On Essentials this changes Film Exposure. Confirm the inspector value, image, companion value and panel feedback agree.
+
+Keep the intended effect's MIDI controls visible and Resolve in front while turning the panels. There is no automatic selected-node following. The app never arms from saved settings or silently arms on startup. If it cannot distinguish the visible effect, show only the intended effect's MIDI controls and use its Arm MIDI button.
+
+The **Controls** screen has setup status, feature bank, speed and mapped controls. Ports, encodings, manual connection/binding and diagnostics are under **Advanced**. Lower speed to 0.25 for quarter-speed movement; hold a mapped **Fine** modifier for another tenfold reduction. Speed is saved, ranges from 0.01–4, and defaults to 1. Choices, integers, booleans, absolute MIDI positions and resets retain their behavior.
+
+## Pause, resume and finish
+
+Click **Pause** before switching targets, exporting or returning the panels to Resolve's usual controls. This disconnects input, disarms live control and restores the previous Mapper routing when the companion changed it and still owns that change. Normal app exit attempts the same restoration. If routing was selected manually, restore it manually in Mapper.
+
+**Resume** reconnects input. Click **Control this effect** again, or explicitly arm the intended MIDI effect in Resolve. Fresh target state is always required; cached arm state is never restored.
+
+Test undo, save/reopen and rendered output using [the acceptance checklist](ACCEPTANCE.md) before a real project. A short earlier live test confirmed actual Element input, host Apply and changed values; the setup flow passed a short live GUI check; full physical/host acceptance remains open.
 
 ## Switching Element from Resolve to Spektrafilm
 
-The panels must be assigned to the companion's separate application. Resolve's default setup keeps controlling Resolve, even when a Spektrafilm effect is visible.
+The companion attempts to choose its separate **Spektrafilm MIDI** application in Tangent Mapper and disable **Auto-select Application** while controlling the panels. It records the prior routing so it can restore its own change on Pause or normal exit. It leaves user maps intact. This depends on Mapper exposing the required accessibility controls; the setup status reports when manual selection is needed.
 
-1. In the companion, choose **Tangent Hub** and click **Connect**. Leave the companion running.
-2. In Tangent Mapper, open **Select Application** and turn **Auto-select Application** off. With Auto-select enabled, bringing Resolve forward selects its usual application again; manually choosing Spektrafilm while Mapper has focus is not enough.
-3. In the same menu, select **Spektrafilm MIDI** so the checkmark moves to it. The arrow beside an application opens its map choices; it does not activate that application.
-4. Select **Essentials** in the companion. Check the Kb screens for **Film Exp**, **Print Exp** and the other Spektrafilm labels. Before an effect is armed, they may have an `[off]` prefix. Check the labels again after returning to Resolve: they should remain Spektrafilm labels.
-5. Add the distinct **Spektrafilm MIDI (Community Beta)** effect, click its **Arm MIDI** button, and confirm a fresh target in the companion. Then turn Kb 1 and click **Apply MIDI** promptly for the first test.
+If asked to switch manually:
 
-The companion advertises its bundled `profiles/tangent` directory as the system map location, with a separate user-map location. There is no need to copy these files over Resolve's installed maps. If **Spektrafilm MIDI** is missing from Mapper, check the companion's connection status and that the package's `profiles/tangent` folder is present.
+1. Leave the companion connected to **Tangent Hub**. Use **Advanced** if you need to change or reconnect the route.
+2. Open Tangent Mapper's **Select Application** menu and turn **Auto-select Application** off.
+3. Select **Spektrafilm MIDI** so it has the checkmark. The arrow beside an application opens maps; it does not activate the application.
+4. On Essentials, check Kb screens for **Film Exp** and **Print Exp**. They may have an [off] prefix before arming. Check that Spektrafilm labels remain when Resolve is foreground.
 
-Version 0.1.3 includes a corrected native Tangent movement range and step. Existing users can keep their installed MIDI OFX binary, run the updated companion with its bundled profiles, then reconnect Tangent Hub so it registers the new controls. Confirm the intended application remains selected after reconnecting.
+The companion registers its bundled profiles/tangent directory. Do not copy those files over Resolve's maps. If the application is absent, confirm the connection and that the whole package was extracted. Resolve's A+B shortcut changes native/mappable modes; it does not select this separate application.
 
-Resolve's A+B shortcut switches its native/mappable modes; it does not select the companion's application. Use Mapper to switch the full panel set. When finished, disarm the effect, select DaVinci Resolve again, and re-enable Auto-select if that is how you normally work.
+If you selected routing manually, restore **DaVinci Resolve** and your preferred Auto-select setting after pausing. Automatic restoration is limited to changes the companion made and still owns.
 
-## Adjusting sensitivity
+## When an edit is queued but nothing changes
 
-Use **Relative speed ×** in the companion to adjust continuous relative movement. The default is `1`, with a `0.01–4` range. Start with `0.25` if the knobs still feel too fast; it produces one quarter of normal movement. The setting persists between sessions and affects native Tangent, relative MIDI and OSC input. Hold a mapped **Fine** modifier for another tenfold reduction.
+**DELTA: QUEUED confirms receipt only.** A real host **Apply MIDI** callback must run to change OFX state. Look for **APPLY: APPLIED** and matching inspector/image feedback in Advanced diagnostics.
 
-Continuous OFX values already support fractions. Earlier native profiles used a generic step of `1` and an excessively broad movement range; that also rounded numeric feedback on the panel. The updated profile uses range `−100` to `100` and step `0.01`. The companion applies the parameter's own mapping step and the relative speed multiplier after receiving the movement. Choice, integer and boolean controls remain discrete and ignore the speed multiplier; absolute MIDI positions and resets are unaffected.
+Automatic linking needs one fresh armed target, complete state, a unique visible/enabled Apply MIDI button and the exact nearby instance marker. Keep the MIDI controls visible. Target or inspector changes invalidate the binding. Automatic dispatch requires foreground Resolve; pending input expires two seconds after the latest movement. Return to Resolve and turn again if it expired.
 
-Check the input status line for the last axis and raw increment if movement is unexpectedly large. Judge the result against the inspector and companion value as well as the panel display. Physical calibration of the new default remains part of acceptance testing.
+If automatic linking is unavailable, **Advanced** retains **Find Apply buttons** and **Bind selected** with the same exact-marker checks. **Apply now** explicitly invokes a verified bound button while Resolve is in the background. Manual fallback: turn a control and click **Apply MIDI** directly in the effect within two seconds.
+
+The app does not synthesize an OFX callback from a network request or use guessed mouse coordinates/global keys. Hosts without the required accessibility controls need manual Apply.
 
 ## Conventional MIDI
 
-Select an existing MIDI input port in the companion and the controller's actual relative/absolute encoding. The default profile is documented by `profiles/midi/default-midi.json`:
+Under **Advanced**, choose **MIDI**, an existing input port and the controller's actual encoding. The default profile is profiles/midi/default-midi.json:
 
 | Message | Assignment |
 |---|---|
@@ -55,36 +70,32 @@ Select an existing MIDI input port in the companion and the controller's actual 
 | Note 56–63 | Kb/Tk/Bt/Mf A/B pairs, including momentary Fine |
 | Note 64–68 | Reserved transport buttons, currently unavailable |
 
-The default relative encoding is **binary offset**: 64 is no movement, 65 is +1, 63 is −1. The companion also supports explicitly selected two's complement, sign magnitude, absolute 7-bit and absolute 14-bit input. A 14-bit axis uses MSB CC 0–23 plus LSB CC 32–55 on the same channel. Choose channel 1 for the included optional bridge; use the companion's filter for other devices. Do not select multiple adapters that process the same physical input.
+Binary offset uses 64 for no movement, 65 for +1 and 63 for −1. Two's complement, sign/magnitude, absolute 7-bit and absolute 14-bit are supported. A 14-bit axis pairs MSB CC 0–23 with LSB CC 32–55 on the same channel. Channel 0 accepts all; 1–16 filters one. The included optional bridge uses channel 1.
 
-Absolute input uses soft takeover. Compound printer axes require relative input. Full-precision parameter changes are independent of MIDI's 7-bit message resolution; selected encoding and mapping steps determine increments.
+Absolute input uses soft takeover. Compound printer axes require relative input. Continuous OFX values retain fractions; encoding and mapping determine increments. Only one input adapter connects, preventing duplicate events.
 
 ## Optional Element → OSC → MIDI
 
-This route tests real MIDI ingress with Element on Windows. It needs an already installed virtual MIDI port; this repository installs no driver.
+Native Tangent provides dynamic displays without a virtual MIDI driver. The optional bridge tests MIDI ingress and requires an already installed virtual MIDI port; this repository installs no driver.
 
-1. Create/select a virtual MIDI port using the user's chosen existing MIDI software.
-2. Import `profiles/midi/element-osc-map.xml` into a separate custom Tangent application/profile. It maps all 24 axes and 37 action buttons. Do not import it over a valued Resolve map. Its OSC destination is localhost port 9000.
-3. Run `python profiles/tools/osc_to_midi.py --list` to list existing MIDI outputs. Start `python profiles/tools/osc_to_midi.py --port INDEX --channel 1` with the selected output index.
-4. In the companion, disable native/other OSC input for these controls, select the virtual MIDI input, channel 1 and RelativeBinaryOffset encoding. Do not simultaneously bind the companion OSC listener to port 9000.
-5. Turn **Auto-select Application** off in Mapper and select the custom Tangent application so it has the checkmark. Arm the intended MIDI effect, then verify the host commit path as above.
+1. Create/select a virtual MIDI port in your existing MIDI software.
+2. Import profiles/midi/element-osc-map.xml into a separate custom Tangent application/profile. It maps all 24 axes and 37 actions to loopback port 9000. Do not replace a valued Resolve map.
+3. List outputs with python profiles/tools/osc_to_midi.py --list, then run python profiles/tools/osc_to_midi.py --port INDEX --channel 1.
+4. In Advanced, choose that virtual MIDI input, channel 1 and RelativeBinaryOffset. Do not also connect native Tangent or the companion's OSC listener to the same controls/port.
+5. Turn Mapper Auto-select off and select the custom application manually. Arm the MIDI effect and verify host Apply as above.
 
-The converter binds loopback only, accepts immediate OSC messages/bundles, splits large deltas without clipping net movement, accumulates fractional deltas, and releases held action notes on normal exit. The supplied Mapper XML chooses relative integer OSC values; that setting can quantize hardware movement before the converter sees it. Its associated reset sends zero, which the converter translates into a separate reset note. Native Tangent avoids this quantization and provides the intended dynamic displays.
-
-The bridge's WinMM device-open/output path and the imported OSC map still require actual hardware/driver validation. Offline tests exercise encoding/parsing; they do not establish a working virtual MIDI driver or physical display feedback.
+The loopback-only converter supports immediate OSC messages/bundles, preserves net large/fractional deltas and releases held actions on normal exit. The optional XML's integer movement can quantize input before conversion, and its labels are static. Driver/hardware validation remains open.
 
 ## Troubleshooting
 
-- **Panels still show the default Resolve setup:** choose Tangent Hub and click Connect in the companion, turn Mapper's Auto-select Application off, then checkmark Spektrafilm MIDI. Check the Kb labels before testing OFX changes. A+B does not select this application.
-- **Spektrafilm MIDI is absent from Mapper:** confirm the companion is connected to Tangent Hub and its bundled `profiles/tangent` folder is present. The application is registered by the running companion.
-- **There is no Arm MIDI button:** confirm you added Spektrafilm MIDI (Community Beta), rather than regular Spektrafilm.
-- **No target:** click Arm MIDI on the intended sibling instance; disarm other instances and wait for a fresh snapshot.
-- **DELTA: QUEUED but image does not change:** receipt succeeded, but the host Apply action has not run. Check the persistent Host Apply line. If it says OFF, find the intended Apply button and use **Bind + enable Auto Apply**. If it is waiting for Resolve foreground, return to Resolve and move a control again. Confirm an APPLIED acknowledgment. Manual fallback: move a control, then click Apply MIDI in the effect within two seconds.
-- **Panels work only while Mapper/Hub is active:** turn Mapper's **Auto-select Application** off and checkmark **Spektrafilm MIDI**, then check the panel labels again with Resolve foreground. An executable association does not keep the companion application selected when Resolve gains focus.
-- **Knobs are too sensitive or values appear to jump by integers:** use the 0.1.3 companion with its bundled Tangent profiles and reconnect the Hub. Lower **Relative speed ×** (for example to `0.25`) or hold **Fine**. Continuous parameters retain fractions; choices and integer parameters intentionally move in discrete steps. Check the inspector and last raw increment to distinguish display rounding from actual parameter changes.
-- **A control is off:** it may be hidden by processing mode or stage state. Select the appropriate mode/enable switch through a mapped parameter or the inspector.
-- **Printer balance is inactive:** this public build falls back to C/M/Y. If a later schema offers RGB printer points, disable Gang/Group before opponent movements.
-- **Labels do not change after a bank switch:** use native Tangent rather than the static OSC/MIDI profile; verify the active application is Spektrafilm MIDI.
-- **Resolve's usual panel controls stop:** switch the full set back to DaVinci Resolve in Tangent Hub/Mapper. Split-panel ownership has not been established.
-- **MIDI direction is wrong:** select the controller's actual relative encoding. Do not compensate for an encoding mismatch by changing parameter bounds.
-- **Undo/transport buttons report unavailable:** the prototype reserves them but does not implement the required Resolve command adapter.
+- **Panels show Resolve controls:** follow setup status. If automatic Mapper selection is unavailable, disable Auto-select and checkmark Spektrafilm MIDI manually. Check labels with Resolve foreground.
+- **Connection unavailable:** confirm Tangent Hub is running, panels are connected and the whole package is extracted. The app retries while running; use Advanced to select another route.
+- **Control this effect cannot find it:** show the intended MIDI effect's controls. Confirm Spektrafilm MIDI (Community Beta). Click its Arm MIDI button if accessibility is unavailable; disarm other instances.
+- **Queued edits do not change the image:** keep Resolve foreground and MIDI controls visible; check linked/Apply status. Turn again after returning to Resolve. Use manual Apply when needed.
+- **Knobs too sensitive:** lower speed or hold Fine. Advanced shows raw increments. Use the current bundled profiles; earlier profiles rounded numeric feedback to whole numbers.
+- **A control is off:** its processing mode or stage may hide it. Change the mode/enable control in the inspector.
+- **Printer balance inactive:** the public build uses available C/M/Y controls. A future RGB printer-point schema needs Gang/Group disabled for opponent movement.
+- **Labels do not change with banks:** native Tangent provides dynamic feedback; the OSC/MIDI profile has static labels.
+- **Resolve controls do not return:** pause, then select DaVinci Resolve and your preferred Auto-select setting manually in Mapper. Split-panel ownership is not established.
+- **MIDI direction wrong:** select the actual relative encoding in Advanced.
+- **Undo/transport unavailable:** the Resolve command adapter is not implemented.

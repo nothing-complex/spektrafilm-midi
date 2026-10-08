@@ -1,0 +1,29 @@
+SPEKTRAFILM MIDI - WINDOWS QUICK START
+
+Extract the whole ZIP into a folder you can keep. The companion includes its
+.NET runtime; you do not need to install .NET separately.
+
+FIRST TIME ONLY
+1. Close DaVinci Resolve.
+2. Double-click Install MIDI Effect.cmd and approve the Windows permission prompt.
+3. Reopen Resolve. Add Spektrafilm MIDI (Community Beta) to a node.
+
+EACH SESSION
+1. Double-click Start Spektrafilm MIDI.cmd.
+2. Show the intended MIDI effect's controls in Resolve, then click Control this
+   effect in the companion. It connects to your panels and links Apply for you.
+3. Return to Resolve and turn Kb knob 1 to change Film Exposure.
+4. Keep the MIDI effect's controls visible and Resolve in front while grading.
+
+Tangent Hub/Mapper must already be installed and your Element panels connected.
+The companion's setup screen helps with the Spektrafilm mapping and Resolve link.
+If it asks you to choose the mapping manually, follow the on-screen instructions.
+Use the companion's speed control if you want slower or faster dial movement.
+Pause returns the panels to their previous routing when the companion changed it.
+Resume reconnects; click Control this effect again before grading.
+
+If you already installed the MIDI effect from 0.1.x, it is the same effect binary:
+you can skip the one-time installer and just start this updated companion.
+
+Regular Spektrafilm remains available alongside Spektrafilm MIDI.
+This is a community prototype. See README.md and docs/SETUP.md for details.

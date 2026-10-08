@@ -58,7 +58,7 @@ Mf programmable buttons 1–12 are:
 11. Queue alternate A/B recall.
 12. Request host Apply (requires an explicit automatic binding, or the effect's Apply MIDI button).
 
-Initial arming is deliberately an **Arm MIDI** action in the intended OFX instance. A panel cannot infer the selected Resolve node. Capture reads the last authoritative snapshot; apply any pending edits before capture. Comparison recall is queued and uses the same host commit mechanism as individual edits.
+Initial arming is deliberately an **Arm MIDI** host action in the intended OFX instance. In 0.2.0, the companion's explicit **Control this effect** click can invoke that real button after exact visible-instance verification; clicking Arm MIDI in Resolve remains available. Startup never arms silently. A panel cannot infer the selected Resolve node. Capture reads the last authoritative snapshot; apply any pending edits before capture. Comparison recall is queued and uses the same host commit mechanism as individual edits.
 
 The five dedicated transport buttons have reserved, labelled roles for reverse, stop, forward, previous frame and next frame. They are **unavailable in this prototype** until a foreground Resolve transport adapter is validated. They never emit global keystrokes. The Mf Grade/Browse/Transport cycle from the plan is also not implemented; focus navigation supplies useful parameter browsing now.
 

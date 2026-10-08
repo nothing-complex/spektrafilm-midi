@@ -1,6 +1,9 @@
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using Forms = System.Windows.Forms;
@@ -14,6 +17,17 @@ internal static class Program
     {
         try
         {
+            // Development diagnostics are independent command-line runs. Only the
+            // interactive companion owns the GUI mutex and the normal input ports.
+            var diagnostics = args.Contains("--self-test") || args.Contains("--headless");
+            var firstInstance = true;
+            using var singleInstance = diagnostics ? null : new Mutex(true, @"Local\SpektrafilmMidi.Gui.v1", out firstInstance);
+            if (!diagnostics && !firstInstance)
+            {
+                if (!FocusRunningCompanion())
+                    Forms.MessageBox.Show("Spektrafilm MIDI is already running. Open its window from the taskbar.", "Spektrafilm MIDI", Forms.MessageBoxButtons.OK, Forms.MessageBoxIcon.Information);
+                return 0;
+            }
             var profiles = FindProfiles(args);
             if (args.Contains("--self-test"))
             {
@@ -37,6 +51,32 @@ internal static class Program
             Forms.MessageBox.Show(error, "Spektrafilm MIDI", Forms.MessageBoxButtons.OK, Forms.MessageBoxIcon.Error); return 1;
         }
     }
+    private static bool FocusRunningCompanion()
+    {
+        using var current = Process.GetCurrentProcess();
+        var matches = new List<(int ProcessId, IntPtr Window)>();
+        foreach (var process in Process.GetProcessesByName("SpektrafilmMidi"))
+        {
+            using (process)
+            {
+                try
+                {
+                    if (process.Id == current.Id || process.SessionId != current.SessionId || process.MainWindowHandle == IntPtr.Zero || !process.MainWindowTitle.StartsWith("Spektrafilm MIDI", StringComparison.Ordinal)) continue;
+                    matches.Add((process.Id, process.MainWindowHandle));
+                }
+                catch (Exception e) when (e is InvalidOperationException or System.ComponentModel.Win32Exception) { }
+            }
+        }
+        if (matches.Count != 1) return false;
+        var match = matches[0];
+        GetWindowThreadProcessId(match.Window, out var owner);
+        if (owner != match.ProcessId) return false;
+        ShowWindowAsync(match.Window, 9); // SW_RESTORE also restores a minimized companion.
+        return SetForegroundWindow(match.Window);
+    }
+    [DllImport("user32.dll")] private static extern bool ShowWindowAsync(IntPtr window, int command);
+    [DllImport("user32.dll")] private static extern bool SetForegroundWindow(IntPtr window);
+    [DllImport("user32.dll")] private static extern uint GetWindowThreadProcessId(IntPtr window, out int processId);
     private static string FindProfiles(string[] args)
     {
         var supplied = Array.IndexOf(args, "--profiles");

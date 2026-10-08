@@ -4,12 +4,13 @@ A free, open-source Windows prototype for controlling a community build of Spekt
 
 **Early prototype, looking for testers.** The software builds and automated tests pass. A short live Element test now confirms physical input, automatic host Apply and changed values in Resolve. Sensitivity calibration and the full acceptance checklist remain open. Continuous automatic control depends on Resolve exposing the effect's **Apply MIDI** button and target marker through Windows accessibility. Manual Apply is the fallback. Please start with a disposable project.
 
-[Download the Windows prototype and matching source](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.3-prototype) · [Setup](docs/SETUP.md) · [Controls](docs/CONTROLS.md) · [Verified status](docs/BUILD_STATUS.md)
+[Download the Windows prototype and matching source](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.2.0-prototype) · [Setup](docs/SETUP.md) · [Controls](docs/CONTROLS.md) · [Verified status](docs/BUILD_STATUS.md)
 
 ## What it does
 
 - Maps all **24 continuous axes** on an Element Kb/Tk/Bt/Mf set: twelve knobs, three Tk ball/ring sets, and the Mf ball/ring.
 - Provides feature banks, parameter pages, resets, adjustable relative speed, fine adjustment, a focused Mf ring and temporary A/B snapshots.
+- Starts with a simple **Controls** screen, reconnects your chosen input automatically, and links the visible effect without manual Apply-button binding. Device settings and diagnostics live under **Advanced**.
 - Sends control labels, actual values, choice names and bank information to panel screens through native Tangent Hub support. Physical formatting still needs checking.
 - Accepts WinMM MIDI, native Tangent Hub TCP or loopback OSC input, with one physical input route active at a time.
 - Supports relative MIDI formats, absolute 7-bit and 14-bit input, and soft takeover.
@@ -32,22 +33,24 @@ The installer targets only the MIDI bundle. Existing regular Spektrafilm nodes k
 
 ## Download and try it
 
-Requirements: **Windows x64**, the **.NET 9 Windows Desktop runtime**, a Vulkan-capable GPU/driver supported by the public renderer, and Tangent Hub for the native Element route. No virtual MIDI driver is installed by this project.
+Requirements: **Windows x64**, a Vulkan-capable GPU/driver supported by the public renderer, and Tangent Hub/Mapper for the native Element route. **The Windows download includes its .NET runtime.** No separate .NET installation or virtual MIDI driver is needed for native Element control.
 
-1. Download and extract `Spektrafilm-MIDI-0.1.3-prototype.zip` from the [prerelease](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.1.3-prototype).
-2. Close Resolve. From the extracted package, preview `./Install.ps1` in PowerShell. Then use `./Install.ps1 -Apply` in an administrator PowerShell to install the separate MIDI bundle.
-3. Restart Resolve and add **Spektrafilm MIDI (Community Beta)** to a disposable test grade.
-4. Run **Launch Companion.cmd**, choose one input route and click **Connect** each session. For Element, choose **Tangent Hub**.
-5. For native Element control, open Mapper's **Select Application** menu and turn **Auto-select Application** off. Select **Spektrafilm MIDI** so it has the checkmark; the arrow beside it opens its maps. Auto-select otherwise switches the panels back to the default Resolve setup when Resolve gains focus.
-6. Confirm the Kb screens show Spektrafilm labels such as **Film Exp** and **Print Exp** on the Essentials bank, possibly marked off before arming. If they still show Resolve's controls, complete the [Tangent switching steps](docs/SETUP.md#switching-element-from-resolve-to-spektrafilm) first.
-7. Click **Arm MIDI** in the intended effect and wait for a complete armed target in the companion.
-8. With the effect's MIDI controls visible, click **Find visible Apply buttons** in the companion, select the intended button, then **Bind + enable Auto Apply**. Return to Resolve and confirm the companion reports **Host Apply: AUTO enabled (Resolve active)**. Move a control and check for an **APPLIED** acknowledgment and a matching inspector/image change.
+1. Download and extract `Spektrafilm-MIDI-0.2.0-prototype.zip` from the [prerelease](https://github.com/nothing-complex/spektrafilm-midi/releases/tag/v0.2.0-prototype).
+2. **First installation only:** close Resolve and double-click **Install MIDI Effect.cmd**. Approve the Windows permission prompt, then reopen Resolve. Existing 0.1.x users can skip this: the OFX binary is unchanged.
+3. Add **Spektrafilm MIDI (Community Beta)** to a test node and show its MIDI controls in the inspector.
+4. Double-click **Start Spektrafilm MIDI.cmd**. The companion connects to Tangent Hub on first launch, or reconnects the input route you last chose.
+5. Click **Control this effect** in the companion. This explicitly arms the uniquely identified visible MIDI effect. You can also click **Arm MIDI** directly in the effect. Once fresh armed state arrives, the companion links its Apply button automatically.
+6. Return to Resolve and turn Kb knob 1. Film Exposure should change. Use the bank and speed controls on the companion's **Controls** screen to adjust the mapping and feel.
 
-**DELTA: QUEUED only confirms receipt; it does not mean the effect changed.** Automatic Apply is off until you bind the button each session. The persistent **Host Apply** line shows OFF, waiting for foreground Resolve, or enabled, together with the last Apply result. After binding, **Apply now** in the companion invokes the verified effect button immediately, including while Resolve is in the background. If binding is unavailable, move a control and click **Apply MIDI** in the effect within two seconds for manual testing. Automatic hardware input requires foreground Resolve and the exact instance marker. See [setup](docs/SETUP.md) and [companion details](companion/README.md).
+Keep the intended effect's MIDI controls visible and Resolve in front while turning the panels. The companion tries to select **Spektrafilm MIDI** in Mapper and keep it selected across focus changes. If Mapper does not expose the required accessibility controls, the setup message explains the short [manual switching step](docs/SETUP.md#switching-element-from-resolve-to-spektrafilm). The Kb screens should show Spektrafilm labels such as **Film Exp** and **Print Exp**.
 
-If the knobs move too quickly, reduce **Relative speed ×** in the companion: `0.25` gives one quarter of normal movement. The default is `1`, with a `0.01–4` range, and the setting is saved. Hold a mapped **Fine** button for another tenfold reduction. Continuous parameters retain fractional values; choices and integer controls keep their discrete steps. Version 0.1.3 also corrects the native Tangent movement range/step and fractional numeric feedback. Existing users can keep the installed OFX binary and run the updated companion with its bundled profiles; reconnect Tangent Hub to register them.
+**Pause** stops input, disarms live control and restores the Mapper routing the companion changed when that routing is still its own. **Resume** reconnects; explicitly choose the effect again. The companion never restores arm ownership from saved settings or follows selected Resolve nodes automatically. Manual connection, binding, MIDI encodings, ports and detailed status remain under **Advanced**.
 
-Disarm before export or switching the full panel set back to Resolve's native application. Select DaVinci Resolve in Mapper, and restore Auto-select if you want normal focus switching again. Keep your normal Resolve maps; the A+B shortcut between Resolve's native/mappable modes does not select this separate application. Use the [acceptance checklist](docs/ACCEPTANCE.md) to check undo, persistence, cache invalidation and renders before using a real job.
+If the knobs move too quickly, lower the speed: `0.25` gives one quarter of normal movement. The default is `1`, with a `0.01–4` range, and the setting is saved. Hold a mapped **Fine** button for another tenfold reduction. Continuous parameters retain fractional values; choices and integer controls keep their discrete steps.
+
+**DELTA: QUEUED confirms receipt, not a completed effect change.** Check for an **APPLIED** result and matching inspector/image feedback if troubleshooting. When automatic linking is unavailable, move a control and click **Apply MIDI** in the effect within two seconds. See [setup](docs/SETUP.md) and [companion details](companion/README.md) for the fallback.
+
+Pause before export or returning the full panel set to Resolve's normal controls. If routing was selected manually, restore DaVinci Resolve and Auto-select yourself in Mapper. Use the [acceptance checklist](docs/ACCEPTANCE.md) to check undo, persistence, cache invalidation and renders before using a real job.
 
 ## Public-source limits
 
@@ -71,11 +74,13 @@ cd spektrafilm-midi
 
 Bootstrap creates an isolated Python environment with pinned data-generation dependencies and fetches the pinned OpenFX SDK. Close Resolve and the companion before `Test.ps1`: installer contracts require Resolve closed, and integration tests use ports 55051 and 9000.
 
-The build includes a regular baseline for coexistence tests; the distribution packages the MIDI sibling alone. Build/package scripts do not install OFX binaries or change Tangent user maps. Output goes into `.build/` and `dist/`.
+The build includes a regular baseline for coexistence tests; the distribution packages the MIDI sibling alone. Build/package scripts do not install OFX binaries or change Tangent user maps. Output goes into `.build/` and `dist/`. Packaging downloads the Microsoft Windows x64 runtime packs on its first run and includes them in the Windows companion.
 
-Automated verification covers native OFX host-action/thread boundaries, targeting, HDR dependencies, animation protection, queue expiry, companion state/protocol tests, 11 profile/bridge tests, cross-language integration, installer isolation and Vulkan core/print-scan smoke tests. [Build status](docs/BUILD_STATUS.md) separates those results from outstanding host/hardware work.
+Automated verification covers native OFX host-action/thread boundaries, targeting, HDR dependencies, animation protection, queue expiry, companion state/protocol tests, 12 profile/bridge tests, cross-language integration, installer isolation and Vulkan core/print-scan smoke tests. [Build status](docs/BUILD_STATUS.md) separates those results from outstanding host/hardware work.
 
 ## Feedback and contributions
+
+For development, start with [the agent/contributor handoff](docs/AGENT_HANDOFF.md) and [the MIDI controller workplan](docs/MIDI_CONTROLLER_WORKPLAN.md). They describe source entry points, protocol and host constraints, reproducible checks, and staged work for adding device profiles and feedback.
 
 If you try it, please [open an issue](https://github.com/nothing-complex/spektrafilm-midi/issues) with your Windows/Resolve/Tangent Hub versions, GPU/driver, panel set or MIDI encoding, what you did and what happened. Testing the automatic Apply path and actual panel displays is especially useful. Code, mapping and documentation contributions are welcome.
 
